@@ -14,9 +14,9 @@ The workshop is provisioned with a pre-configured lab environment. You
 will have access to a host deployed with Ansible Automation Platform
 (AAP) which you will use to control the playbook and workflow jobs that
 automate the RHEL in-place upgrade workflow steps. You will also have
-access to some ``pet'' application hosts, two with RHEL7 and another two
-with RHEL8. These are the hosts where we will be upgrading the RHEL
-operating system (OS).
+access to some ''pet'' application hosts, with RHEL 7, 8, and 9.
+ These are the hosts where we will be upgrading the RHEL
+operating system (OS) to the next major version.
 
 [cols=",",options="header",]
 |===
@@ -33,12 +33,10 @@ operating system (OS).
 We will use Visual Studio Code (VS Code) as it provides a convenient and
 intuitive way to use a web browser to edit files and access terminal
 sessions. If you are a command line hero, direct SSH access is available
-if VS Code is not to your liking. There is a short YouTube video to
-explain if you need additional clarity: Ansible Workshops - Accessing
-your workbench environment.
+if VS Code is not to your liking.
 
-* You can open VS Code in your web browser using the ``Console URL''
-link under ``Visual Studio Code'' on the workshop launch page provided
+* You can open VS Code in your web browser using the ``Console URL``
+link under ``Code-Server Console (Bastion)`` on the workshop launch page provided
 by your instructor. The password is given below the link. For example:
 +
 image::vscode_link.png[Example link to VS Code WebUI]
@@ -64,20 +62,14 @@ RHEL in-place upgrade automation is doing its thing.
 +
 image::new_term.svg[Example of how to open a terminal session in VS Code]
 * This terminal session will be running on the AAP control host
-`ansible-1`. Use the `cat /etc/hosts` command to see the hostnames of
-your pet app hosts. Next, use the `ssh` command to login to one of your
+`ansible-1`. You can use the `ssh` command to login to one of your
 pet app hosts. Finally, use the highlighted commands confirm the RHEL OS
 version and kernel version installed.
 +
 For example:
 +
-image::ssh_login.svg[Example ssh login to pet app host]
-* In the example above, the command `ssh tidy-bengal` connects us to a
-new session on the named pet app host. Then the commands
-`cat /etc/redhat-release` and `uname -r` are used to output the OS
-release information
-`Red Hat Enterprise Linux Server release 7.9 (Maipo)` and kernel version
-`3.10.0-1160.88.1.el7.x86_64` from that host.
+image::ssh_login.png[Example ssh login to pet app host]
+
 
 [#step-3---access-the-aap-web-ui]
 ==== Step 3 - Access the AAP Web UI
@@ -94,7 +86,7 @@ image::aap_link.png[Example link to AAP Web UI]
 * Enter the username `admin` and the password provided. This will bring
 you to your AAP Web UI dashboard like the example below:
 +
-image::aap_console_example.svg[Example AAP Web UI dashboard]
+image::aap_console_example.png[Example AAP Web UI dashboard]
 * We will learn more about how to use the AAP Web UI in the next
 exercise.
 
@@ -112,7 +104,7 @@ image::cockpit_link.png[Example link to RHEL Web Console]
 * Enter the username `student` and the password provided. This will
 bring you to a RHEL Web Console Overview page like the example below:
 +
-image::cockpit_example.svg[Example RHEL Web Console]
+image::cockpit_example.png[Example RHEL Web Console]
 * We will revisit the RHEL Web Console when we are ready to review our
 pre-upgrade reports in an upcoming exercise.
 
@@ -130,7 +122,7 @@ In this exercise, we learned about the lab environment we will be using
 to continue through the workshop exercises. We verified that we are able
 to use VS Code in our web browser and from there we can open terminal
 sessions. We also made sure we are able to access the AAP Web UI which
-will be the ``self-service portal'' we use to perform the next steps of
+will be the ``self-service portal`` we use to perform the next steps of
 the RHEL in-place upgrade automation workflow. Finally, we connected to
 the RHEL Web Console where we will soon be reviewing pre-upgrade
 reports.

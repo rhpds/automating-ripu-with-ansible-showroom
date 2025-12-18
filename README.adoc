@@ -1,3 +1,13 @@
+=== Current Issues to verify on redeployment
+The hosts are not populated in /etc/hosts (exercise 1.1-step 2)
+The RHEL targets are getting the names "node1", "node2", "node3" instead of rhel7/8/9
+
+Add the ALL_rhel group to the inventory in AAP
+
+RHEL 9 host is missing the leapp-repository package
+
+
+
 === Getting Started
 
 This template is designed to be used as a base for your showroom lab guides.
