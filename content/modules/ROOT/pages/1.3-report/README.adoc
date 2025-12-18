@@ -79,31 +79,26 @@ reports. Do this by clicking the ``student​@​ansible-1.example.com'' box
 in the top left corner of the RHEL Web Console to reveal the remote host
 menu. For example:
 +
-image::remote_host_menu_with_pets.svg[Remote host menu listing
-all pet app servers]
+image::remote_host_menu_with_pets.svg[Remote host menu listing all pet app servers]
 * You can use the remote host menu to navigate to the web consoles of
 each of your pet app servers. Try selecting one of your pet servers now.
 The RHEL Web Console system overview page will show the operating system
 version installed. For example, this pet app server is running RHEL8:
 +
-image::rhel8_os.svg[upward-moray running Red Hat Enterprise Linux
-8.7 (Ootpa)]
+image::rhel8_os.svg[upward-moray running Red Hat Enterprise Linux 8.7 (Ootpa)]
 +
 Here is an example of one running RHEL7:
 +
-image::rhel7_os.svg[Operating System Red Hat Enterprise Linux
-Server 7.9 (Maipo)]
+image::rhel7_os.svg[Operating System Red Hat Enterprise Linux Server 7.9 (Maipo)]
 * When you navigate to different hosts in the RHEL Web Console, look out
 for the ``limited access mode'' warning:
 +
-image::limited_access.svg[Web console is running in limited
-access mode]
+image::limited_access.svg[Web console is running in limited access mode]
 +
 If you see this, use the button to switch to administrative access mode
 before proceeding. A confirmation will appear like this:
 +
-image::administrative_access.svg[You now have administrative
-access]
+image::administrative_access.svg[You now have administrative access]
 * Take some time to explore the navigation menus available with the RHEL
 Web Console of your different pet app servers. Once you feel comfortable
 navigating around the console and switching between hosts, move on to
@@ -124,8 +119,7 @@ upgraded.
 
 We are now here in the automation approach workflow:
 
-image::ripu-workflow-hl-review.svg[Automation approach workflow
-diagram with review report step highlighted]
+image::ripu-workflow-hl-review.svg[Automation approach workflow diagram with review report step highlighted]
 
 * Navigate to the RHEL Web Console remote host menu and click on the
 hostname of one of your RHEL8 pet app servers. Remember as we learned in
@@ -169,8 +163,7 @@ Challenge Lab in a later exercise.
 * The next finding is titled ``Remote root logins globally allowed using
 password.'' Click on it to see the details:
 +
-image::remote_root_logins_finding.svg[Details view of remote root
-logins finding]
+image::remote_root_logins_finding.svg[Details view of remote root logins finding]
 +
 This finding is meant to raise awareness of a change to the default root
 login settings introduced with RHEL9. We can safely ignore this finding
@@ -179,8 +172,7 @@ in directly as the root user.
 * That brings us to the final high risk finding. This one is a little
 embarrassing because it’s actually a known bug in the Leapp framework.
 +
-image::leapp_bug_finding.svg[Details view usage of deprecated
-model bug finding]
+image::leapp_bug_finding.svg[Details view usage of deprecated model bug finding]
 +
 Luckily, it is completely benign and we can safely ignore it. This bug
 will be fixed with an update to the Leapp framework expected to be
@@ -238,8 +230,7 @@ pre-upgrade report. At the top of the list we see the ``Packages
 available in excluded repositories will not be installed'' finding.
 Clicking on the finding to bring up the detailed view, we see this:
 +
-image::excluded_repos_finding.svg[Details view of packages
-available in excluded repositories will not be installed]
+image::excluded_repos_finding.svg[Details view of packages available in excluded repositories will not be installed]
 +
 This finding is warning that packages python3-pyxattr and rpcgen will
 not be upgraded because ``they are available only in target system
@@ -249,8 +240,7 @@ informational finding titled ``Excluded target system repositories'' for
 more information. Scroll down and click on that finding to show its
 details:
 +
-image::enablerepo_info_finding.svg[Details view of excluded
-target system repositories information finding]
+image::enablerepo_info_finding.svg[Details view of excluded target system repositories information finding]
 +
 Here we see the remediation hint suggests to run the `leapp` utility
 with the `--enablerepo` option. But wait, that’s assuming we are
@@ -260,8 +250,7 @@ variable when submitting the upgrade playbook job. Stay tuned!
 * The next high risk entry on the list is the ``Difference in Python
 versions and support in RHEL8'' finding:
 +
-image::python_finding.svg[Details view of Difference in Python
-versions and support in RHEL8 finding]
+image::python_finding.svg[Details view of Difference in Python versions and support in RHEL8 finding]
 +
 This finding could be a concern if we have any apps on our pet server
 that are using the system-provided Python interpreter. Let’s assume we
@@ -271,8 +260,7 @@ finding.
 ``Possible problems with remote login using root account'' finding. You
 know the drill; click on the finding to review the details:
 +
-image::root_account_inhibitor.svg[Details view of possible
-problems with remote login using root account inhibitor finding]
+image::root_account_inhibitor.svg[Details view of possible problems with remote login using root account inhibitor finding]
 +
 Remember that with inhibitor findings, if we don’t take action to
 resolve the inhibitor, the Leapp framework will block the RHEL in-place
@@ -280,8 +268,7 @@ upgrade from going forward.
 * The other inhibitor is the ``Missing required answers in the answer
 file'' finding. Here are the details for this one:
 +
-image::missing_answers_inhibitor.svg[Details view of missing
-required answers in the answer file]
+image::missing_answers_inhibitor.svg[Details view of missing required answers in the answer file]
 +
 Here again, we will need to take action to remediate this finding. Don’t
 panic! In the next exercise, we will explore different options for

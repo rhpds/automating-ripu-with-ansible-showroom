@@ -14,8 +14,7 @@ found the upgrade caused unexpected impact to the application.
 We are now here in our exploration of the RHEL in-place automation
 workflow:
 
-image::ripu-workflow-hl-rollback.svg[Automation approach workflow
-diagram with rollback playbook highlighted]
+image::ripu-workflow-hl-rollback.svg[Automation approach workflow diagram with rollback playbook highlighted]
 
 After rolling back, the pet app server will be restored to as it was
 just before entering the upgrade phase of the workflow.
@@ -30,28 +29,24 @@ of our pet application servers.
 Resources > Templates and then open the ``AUTO / 03 Rollback'' job
 template. Here is what it looks like:
 +
-image::rollback_template.svg[AAP Web UI showing the rollback job
-template details view]
+image::rollback_template.svg[AAP Web UI showing the rollback job template details view]
 * Click the ``Launch'' button which will bring up the prompts for
 submitting the job starting with the limit and variables prompts. We
 only want to do a rollback of one server. To do this, enter the hostname
 of your chosen pet app server under the ``Limit'' prompt. For example:
 +
-image::rollback_prompts.svg[AAP Web UI showing the rollback job
-limit and variables prompts]
+image::rollback_prompts.svg[AAP Web UI showing the rollback job limit and variables prompts]
 +
 Click the ``Next'' button to proceed.
 +
-image::rollback_survey.svg[AAP Web UI showing the rollback job
-survey prompt]
+image::rollback_survey.svg[AAP Web UI showing the rollback job survey prompt]
 * Next we see the job template survey prompt asking us to select an
 inventory group. We already limited the job to one server, so just
 choose the ``ALL_rhel'' option and click the ``Next'' button. This will
 bring you to the preview of the selected job options and variable
 settings, for example:
 +
-image::rollback_preview.svg[AAP Web UI showing the rollback job
-preview prompt]
+image::rollback_preview.svg[AAP Web UI showing the rollback job preview prompt]
 +
 If everything looks good, use the ``Launch'' button to start the
 playbook job.
@@ -68,8 +63,7 @@ monitor the log output as the playbook run progresses.
 output. If it finished successfully, you should see ``failed=0'' status
 in the job summary like this example:
 +
-image::rollback_job_recap.svg[Rollback job ``PLAY RECAP'' as seen
-at the end of the job output]
+image::rollback_job_recap.svg[Rollback job ``PLAY RECAP'' as seen at the end of the job output]
 +
 Notice in the example above, we see the job completed in just under 3
 minutes. However, most of that time was spent in the final ``Wait for
@@ -88,8 +82,7 @@ back.
 * For example, if the pet app host you rolled back had been upgraded
 from RHEL7 to RHEL8, you should now see it is back to RHEL7:
 +
-image::commands_after_rollback.svg[command output showing the
-host is back to RHEL7 installed]
+image::commands_after_rollback.svg[command output showing the host is back to RHEL7 installed]
 
 === Conclusion
 

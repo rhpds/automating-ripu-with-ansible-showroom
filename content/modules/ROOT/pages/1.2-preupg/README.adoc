@@ -26,13 +26,12 @@ upgrade is measured in hours or less.
 Our RHEL in-place upgrade automation approach follows a workflow with
 three phases:
 
-image::ripu-workflow.svg[Three phase workflow: Analysis, Upgrade,
-Commit]
+image::ripu-workflow.svg[Three phase workflow: Analysis, Upgrade, Commit]
 
 ____
 *Note*
 
-The image:images/playbook_icon.svg[arrow pointing down at server] icon
+The image:playbook_icon.svg[arrow pointing down at server] icon
 indicates workflow steps that are automated by Ansible playbooks.
 ____
 
@@ -95,8 +94,7 @@ As we progress through the workshop, we’ll refer back to this diagram to
 track where we are in our automation approach workflow. We are starting
 now in the highlighted block below:
 
-image::ripu-workflow-hl-analysis.svg[Automation approach workflow
-diagram with analysis step highlighted]
+image::ripu-workflow-hl-analysis.svg[Automation approach workflow diagram with analysis step highlighted]
 
 The first step in upgrading our pet app hosts will be executing the
 analysis playbook to generate the Leapp pre-upgrade report for each
@@ -114,8 +112,7 @@ image::aap_templates.svg[Job templates listed on AAP Web UI]
 * Click on the ``AUTO / 01 Analysis'' job template. This will display
 the Details tab of the job template:
 +
-image::analysis_template.svg[``AUTO / 01 Analysis'' job templates
-seen on AAP Web UI]
+image::analysis_template.svg[``AUTO / 01 Analysis'' job templates seen on AAP Web UI]
 * From here, we could use the ``Edit'' button if we wanted to make any
 changes to the job template. This job template is already configured, so
 we are ready to use it to submit a playbook job. To do this, use the
@@ -128,14 +125,12 @@ The prompts that each job template presents can be configured using the
 ``Prompt on launch'' checkboxes seen when editing a job template.
 ____
 +
-image::analysis_vars_prompt.svg[Analysis job variables prompt on
-AAP Web UI]
+image::analysis_vars_prompt.svg[Analysis job variables prompt on AAP Web UI]
 * The first prompt as seen above allows for changing the default
 playbook variables or adding more variables. We don’t need to do this at
 this time, so just click the ``Next'' button to move on.
 +
-image::analysis_survey_prompt.svg[Analysis job survey prompt on
-AAP Web UI]
+image::analysis_survey_prompt.svg[Analysis job survey prompt on AAP Web UI]
 * Next we see the job template survey prompt. A survey is a customizable
 set of prompts that can be configured from the Survey tab of the job
 template. For this job template, the survey allows for choosing a group
@@ -165,8 +160,7 @@ of ``failed=0'' indicates a successful playbook run. Scroll to the
 bottom of the job output and you should see that your job summary looks
 like this example:
 +
-image::analysis_job_recap.svg[Analysis job ``PLAY RECAP'' as seen
-at the end of the job output]
+image::analysis_job_recap.svg[Analysis job ``PLAY RECAP'' as seen at the end of the job output]
 
 [#step-4-challenge-lab-analysis-playbook]
 ==== Step 4 - Challenge Lab: Analysis Playbook

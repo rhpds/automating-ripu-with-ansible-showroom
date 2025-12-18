@@ -21,27 +21,25 @@ them before those hosts can be upgraded.
 
 We are now here in our automation approach workflow:
 
-image::ripu-workflow-hl-remediate.svg[Automation approach
-workflow diagram with apply recommended remediations step highlighted]
+image::ripu-workflow-hl-remediate.svg[Automation approach workflow diagram with apply recommended remediations step highlighted]
 
 * Let’s start by dissecting one of our inhibitor findings:
 +
-image::missing_answers_dissected.svg[Details view of missing
-required answers in the answer file]
+image::missing_answers_dissected.svg[Details view of missing required answers in the answer file]
 +
-image:images/circle_1.svg[1.] Each finding has a unique title.
+image:circle_1.svg[1.] Each finding has a unique title.
 +
-image:images/circle_2.svg[2.] A risk factor is assigned to each finding,
+image:circle_2.svg[2.] A risk factor is assigned to each finding,
 but as we discussed in the previous exercise, this may be more nuanced
 than can be indicated by a simple High, Medium, Low or Info rating.
 +
-image:images/circle_3.svg[3.] The summary provides a detailed
+image:circle_3.svg[3.] The summary provides a detailed
 explanation of the risk and solution recommendation.
 +
-image:images/circle_4.svg[4.] Under remediation, we are given a fairly
+image:circle_4.svg[4.] Under remediation, we are given a fairly
 prescriptive recommendation.
 +
-image:images/circle_5.svg[5.] Sometimes, the remediation also includes
+image:circle_5.svg[5.] Sometimes, the remediation also includes
 an exact command like this one.
 * When a remediation command is given such as with the example above,
 there are a number of options we can choose from for how to execute the
@@ -90,8 +88,7 @@ the Variables prompt:
 +
 For example:
 +
-image::analysis_leapp_answerfile.svg[Setting the
-`leapp_answerfile` input variable]
+image::analysis_leapp_answerfile.svg[Setting the `leapp_answerfile` input variable]
 +
 After making the variable setting as shown above, click the ``Next''
 button. This will lead to the job template survey prompt. Previously, we
@@ -99,8 +96,7 @@ used the ``ALL_rhel'' option to run the pre-upgrade on all our pet
 servers. However, our `leapp_answerfile` setting is specific to our
 RHEL7 hosts, so choose the ``rhel7'' option this time:
 +
-image::analysis_survey_rhel7_only.svg[Choose ``rhel7'' at the
-survey prompt]
+image::analysis_survey_rhel7_only.svg[Choose ``rhel7'' at the survey prompt]
 +
 Click the ``Next'' button to proceed to the preview prompt. If you are
 satisfied with the job preview, use the ``Launch'' button to start the
@@ -124,8 +120,7 @@ inhibitor finding is no longer being reported.
 +
 For example:
 +
-image::rhel7_answer_fixed.svg[Pre-upgrade report of RHEL7 host
-without answer file inhibitor]
+image::rhel7_answer_fixed.svg[Pre-upgrade report of RHEL7 host without answer file inhibitor]
 +
 But we still have the ``Possible problems with remote login using root
 account'' inhibitor which we need to fix. Let’s look at that next.
@@ -141,8 +136,7 @@ can’t be resolved that way.
 
 * Here is our other inhibitor finding:
 +
-image::../1.3-report/images/root_account_inhibitor.svg[Details view of
-missing required answers in the answer file]
+image::root_account_inhibitor.svg[Details view of missing required answers in the answer file]
 +
 Like the previous inhibitor finding, this one also provides a detailed
 summary and a a fairly prescriptive recommended remediation. However, it
@@ -200,8 +194,7 @@ Analysis'' job template one more time again taking care to choose the
 completes, go back to the RHEL Web Console of your RHEL7 host and
 refresh the report. You should now see there are no inhibitors:
 +
-image::rhel7_no_inhibitors.svg[Pre-upgrade report of RHEL7 host
-with no more inhibitors]
+image::rhel7_no_inhibitors.svg[Pre-upgrade report of RHEL7 host with no more inhibitors]
 +
 With no inhibitors indicated on our RHEL7 and RHEL8 pet servers, we are
 ready to try the RHEL upgrade.

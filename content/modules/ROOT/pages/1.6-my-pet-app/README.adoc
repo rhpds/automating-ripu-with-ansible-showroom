@@ -278,12 +278,10 @@ there are any new findings. Refer to the steps in the previous exercises
 if you don’t have them memorized by heart already.
 * Did you notice that this high risk finding has popped up now?
 +
-image::packages_not_signed_by_rh.svg[Packages not signed by Red
-Hat found on the system high risk finding]
+image::packages_not_signed_by_rh.svg[Packages not signed by Red Hat found on the system high risk finding]
 * If we open the finding, we are presented with the following details:
 +
-image::packages_not_signed_details.svg[Packages not signed by Red
-Hat details view]
+image::packages_not_signed_details.svg[Packages not signed by Red Hat details view]
 * ``Packages not signed by Red Hat'' is just a fancy way of referring to
 3rd-party packages and/or package that are built in-house by your app
 teams. In the case of this finding, the package that has been identified

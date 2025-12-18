@@ -62,8 +62,7 @@ RHEL in-place upgrade automation is doing its thing.
 
 * Use VS Code to open a terminal session. For example:
 +
-image::new_term.svg[Example of how to open a terminal session in
-VS Code]
+image::new_term.svg[Example of how to open a terminal session in VS Code]
 * This terminal session will be running on the AAP control host
 `ansible-1`. Use the `cat /etc/hosts` command to see the hostnames of
 your pet app hosts. Next, use the `ssh` command to login to one of your
