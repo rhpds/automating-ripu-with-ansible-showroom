@@ -32,7 +32,7 @@ to review the local Leapp pre-upgrade report file:
 less /var/log/leapp/leapp-report.txt
 ----
 +
-This is a ``quick and dirty'' way to review the report, but doesn’t
+This is a ``quick and dirty`` way to review the report, but doesn’t
 scale if you need to review reports for a large number of hosts.
 +
 ____

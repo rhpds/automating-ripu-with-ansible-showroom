@@ -108,12 +108,12 @@ previous exercise. Navigate to Resources > Templates by clicking on
 will bring up a list of job templates that can be used to run playbook
 jobs on target hosts:
 +
-image::aap_templates.svg[Job templates listed on AAP Web UI]
+image::aap_templates.png[Job templates listed on AAP Web UI]
 * Click on the ``AUTO / 01 Analysis`` job template. This will display
 the Details tab of the job template:
 +
-image::analysis_template.svg[``AUTO / 01 Analysis`` job templates seen on AAP Web UI]
-* From here, we could use the ``Edit`` button if we wanted to make any
+image::analysis_template.png[``AUTO / 01 Analysis`` job templates seen on AAP Web UI]
+* From here, we could use the ``Edit template`` button if we wanted to make any
 changes to the job template. This job template is already configured, so
 we are ready to use it to submit a playbook job. To do this, use the
 ``Launch`` button which will bring up a series of prompts.
@@ -125,12 +125,12 @@ The prompts that each job template presents can be configured using the
 ``Prompt on launch`` checkboxes seen when editing a job template.
 ____
 +
-image::analysis_vars_prompt.svg[Analysis job variables prompt on AAP Web UI]
+image::analysis_vars_prompt.png[Analysis job variables prompt on AAP Web UI]
 * The first prompt as seen above allows for changing the default
 playbook variables or adding more variables. We don’t need to do this at
 this time, so just click the ``Next`` button to move on.
 +
-image::analysis_survey_prompt.svg[Analysis job survey prompt on AAP Web UI]
+image::analysis_survey_prompt.png[Analysis job survey prompt on AAP Web UI]
 * Next we see the job template survey prompt. A survey is a customizable
 set of prompts that can be configured from the Survey tab of the job
 template. For this job template, the survey allows for choosing a group
@@ -138,8 +138,8 @@ of hosts on which the job will execute the playbook. Choose the
 ``ALL_rhel`` option and click the ``Next`` button. This will bring you
 to a preview of the selected job options and variable settings.
 +
-image::analysis_preview.svg[Analysis job preview on AAP Web UI]
-* If you are satisfied with the job preview, use the ``Launch`` button
+image::analysis_preview.png[Analysis job preview on AAP Web UI]
+* If you are satisfied with the job preview, use the ``Finish`` button
 to start the playbook job.
 
 [#step-3-review-the-playbook-job-output]
@@ -186,7 +186,7 @@ ____
 Under the Details tab, you will see the ``Source Control URL`` setting
 that defines where job templates of this project will go to pull their
 playbooks. We see it is pointing to this git repo on GitHub:
-https://github.com/redhat-partner-tech/leapp-project. Open this URL in a
+https://github.com/rhpds/leapp-project. Open this URL in a
 new browser tab.
 * Go back to the AAP Web UI and now navigate to Resources > Templates >
 AUTO / 01 Analysis. Under the Details tab, you will see the ``Playbook``

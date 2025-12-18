@@ -4,7 +4,11 @@ The RHEL targets are getting the names "node1", "node2", "node3" instead of rhel
 
 Add the ALL_rhel group to the inventory in AAP
 
-RHEL 9 host is missing the leapp-repository package
+
+RHEL 8 needs cockpit-leapp installed
+RHEL 8 host is on 8.7 instead of 8.10
+
+RHEL 9 host is missing the leapp and cockpit-leapp packages
 
 
 
