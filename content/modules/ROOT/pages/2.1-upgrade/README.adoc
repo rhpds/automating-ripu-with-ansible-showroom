@@ -1,18 +1,5 @@
 == Workshop Exercise - Run OS Upgrade Jobs
 
-=== Table of Contents
-
-* link:#workshop-exercise---run-os-upgrade-jobs[Workshop Exercise - Run
-OS Upgrade Jobs]
-** link:#table-of-contents[Table of Contents]
-** link:#objectives[Objectives]
-** link:#guide[Guide]
-*** link:#step-1---launch-the-upgrade-workflow-job-template[Step 1 -
-Launch the Upgrade Workflow Job Template]
-*** link:#step-2---learn-more-about-leapp[Step 2 - Learn More About
-Leapp]
-** link:#conclusion[Conclusion]
-
 === Objectives
 
 * Use a workflow job template to create snapshots and start the upgrades
@@ -33,6 +20,7 @@ snapshot is created, the second playbook uses the Leapp utility to
 perform the upgrade where the host is advanced to the new RHEL major
 version.
 
+[#step-1-launch-the-upgrade-workflow-job-template]
 ==== Step 1 - Launch the Upgrade Workflow Job Template
 
 We are about to start the RHEL in-place upgrade of our pet application
@@ -72,6 +60,7 @@ image::images/upgrade_preview.svg[Upgrade job preview on AAP Web UI]
 * If you are satisfied with the job preview, use the ``Launch'' button
 to start the job.
 
+[#step-2-learn-more-about-leapp]
 ==== Step 2 - Learn More About Leapp
 
 After launching the upgrade job, the AAP Web UI will navigate
@@ -127,12 +116,3 @@ about the Leapp framework to better understand what is happening as the
 RHEL OS is being upgraded.
 
 In the next exercise, we’ll learn more about how snapshots work.
-
-'''''
-
-*Navigation*
-
-link:../1.6-my-pet-app/README.md[Previous Exercise] -
-link:../2.2-snapshots/README.md[Next Exercise]
-
-link:../README.md[Home]

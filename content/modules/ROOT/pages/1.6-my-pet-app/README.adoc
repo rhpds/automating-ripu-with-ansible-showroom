@@ -1,25 +1,5 @@
 == Workshop Exercise - Deploy a Pet App
 
-=== Table of Contents
-
-* link:#workshop-exercise---deploy-a-pet-app[Workshop Exercise - Deploy
-a Pet App]
-** link:#table-of-contents[Table of Contents]
-** link:#optional-exercise[Optional Exercise]
-** link:#objectives[Objectives]
-** link:#guide[Guide]
-*** link:#step-1---the-traditional-application-lifecycle[Step 1 - The
-Traditional Application Lifecycle]
-*** link:#step-2---installing-our-beloved-pet-application[Step 2 -
-Installing Our Beloved Pet Application]
-*** link:#step-3---test-the-pet-application[Step 3 - Test the Pet
-Application]
-*** link:#step-4---configure-the-application-to-start-on-reboot[Step 4 -
-Configure the Application to Start on Reboot]
-*** link:#step-5---run-another-pre-upgrade-report[Step 5 - Run Another
-Pre-upgrade Report]
-** link:#conclusion[Conclusion]
-
 === Optional Exercise
 
 This is an optional exercise. It is not required to successfully
@@ -39,6 +19,7 @@ server environments
 
 === Guide
 
+[#step-1-the-traditional-application-lifecycle]
 ==== Step 1 - The Traditional Application Lifecycle
 
 Let’s take a step back and think about why we want to do an in-place
@@ -70,6 +51,7 @@ we can assess if the RHEL in-place upgrade causes any impact. We want to
 see if the app still functions as expected under the new RHEL version
 after the upgrade.
 
+[#step-2-installing-our-beloved-pet-application]
 ==== Step 2 - Installing Our Beloved Pet Application
 
 In this step, we are going to install an example application. We are
@@ -201,6 +183,7 @@ o.s.s.petclinic.PetClinicApplication     : Started PetClinicApplication in 6.945
 +
 Type Ctrl-C to quit the `tailf` command.
 
+[#step-3-test-the-pet-application]
 ==== Step 3 - Test the Pet Application
 
 Now that we have installed our application and verified it is running,
@@ -233,6 +216,7 @@ trace will be logged in the `app.log` file.
 its expected behavior. After the upgrade, we will test it again to
 verify it has not been impacted.
 
+[#step-4-configure-the-application-to-start-on-reboot]
 ==== Step 4 - Configure the Application to Start on Reboot
 
 Right now, our application was started manually. We need to configure
@@ -281,6 +265,7 @@ ____
 +
 FIXME: Shame on us for not using DNS!
 
+[#step-5-run-another-pre-upgrade-report]
 ==== Step 5 - Run Another Pre-upgrade Report
 
 Whenever changes are made to a server, its a good idea to rerun the
@@ -321,12 +306,3 @@ pre-upgrade report.
 Congratulations on completing all the exercises in the first section of
 the workshop. It’s time now to upgrade RHEL and see if there will be any
 application impact.
-
-'''''
-
-*Navigation*
-
-link:../1.5-custom-modules/README.md[Previous Exercise] -
-link:../2.1-upgrade/README.md[Next Exercise]
-
-link:../README.md[Home]

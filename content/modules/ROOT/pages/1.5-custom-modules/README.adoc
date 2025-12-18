@@ -1,23 +1,5 @@
 == Workshop Exercise - Custom Modules
 
-=== Table of Contents
-
-* link:#workshop-exercise---custom-modules[Workshop Exercise - Custom
-Modules]
-** link:#table-of-contents[Table of Contents]
-** link:#optional-exercise[Optional Exercise]
-** link:#objectives[Objectives]
-** link:#guide[Guide]
-*** link:#step-1---what-are-custom-modules[Step 1 - What are Custom
-Modules?]
-*** link:#step-2---install-a-leapp-custom-actor[Step 2 - Install a Leapp
-Custom Actor]
-*** link:#step-3---generate-a-new-pre-upgrade-report[Step 3 - Generate a
-New Pre-upgrade Report]
-*** link:#step-4---learn-more-about-customizing-the-in-place-upgrade[Step
-4 - Learn More About Customizing the In-place Upgrade]
-** link:#conclusion[Conclusion]
-
 === Optional Exercise
 
 This is an optional exercise. It is not required to successfully
@@ -39,6 +21,7 @@ checks
 
 === Guide
 
+[#step-1-what-are-custom-modules?]
 ==== Step 1 - What are Custom Modules?
 
 Custom modules is a generic term that refers to any custom capabilities
@@ -74,6 +57,7 @@ achieved using Ansible. Tasks can be included in your upgrade playbook
 before and after the task that imports the `infra.leapp` collection
 `upgrade` role from the to actually perform RHEL OS upgrade.
 
+[#step-2-install-a-leapp-custom-actor]
 ==== Step 2 - Install a Leapp Custom Actor
 
 There is a collection of example custom actor at the GitHub repo
@@ -168,6 +152,7 @@ With this command, we just created a file under /boot with a timestamp
 later than the last reboot. This host is now out of compliance with our
 reboot hygiene policy!
 
+[#step-3-generate-a-new-pre-upgrade-report]
 ==== Step 3 - Generate a New Pre-upgrade Report
 
 We are now ready to try running a pre-upgrade report including the
@@ -199,6 +184,7 @@ sudo reboot
 * Now generate another pre-upgrade report after rebooting. Verify that
 this inhibitor finding has disappeared with the new report.
 
+[#step-4-learn-more-about-customizing-the-in-place-upgrade]
 ==== Step 4 - Learn More About Customizing the In-place Upgrade
 
 Read the knowledge article
@@ -228,12 +214,3 @@ actors or simply custom tasks added to your upgrade playbook. We
 demonstrated installing an RPM package that provides an example custom
 actor with additional pre-upgrade checks and generated a new pre-upgrade
 report to see it in action.
-
-'''''
-
-*Navigation*
-
-link:../1.4-remediate/README.md[Previous Exercise] -
-link:../1.6-my-pet-app/README.md[Next Exercise]
-
-link:../README.md[Home]

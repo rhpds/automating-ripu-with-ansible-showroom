@@ -1,22 +1,5 @@
 == Workshop Exercise - Rinse and Repeat
 
-=== Table of Contents
-
-* link:#workshop-exercise---rinse-and-repeat[Workshop Exercise - Rinse
-and Repeat]
-** link:#table-of-contents[Table of Contents]
-** link:#objectives[Objectives]
-** link:#guide[Guide]
-*** link:#step-1---what-you-learned[Step 1 - What You Learned]
-*** link:#step-2---activities-for-extra-credit[Step 2 - Activities for
-Extra Credit]
-*** link:#step-3---look-at-the-code[Step 3 - Look at the Code]
-**** link:#redhat-copinfraleapp[redhat-cop/infra.leapp]
-**** link:#oamgleapp-supplements[oamg/leapp-supplements]
-**** link:#redhat-partner-techleapp-project[redhat-partner-tech/leapp-project]
-**** link:#swapdisksnapshot[swapdisk/snapshot]
-** link:#thank-you[Thank You!]
-
 === Objectives
 
 * Review what we have learned in this workshop
@@ -32,6 +15,7 @@ RHEL upgrades at scale.
 
 Let’s review what we learned and think about what’s next.
 
+[#step-1-what-you-learned]
 ==== Step 1 - What You Learned
 
 With this workshop, you gained hands-on experience while learning about
@@ -54,6 +38,7 @@ playbooks to handle common remediations and third-party tools and
 agents.
 * But the most important lesson we learned is ``You can do this!''
 
+[#step-2-activities-for-extra-credit]
 ==== Step 2 - Activities for Extra Credit
 
 Hopefully, this workshop has opened your eyes to what is possible, but
@@ -89,6 +74,7 @@ Doing?]
 own ideas for additional learning and experimentation. Remember you can
 upgrade and roll back as often as you like. Rinse and repeat!
 
+[#step-3-look-at-the-code]
 ==== Step 3 - Look at the Code
 
 All of the Ansible roles and playbooks used in this workshop are
@@ -140,11 +126,3 @@ rating or write a review. If you have any ideas for improvements or new
 features, don’t hesitate to raise an issue
 https://github.com/ansible/workshops/issues/new/choose[here] tagging
 @swapdisk and @heatmiser. All ideas and feedback are welcome!
-
-'''''
-
-*Navigation*
-
-link:../3.3-check-undo/README.md[Previous Exercise]
-
-link:../README.md[Home]

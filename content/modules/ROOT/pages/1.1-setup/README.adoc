@@ -1,23 +1,5 @@
 == Workshop Exercise - Your Lab Environment
 
-=== Table of Contents
-
-* link:#workshop-exercise---your-lab-environment[Workshop Exercise -
-Your Lab Environment]
-** link:#table-of-contents[Table of Contents]
-** link:#objectives[Objectives]
-** link:#guide[Guide]
-*** link:#your-lab-environment[Your Lab Environment]
-*** link:#step-1---access-the-environment[Step 1 - Access the
-Environment]
-*** link:#step-2---open-a-terminal-session[Step 2 - Open a Terminal
-Session]
-*** link:#step-3---access-the-aap-web-ui[Step 3 - Access the AAP Web UI]
-*** link:#step-4---access-the-rhel-web-console[Step 4 - Access the RHEL
-Web Console]
-*** link:#step-5---challenge-labs[Step 5 - Challenge Labs]
-** link:#conclusion[Conclusion]
-
 === Objectives
 
 * Understand the lab topology and how to access the environment
@@ -45,6 +27,7 @@ operating system (OS).
 |RHEL9 pet app host 1 |rhel9
 |===
 
+[#step-1---access-the-environment]
 ==== Step 1 - Access the Environment
 
 We will use Visual Studio Code (VS Code) as it provides a convenient and
@@ -70,7 +53,7 @@ Code user experience. This is optional as the default settings will work
 fine for this workshop. Feel free to step though the wizard to explore
 the VS Code bells and whistles or you may just skip it.
 ____
-
+[#step-2---open-a-terminal-session]
 ==== Step 2 - Open a Terminal Session
 
 Terminal sessions provide access to the RHEL commands and utilities that
@@ -97,6 +80,7 @@ release information
 `Red Hat Enterprise Linux Server release 7.9 (Maipo)` and kernel version
 `3.10.0-1160.88.1.el7.x86_64` from that host.
 
+[#step-3---access-the-aap-web-ui]
 ==== Step 3 - Access the AAP Web UI
 
 The AAP Web UI is where we will go to submit and check the status of the
@@ -115,6 +99,7 @@ image::images/aap_console_example.svg[Example AAP Web UI dashboard]
 * We will learn more about how to use the AAP Web UI in the next
 exercise.
 
+[#step-4---access-the-rhel-web-console]
 ==== Step 4 - Access the RHEL Web Console
 
 We will use the RHEL Web Console to review the results of the Leapp
@@ -132,6 +117,7 @@ image::images/cockpit_example.svg[Example RHEL Web Console]
 * We will revisit the RHEL Web Console when we are ready to review our
 pre-upgrade reports in an upcoming exercise.
 
+[#step-5---challenge-labs]
 ==== Step 5 - Challenge Labs
 
 You will soon discover that many exercises in the workshop come with a
@@ -151,11 +137,3 @@ the RHEL Web Console where we will soon be reviewing pre-upgrade
 reports.
 
 Use the link below to move on the next exercise.
-
-'''''
-
-*Navigation*
-
-link:../1.2-preupg/README.md[Next Exercise]
-
-link:../README.md[Home]

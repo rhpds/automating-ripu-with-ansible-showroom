@@ -1,26 +1,5 @@
 == Workshop Exercise - Let’s Talk About Snapshots
 
-=== Table of Contents
-
-* link:#workshop-exercise---lets-talk-about-snapshots[Workshop Exercise
-- Let’s Talk About Snapshots]
-** link:#table-of-contents[Table of Contents]
-** link:#objectives[Objectives]
-** link:#guide[Guide]
-*** link:#step-1---what-are-snapshots-and-what-are-they-not[Step 1 -
-What are Snapshots and What are They Not]
-*** link:#step-2---assessing-different-snapshot-solutions[Step 2 -
-Assessing Different Snapshot Solutions]
-**** link:#lvm[LVM]
-**** link:#vmware[VMware]
-**** link:#amazon-ebs[Amazon EBS]
-**** link:#break-mirror[Break Mirror]
-**** link:#rear[ReaR]
-*** link:#step-3---snapshot-scope[Step 3 - Snapshot Scope]
-*** link:#step-4---choosing-the-best-snapshot-solution[Step 4 - Choosing
-the Best Snapshot Solution]
-** link:#conclusion[Conclusion]
-
 === Objectives
 
 * Understand the difference between backups and snapshots
@@ -45,6 +24,7 @@ strategies for overcoming them.
 Let’s start by defining exactly what we mean when we talk about
 snapshots.
 
+[#step-1-what-are-snapshots-and-what-are-they-not]
 ==== Step 1 - What are Snapshots and What are They Not
 
 Most organizations with a mature traditional computing environment will
@@ -86,6 +66,7 @@ backup and restore. It is this ability to quickly take an entire server
 back in time that makes snapshots ideal for reducing the risk of
 performing RHEL in-place upgrades.
 
+[#step-2-assessing-different-snapshot-solutions]
 ==== Step 2 - Assessing Different Snapshot Solutions
 
 There are a number of different types of snapshot solutions you may
@@ -360,6 +341,7 @@ Read the article
 https://www.redhat.com/sysadmin/rear-backup-and-recover[ReaR: Backup and
 recover your Linux server with confidence] to learn more.
 
+[#step-3-snapshot-scope]
 ==== Step 3 - Snapshot Scope
 
 The best practice for allocating the local storage of a RHEL servers is
@@ -430,6 +412,7 @@ result in the app state becoming out of sync with external systems
 leading to unpredictable issues. When rolling back app data for any
 reason, be aware of the potential headaches that may result.
 
+[#step-4-choosing-the-best-snapshot-solution]
 ==== Step 4 - Choosing the Best Snapshot Solution
 
 There are a number of factors you should consider when deciding which
@@ -462,12 +445,3 @@ your snapshot/rollback automation approach.
 
 In the next exercise, we’ll go back to look at how the RHEL in-place
 upgrades are progressing on our pet application servers.
-
-'''''
-
-*Navigation*
-
-link:../2.1-upgrade/README.md[Previous Exercise] -
-link:../2.3-check-upg/README.md[Next Exercise]
-
-link:../README.md[Home]

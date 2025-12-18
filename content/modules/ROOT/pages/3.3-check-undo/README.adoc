@@ -1,17 +1,5 @@
 == Workshop Exercise - Check if Upgrade Undone
 
-=== Table of Contents
-
-* link:#workshop-exercise---check-if-upgrade-undone[Workshop Exercise -
-Check if Upgrade Undone]
-** link:#table-of-contents[Table of Contents]
-** link:#objectives[Objectives]
-** link:#guide[Guide]
-*** link:#step-1---our-state-after-rolling-back[Step 1 - Our State After
-Rolling Back]
-*** link:#step-2---whats-next[Step 2 - What’s Next?]
-** link:#conclusion[Conclusion]
-
 === Objectives
 
 * Validate that all changes and impacts caused by the upgrade are undone
@@ -25,6 +13,7 @@ In the previous exercise, we rolled back one of our pet app servers. Now
 we will take a closer look at where that has left us and consider where
 do we go from there.
 
+[#step-1-our-state-after-rolling-back]
 ==== Step 1 - Our State After Rolling Back
 
 In this step, we will repeat the observations we made on our host after
@@ -78,6 +67,7 @@ The business will not be happy about losing their changes, so make sure
 they are aware of the risk to app data if you choose to do everything
 scope snapshots.
 
+[#step-2-what’s-next?]
 ==== Step 2 - What’s Next?
 
 No matter what the reason is for rolling back, the next step will be to
@@ -117,12 +107,3 @@ rolling back and we considered next steps for some different scenarios.
 In the next and final exercise of the workshop, we’ll review what we
 learned and explore some additional things you may want to play with in
 the workshop lab environment.
-
-'''''
-
-*Navigation*
-
-link:../3.2-rollback/README.md[Previous Exercise] -
-link:../3.4-conclusion/README.md[Next Exercise]
-
-link:../README.md[Home]

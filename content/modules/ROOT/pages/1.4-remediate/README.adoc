@@ -1,20 +1,5 @@
 == Workshop Exercise - Perform Recommended Remediation
 
-=== Table of Contents
-
-* link:#workshop-exercise---perform-recommended-remediation[Workshop
-Exercise - Perform Recommended Remediation]
-** link:#table-of-contents[Table of Contents]
-** link:#objectives[Objectives]
-** link:#guide[Guide]
-*** link:#step-1---explore-options-for-resolving-inhibitors[Step 1 -
-Explore Options for Resolving Inhibitors]
-*** link:#step-2---managing-the-leapp-answer-file[Step 2 - Managing the
-Leapp Answer File]
-*** link:#step-3---resolving-inhibitors-using-a-remediation-playbook[Step
-3 - Resolving Inhibitors Using a Remediation Playbook]
-** link:#conclusion[Conclusion]
-
 === Objectives
 
 * Consider different options for resolving inhibitor risk findings
@@ -24,6 +9,7 @@ role
 
 === Guide
 
+[#step-1-explore-options-for-resolving-inhibitors]
 ==== Step 1 - Explore Options for Resolving Inhibitors
 
 In the previous exercise, we reviewed the Leapp pre-upgrade reports that
@@ -71,6 +57,7 @@ going to run on this single host.
 Automation Platform (AAP) to perform remediations in bulk across a large
 RHEL estate.
 
+[#step-2-managing-the-leapp-answer-file]
 ==== Step 2 - Managing the Leapp Answer File
 
 The Leapp framework uses an answer file as a means of accepting user
@@ -143,6 +130,7 @@ without answer file inhibitor]
 But we still have the ``Possible problems with remote login using root
 account'' inhibitor which we need to fix. Let’s look at that next.
 
+[#step-3-resolving-inhibitors-using-a-remediation-playbook]
 ==== Step 3 - Resolving Inhibitors Using a Remediation Playbook
 
 In the previous step, we were able to resolve an inhibitor finding by
@@ -243,12 +231,3 @@ exercise:
 
 * link:../2.1-upgrade/README.md[Exercise 2.1 - Run the RHEL Upgrade
 Jobs]
-
-'''''
-
-*Navigation*
-
-link:../1.3-report/README.md[Previous Exercise] -
-link:../1.5-custom-modules/README.md[Next Exercise]
-
-link:../README.md[Home]

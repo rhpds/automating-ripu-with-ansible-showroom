@@ -1,18 +1,5 @@
 == Workshop Exercise - Check if the Upgrades Worked
 
-=== Table of Contents
-
-* link:#workshop-exercise---check-if-the-upgrades-worked[Workshop
-Exercise - Check if the Upgrades Worked]
-** link:#table-of-contents[Table of Contents]
-** link:#objectives[Objectives]
-** link:#guide[Guide]
-*** link:#step-1---review-the-upgrade-playbook-job-log[Step 1 - Review
-the Upgrade Playbook Job Log]
-*** link:#step-2---verify-the-hosts-are-upgraded-to-next-rhel-version[Step
-2 - Verify the Hosts are Upgraded to Next RHEL Version]
-** link:#conclusion[Conclusion]
-
 === Objectives
 
 * Review the upgrade playbook job log
@@ -35,6 +22,7 @@ diagram with app validation steps highlighted]
 
 Let’s get started!
 
+[#step-1-review-the-upgrade-playbook-job-log]
 ==== Step 1 - Review the Upgrade Playbook Job Log
 
 The first thing we want to do is see if the job running the upgrade
@@ -77,6 +65,7 @@ upgrade playbook run play recap]
 If there are no failed runs, the RHEL in-place upgrade is done on all of
 our pet app servers.
 
+[#step-2-verify-the-hosts-are-upgraded-to-next-rhel-version]
 ==== Step 2 - Verify the Hosts are Upgraded to Next RHEL Version
 
 Now let’s make sure our pet app servers are actually upgraded to the
@@ -142,12 +131,3 @@ exercises:
 * link:../3.1-rm-rf/README.md[Exercise 3.1 - (Optional) Trash the
 Instance]
 * link:../3.2-rollback/README.md[Exercise 3.2 - Run Rollback Job]
-
-'''''
-
-*Navigation*
-
-link:../2.1-upgrade/README.md[Previous Exercise] -
-link:../2.4-check-pet-app/README.md[Next Exercise]
-
-link:../README.md[Home]

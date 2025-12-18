@@ -1,24 +1,5 @@
 == Workshop Exercise - Trash the Instance
 
-=== Table of Contents
-
-* link:#workshop-exercise---trash-the-instance[Workshop Exercise - Trash
-the Instance]
-** link:#table-of-contents[Table of Contents]
-** link:#optional-exercise[Optional Exercise]
-** link:#objectives[Objectives]
-** link:#guide[Guide]
-*** link:#step-1---select-a-pet-app-server[Step 1 - Select a Pet App
-Server]
-*** link:#step-2---choose-your-poison[Step 2 - Choose your Poison]
-**** link:#delete-everything[Delete everything]
-**** link:#uninstall-glibc[Uninstall glibc]
-**** link:#break-the-application[Break the application]
-**** link:#wipe-the-boot-record[Wipe the boot record]
-**** link:#fill-up-your-disk[Fill up your disk]
-**** link:#set-off-a-fork-bomb[Set off a fork bomb]
-** link:#conclusion[Conclusion]
-
 === Optional Exercise
 
 This is an optional exercise. It is not required to successfully
@@ -44,6 +25,7 @@ demonstrate how rolling back can save the day.
 
 Let’s get started!
 
+[#step-1-select-a-pet-app-server]
 ==== Step 1 - Select a Pet App Server
 
 In the next exercise, we will be rolling back the RHEL upgrade on one of
@@ -66,6 +48,7 @@ user. For example:
 +
 Verify you see a root prompt like the example above.
 
+[#step-2-break-your-application]
 ==== Step 2 - Break your application
 
 * In
@@ -105,12 +88,3 @@ Congratulations, you have trashed one of your app servers. Wasn’t that
 fun?
 
 In the next exercise, you will untrash it by rolling back the upgrade.
-
-'''''
-
-*Navigation*
-
-link:../2.4-check-pet-app/README.md[Previous Exercise] -
-link:../3.2-rollback/README.md[Next Exercise]
-
-link:../README.md[Home]
