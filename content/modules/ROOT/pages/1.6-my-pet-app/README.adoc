@@ -200,7 +200,7 @@ the command above. This should open the application web user interface.
 If the application is working correctly, you should see something like
 this:
 +
-image::images/petapp_home.svg[Pet Clinic application home page]
+image::petapp_home.svg[Pet Clinic application home page]
 * Try the different function tabs at the top of the web user interface.
 For example, navigate to ``FIND OWNERS'' and search for Davis. Click on
 one of the owner records to see their details.
@@ -278,11 +278,11 @@ there are any new findings. Refer to the steps in the previous exercises
 if you don’t have them memorized by heart already.
 * Did you notice that this high risk finding has popped up now?
 +
-image::images/packages_not_signed_by_rh.svg[Packages not signed by Red
+image::packages_not_signed_by_rh.svg[Packages not signed by Red
 Hat found on the system high risk finding]
 * If we open the finding, we are presented with the following details:
 +
-image::images/packages_not_signed_details.svg[Packages not signed by Red
+image::packages_not_signed_details.svg[Packages not signed by Red
 Hat details view]
 * ``Packages not signed by Red Hat'' is just a fancy way of referring to
 3rd-party packages and/or package that are built in-house by your app

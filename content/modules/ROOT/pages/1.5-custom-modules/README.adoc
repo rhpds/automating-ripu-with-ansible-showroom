@@ -167,13 +167,13 @@ remote host menu to navigate to the pet app server where you installed
 the custom actor package. Refresh the pre-upgrade report. You should now
 see there is a new inhibitor finding. For example:
 +
-image::images/reboot_hygiene.svg[Pre-upgrade report showing inhibitor
+image::reboot_hygiene.svg[Pre-upgrade report showing inhibitor
 finding from custom actor]
 * Click on the finding to open the detail view. Here we see the summary
 with an explanation of the finding and the remediation hint which
 politely says please reboot:
 +
-image::images/reboot_hygiene_finding.svg[Finding details reported by
+image::reboot_hygiene_finding.svg[Finding details reported by
 reboot hygiene custom actor]
 * Reboot the host to resolve the inhibitor finding. For example:
 +

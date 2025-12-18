@@ -79,30 +79,30 @@ reports. Do this by clicking the ``student​@​ansible-1.example.com'' box
 in the top left corner of the RHEL Web Console to reveal the remote host
 menu. For example:
 +
-image::images/remote_host_menu_with_pets.svg[Remote host menu listing
+image::remote_host_menu_with_pets.svg[Remote host menu listing
 all pet app servers]
 * You can use the remote host menu to navigate to the web consoles of
 each of your pet app servers. Try selecting one of your pet servers now.
 The RHEL Web Console system overview page will show the operating system
 version installed. For example, this pet app server is running RHEL8:
 +
-image::images/rhel8_os.svg[upward-moray running Red Hat Enterprise Linux
+image::rhel8_os.svg[upward-moray running Red Hat Enterprise Linux
 8.7 (Ootpa)]
 +
 Here is an example of one running RHEL7:
 +
-image::images/rhel7_os.svg[Operating System Red Hat Enterprise Linux
+image::rhel7_os.svg[Operating System Red Hat Enterprise Linux
 Server 7.9 (Maipo)]
 * When you navigate to different hosts in the RHEL Web Console, look out
 for the ``limited access mode'' warning:
 +
-image::images/limited_access.svg[Web console is running in limited
+image::limited_access.svg[Web console is running in limited
 access mode]
 +
 If you see this, use the button to switch to administrative access mode
 before proceeding. A confirmation will appear like this:
 +
-image::images/administrative_access.svg[You now have administrative
+image::administrative_access.svg[You now have administrative
 access]
 * Take some time to explore the navigation menus available with the RHEL
 Web Console of your different pet app servers. Once you feel comfortable
@@ -124,7 +124,7 @@ upgraded.
 
 We are now here in the automation approach workflow:
 
-image::images/ripu-workflow-hl-review.svg[Automation approach workflow
+image::ripu-workflow-hl-review.svg[Automation approach workflow
 diagram with review report step highlighted]
 
 * Navigate to the RHEL Web Console remote host menu and click on the
@@ -137,7 +137,7 @@ use the main menu to navigate to Tools > Upgrade Report. This will
 display the Leapp pre-upgrade report that was generated for the selected
 host. For example, the report might look like this:
 +
-image::images/rhel8_report.svg[Example pre-upgrade report of RHEL8 host]
+image::rhel8_report.svg[Example pre-upgrade report of RHEL8 host]
 +
 ____
 *Note*
@@ -160,7 +160,7 @@ identify where GRUB core is located.'' You can see additional details
 for any finding by clicking on it in the list. For example, click on the
 first finding and you will see these details:
 +
-image::images/grub_core_finding.svg[Details view of grub core finding]
+image::grub_core_finding.svg[Details view of grub core finding]
 +
 This finding is being reported because the EC2 instances deployed for
 the workshop do not have a separate /boot partition. We’ll ignore this
@@ -169,7 +169,7 @@ Challenge Lab in a later exercise.
 * The next finding is titled ``Remote root logins globally allowed using
 password.'' Click on it to see the details:
 +
-image::images/remote_root_logins_finding.svg[Details view of remote root
+image::remote_root_logins_finding.svg[Details view of remote root
 logins finding]
 +
 This finding is meant to raise awareness of a change to the default root
@@ -179,7 +179,7 @@ in directly as the root user.
 * That brings us to the final high risk finding. This one is a little
 embarrassing because it’s actually a known bug in the Leapp framework.
 +
-image::images/leapp_bug_finding.svg[Details view usage of deprecated
+image::leapp_bug_finding.svg[Details view usage of deprecated
 model bug finding]
 +
 Luckily, it is completely benign and we can safely ignore it. This bug
@@ -212,7 +212,7 @@ chosen is RHEL7. Then use the main menu to navigate to Tools > Upgrade
 Report. This will bring up the Leapp pre-upgrade report for the selected
 host. For example, the report might look like this:
 +
-image::images/rhel7_report.svg[Example pre-upgrade report of RHEL7 host]
+image::rhel7_report.svg[Example pre-upgrade report of RHEL7 host]
 +
 ____
 *Note*
@@ -238,7 +238,7 @@ pre-upgrade report. At the top of the list we see the ``Packages
 available in excluded repositories will not be installed'' finding.
 Clicking on the finding to bring up the detailed view, we see this:
 +
-image::images/excluded_repos_finding.svg[Details view of packages
+image::excluded_repos_finding.svg[Details view of packages
 available in excluded repositories will not be installed]
 +
 This finding is warning that packages python3-pyxattr and rpcgen will
@@ -249,7 +249,7 @@ informational finding titled ``Excluded target system repositories'' for
 more information. Scroll down and click on that finding to show its
 details:
 +
-image::images/enablerepo_info_finding.svg[Details view of excluded
+image::enablerepo_info_finding.svg[Details view of excluded
 target system repositories information finding]
 +
 Here we see the remediation hint suggests to run the `leapp` utility
@@ -260,7 +260,7 @@ variable when submitting the upgrade playbook job. Stay tuned!
 * The next high risk entry on the list is the ``Difference in Python
 versions and support in RHEL8'' finding:
 +
-image::images/python_finding.svg[Details view of Difference in Python
+image::python_finding.svg[Details view of Difference in Python
 versions and support in RHEL8 finding]
 +
 This finding could be a concern if we have any apps on our pet server
@@ -271,7 +271,7 @@ finding.
 ``Possible problems with remote login using root account'' finding. You
 know the drill; click on the finding to review the details:
 +
-image::images/root_account_inhibitor.svg[Details view of possible
+image::root_account_inhibitor.svg[Details view of possible
 problems with remote login using root account inhibitor finding]
 +
 Remember that with inhibitor findings, if we don’t take action to
@@ -280,7 +280,7 @@ upgrade from going forward.
 * The other inhibitor is the ``Missing required answers in the answer
 file'' finding. Here are the details for this one:
 +
-image::images/missing_answers_inhibitor.svg[Details view of missing
+image::missing_answers_inhibitor.svg[Details view of missing
 required answers in the answer file]
 +
 Here again, we will need to take action to remediate this finding. Don’t

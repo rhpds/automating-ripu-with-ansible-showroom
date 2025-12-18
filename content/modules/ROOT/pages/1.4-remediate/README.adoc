@@ -21,12 +21,12 @@ them before those hosts can be upgraded.
 
 We are now here in our automation approach workflow:
 
-image::images/ripu-workflow-hl-remediate.svg[Automation approach
+image::ripu-workflow-hl-remediate.svg[Automation approach
 workflow diagram with apply recommended remediations step highlighted]
 
 * Let’s start by dissecting one of our inhibitor findings:
 +
-image::images/missing_answers_dissected.svg[Details view of missing
+image::missing_answers_dissected.svg[Details view of missing
 required answers in the answer file]
 +
 image:images/circle_1.svg[1.] Each finding has a unique title.
@@ -90,7 +90,7 @@ the Variables prompt:
 +
 For example:
 +
-image::images/analysis_leapp_answerfile.svg[Setting the
+image::analysis_leapp_answerfile.svg[Setting the
 `leapp_answerfile` input variable]
 +
 After making the variable setting as shown above, click the ``Next''
@@ -99,7 +99,7 @@ used the ``ALL_rhel'' option to run the pre-upgrade on all our pet
 servers. However, our `leapp_answerfile` setting is specific to our
 RHEL7 hosts, so choose the ``rhel7'' option this time:
 +
-image::images/analysis_survey_rhel7_only.svg[Choose ``rhel7'' at the
+image::analysis_survey_rhel7_only.svg[Choose ``rhel7'' at the
 survey prompt]
 +
 Click the ``Next'' button to proceed to the preview prompt. If you are
@@ -124,7 +124,7 @@ inhibitor finding is no longer being reported.
 +
 For example:
 +
-image::images/rhel7_answer_fixed.svg[Pre-upgrade report of RHEL7 host
+image::rhel7_answer_fixed.svg[Pre-upgrade report of RHEL7 host
 without answer file inhibitor]
 +
 But we still have the ``Possible problems with remote login using root
@@ -200,7 +200,7 @@ Analysis'' job template one more time again taking care to choose the
 completes, go back to the RHEL Web Console of your RHEL7 host and
 refresh the report. You should now see there are no inhibitors:
 +
-image::images/rhel7_no_inhibitors.svg[Pre-upgrade report of RHEL7 host
+image::rhel7_no_inhibitors.svg[Pre-upgrade report of RHEL7 host
 with no more inhibitors]
 +
 With no inhibitors indicated on our RHEL7 and RHEL8 pet servers, we are

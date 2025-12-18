@@ -17,7 +17,7 @@ It’s time to see verify the result of the upgrades and let our
 application teams assess if their pet apps are still good. We are here
 in the our RHEL in-place upgrade automation workflow:
 
-image::images/ripu-workflow-hl-validate.svg[Automation approach workflow
+image::ripu-workflow-hl-validate.svg[Automation approach workflow
 diagram with app validation steps highlighted]
 
 Let’s get started!
@@ -43,7 +43,7 @@ ____
 +
 For example:
 +
-image::images/upgrade_jobs.svg[AAP Web UI listing upgrade job entries]
+image::upgrade_jobs.svg[AAP Web UI listing upgrade job entries]
 * If the playbook run finished without any failed tasks, you should see
 ``Successful'' displayed with a green checkmark.
 +
@@ -59,7 +59,7 @@ Scroll down to the end of the log output to see the ``PLAY RECAP''
 indicating the success or failure status for the playbook run executed
 on each host. Here is what you should expect to see:
 +
-image::images/upgrade_play_recap.svg[AAP Web UI showing successful
+image::upgrade_play_recap.svg[AAP Web UI showing successful
 upgrade playbook run play recap]
 +
 If there are no failed runs, the RHEL in-place upgrade is done on all of
@@ -92,12 +92,12 @@ ____
 For example, this pet app server that previously had RHEL8 is now
 reporting RHEL9:
 +
-image::images/rhel9_upgraded.svg[fluent-bee running Red Hat Enterprise
+image::rhel9_upgraded.svg[fluent-bee running Red Hat Enterprise
 Linux 9.2 (Plow)]
 +
 Here is an example one that was previously RHEL7 now running RHEL8:
 +
-image::images/rhel8_upgraded.svg[vocal-hyena running Red Hat Enterprise
+image::rhel8_upgraded.svg[vocal-hyena running Red Hat Enterprise
 Linux Server 8.8 (Oopta)]
 * You can also check the RHEL and kernel versions from the command line
 following the steps you used with
@@ -108,7 +108,7 @@ At the shell prompt of your pet app servers, use the
 `cat /etc/redhat-release` and `uname -r` commands. Here’s an example
 showing a pet app server that was upgraded to RHEL9:
 +
-image::images/rhel9_commands.svg[command output showing RHEL9 is
+image::rhel9_commands.svg[command output showing RHEL9 is
 installed]
 
 === Conclusion
