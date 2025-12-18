@@ -55,7 +55,7 @@ ____
 ==== Step 2 - Open a Terminal Session
 
 Terminal sessions provide access to the RHEL commands and utilities that
-will help us understand what’s going on ``behind the curtain'' when the
+will help us understand what's going on ``behind the curtain`` when the
 RHEL in-place upgrade automation is doing its thing.
 
 * Use VS Code to open a terminal session. For example:
@@ -79,7 +79,7 @@ Ansible playbook jobs we will use to automate the RHEL in-place upgrade
 workflow.
 
 * Let’s open the AAP Web UI in a new web browser tab using the
-``Console'' link under ``Red Hat Ansible Automation Controller'' on the
+``Console`` link under ``Red Hat Ansible Automation Controller`` on the
 workshop launch page. For example:
 +
 image::aap_link.png[Example link to AAP Web UI]
@@ -96,7 +96,7 @@ exercise.
 We will use the RHEL Web Console to review the results of the Leapp
 pre-upgrade reports we generate for our pet app servers.
 
-* Open a new web browser tab using the ``Console'' link under ``Cockpit
+* Open a new web browser tab using the ``Console`` link under ``Cockpit``
 Interactive Linux Server Admin Interface'' on the workshop launch page.
 For example:
 +
@@ -112,7 +112,7 @@ pre-upgrade reports in an upcoming exercise.
 ==== Step 5 - Challenge Labs
 
 You will soon discover that many exercises in the workshop come with a
-``Challenge Lab'' step. These labs are meant to give you a small task to
+``Challenge Lab`` step. These labs are meant to give you a small task to
 solve using what you have learned so far. The solution of the task is
 shown underneath a warning sign.
 

@@ -104,42 +104,42 @@ lab environment.
 
 * Return to the AAP Web UI browser tab you opened in step 3 of the
 previous exercise. Navigate to Resources > Templates by clicking on
-``Templates'' under the ``Resources'' group in the navigation menu. This
+``Templates`` under the ``Resources`` group in the navigation menu. This
 will bring up a list of job templates that can be used to run playbook
 jobs on target hosts:
 +
 image::aap_templates.svg[Job templates listed on AAP Web UI]
-* Click on the ``AUTO / 01 Analysis'' job template. This will display
+* Click on the ``AUTO / 01 Analysis`` job template. This will display
 the Details tab of the job template:
 +
-image::analysis_template.svg[``AUTO / 01 Analysis'' job templates seen on AAP Web UI]
-* From here, we could use the ``Edit'' button if we wanted to make any
+image::analysis_template.svg[``AUTO / 01 Analysis`` job templates seen on AAP Web UI]
+* From here, we could use the ``Edit`` button if we wanted to make any
 changes to the job template. This job template is already configured, so
 we are ready to use it to submit a playbook job. To do this, use the
-``Launch'' button which will bring up a series of prompts.
+``Launch`` button which will bring up a series of prompts.
 +
 ____
 *Note*
 
 The prompts that each job template presents can be configured using the
-``Prompt on launch'' checkboxes seen when editing a job template.
+``Prompt on launch`` checkboxes seen when editing a job template.
 ____
 +
 image::analysis_vars_prompt.svg[Analysis job variables prompt on AAP Web UI]
 * The first prompt as seen above allows for changing the default
 playbook variables or adding more variables. We don’t need to do this at
-this time, so just click the ``Next'' button to move on.
+this time, so just click the ``Next`` button to move on.
 +
 image::analysis_survey_prompt.svg[Analysis job survey prompt on AAP Web UI]
 * Next we see the job template survey prompt. A survey is a customizable
 set of prompts that can be configured from the Survey tab of the job
 template. For this job template, the survey allows for choosing a group
 of hosts on which the job will execute the playbook. Choose the
-``ALL_rhel'' option and click the ``Next'' button. This will bring you
+``ALL_rhel`` option and click the ``Next`` button. This will bring you
 to a preview of the selected job options and variable settings.
 +
 image::analysis_preview.svg[Analysis job preview on AAP Web UI]
-* If you are satisfied with the job preview, use the ``Launch'' button
+* If you are satisfied with the job preview, use the ``Launch`` button
 to start the playbook job.
 
 [#step-3-review-the-playbook-job-output]
@@ -149,18 +149,18 @@ After launching the analysis playbook job, the AAP Web UI will navigate
 automatically to the job output page for the job you just started.
 
 * While the playbook job is running, you can monitor its progress by
-clicking the ``Follow'' button. When you are in follow mode, the output
+clicking the ``Follow`` button. When you are in follow mode, the output
 will scroll automatically as task results are streamed to the bottom of
 job output shown in the AAP Web UI.
 * The analysis playbook will run the Leapp pre-upgrade scan. This will
 take about two or three minutes to complete. When it is done, you can
-find a ``PLAY RECAP'' at the end of the job output showing the success
+find a ``PLAY RECAP`` at the end of the job output showing the success
 or failure status for the playbook runs executed on each host. A status
-of ``failed=0'' indicates a successful playbook run. Scroll to the
+of ``failed=0`` indicates a successful playbook run. Scroll to the
 bottom of the job output and you should see that your job summary looks
 like this example:
 +
-image::analysis_job_recap.svg[Analysis job ``PLAY RECAP'' as seen at the end of the job output]
+image::analysis_job_recap.svg[Analysis job ``PLAY RECAP`` as seen at the end of the job output]
 
 [#step-4-challenge-lab-analysis-playbook]
 ==== Step 4 - Challenge Lab: Analysis Playbook
@@ -170,8 +170,8 @@ Let’s take a closer look at the playbook we just ran.
 ____
 *Tip*
 
-Try looking at the configuration details of the ``Project Leapp''
-project and the ``AUTO / 01 Analysis'' job template.
+Try looking at the configuration details of the ``Project Leapp``
+project and the ``AUTO / 01 Analysis`` job template.
 ____
 
 Can you find the upstream source repo and playbook code?
@@ -183,13 +183,13 @@ ____
 ____
 
 * In the AAP Web UI, navigate to Resources > Projects > Project Leapp.
-Under the Details tab, you will see the ``Source Control URL'' setting
+Under the Details tab, you will see the ``Source Control URL`` setting
 that defines where job templates of this project will go to pull their
 playbooks. We see it is pointing to this git repo on GitHub:
 https://github.com/redhat-partner-tech/leapp-project. Open this URL in a
 new browser tab.
 * Go back to the AAP Web UI and now navigate to Resources > Templates >
-AUTO / 01 Analysis. Under the Details tab, you will see the ``Playbook''
+AUTO / 01 Analysis. Under the Details tab, you will see the ``Playbook``
 setting with the name of the playbook this job template runs when it is
 used to submit a job. The playbook name is `analysis.yml`. In your
 GitHub browser tab, you can find `analysis.yml` listed in the files of

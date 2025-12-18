@@ -79,7 +79,7 @@ The procedure below steps though the commands required to _manually_
 install and start the example application. This is done very much to
 mock how older traditional apps are deployed in the enterprise. If you
 want to take a shortcut as an alternative to manually running a bunch of
-commands, you can launch the ``PETS / App Install'' job template to
+commands, you can launch the ``PETS / App Install`` job template to
 deploy the example app.
 
 If the app install job is successful, you can skip ahead to
@@ -202,13 +202,13 @@ this:
 +
 image::petapp_home.svg[Pet Clinic application home page]
 * Try the different function tabs at the top of the web user interface.
-For example, navigate to ``FIND OWNERS'' and search for Davis. Click on
+For example, navigate to ``FIND OWNERS`` and search for Davis. Click on
 one of the owner records to see their details.
 +
-Use the ``Edit Owner'' and ``Add New Pet'' buttons to make changes and
+Use the ``Edit Owner`` and ``Add New Pet`` buttons to make changes and
 add new records.
 +
-The ``ERROR'' tab in the top-right corner is a error handling test
+The ``ERROR`` tab in the top-right corner is a error handling test
 function. If you click it, the expected result is a ``Something
 happened…'' message will be displayed and a runtime exception and stack
 trace will be logged in the `app.log` file.
@@ -233,7 +233,7 @@ echo '@reboot cd $HOME/spring-petclinic && ./mvnw spring-boot:run -Dspring-boot.
 ____
 *NOTE*
 
-If you deployed the example app using the ``PETS / App Install''
+If you deployed the example app using the ``PETS / App Install``
 playbook job, you can skip the command above because the reboot cron
 entry was automatically created.
 ____
@@ -272,7 +272,7 @@ Whenever changes are made to a server, its a good idea to rerun the
 Leapp pre-upgrade report to make sure those changes have not introduced
 any new risk findings.
 
-* Launch the ``AUTO / 01 Analysis'' job template to generate a fresh
+* Launch the ``AUTO / 01 Analysis`` job template to generate a fresh
 pre-upgrade report. After the job finishes, review the report to see if
 there are any new findings. Refer to the steps in the previous exercises
 if you don’t have them memorized by heart already.
@@ -282,7 +282,7 @@ image::packages_not_signed_by_rh.svg[Packages not signed by Red Hat found on the
 * If we open the finding, we are presented with the following details:
 +
 image::packages_not_signed_details.svg[Packages not signed by Red Hat details view]
-* ``Packages not signed by Red Hat'' is just a fancy way of referring to
+* ``Packages not signed by Red Hat`` is just a fancy way of referring to
 3rd-party packages and/or package that are built in-house by your app
 teams. In the case of this finding, the package that has been identified
 is `temurin-17-jdk`, the 3rd-party JDK runtime package we installed. The
@@ -298,7 +298,7 @@ In this exercise, we discussed the sorry state of traditional
 application maintenance, untracked drift and technical debt. We
 installed a 3rd-party Java runtime and then installed the Pet Clinic
 application on top of that. We made certain that our app is functioning
-as expected, but we also discovered a new ``high risk'' finding on our
+as expected, but we also discovered a new ``high risk`` finding on our
 pre-upgrade report.
 
 Congratulations on completing all the exercises in the first section of

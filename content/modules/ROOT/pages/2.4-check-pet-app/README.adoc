@@ -38,7 +38,7 @@ determine the new URL for the application web user interface:
 echo "http://$(curl -s ifconfig.me):8080"
 ----
 ____
-* Did you previously use the ``Edit Owner'' or ``Add New Pet'' buttons
+* Did you previously use the ``Edit Owner`` or ``Add New Pet`` buttons
 to change any data or add new records? If so, check to see if that data
 is still there and displayed correctly.
 * If you observe any changes in your application behavior or the
@@ -56,7 +56,7 @@ upgrade, but an issue was later discovered after the app had been
 returned to production use.
 
 * Add a new record to the database. For example, add a new pet record
-with the name ``Post Upgrade'' to make it easy to distinguish. Remember
+with the name ``Post Upgrade`` to make it easy to distinguish. Remember
 this record to see what happens after we revert the OS upgrade in the
 next section of the workshop.
 * What will be the business impact if data updates are rolled back with

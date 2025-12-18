@@ -34,21 +34,21 @@ our workshop lab environment will upgrade fairly quickly as they are
 very lightweight compared to traditional enterprise app servers.
 
 * Return to the AAP Web UI tab in your web browser. Navigate to
-Resources > Templates and then open the ``AUTO / 02 Upgrade'' job
+Resources > Templates and then open the ``AUTO / 02 Upgrade`` job
 template. Here is what it looks like:
 +
 image::upgrade_template.svg[AAP Web UI showing the upgrade job template details view]
-* Click the ``Launch'' button which will bring up a the prompts for
+* Click the ``Launch`` button which will bring up a the prompts for
 submitting the job starting with the variables prompt:
 +
 image::upgrade_vars_prompt.svg[Upgrade job variables prompt on AAP Web UI]
 * We don’t need to change the variables settings, so just click the
-``Next'' button to move on.
+``Next`` button to move on.
 +
 image::upgrade_survey_prompt.svg[Upgrade job survey prompt on AAP Web UI]
 * Next we see the job template survey prompt asking us to select an
 inventory group. We are going to upgrade all our pet app hosts using a
-single job, so choose the ``ALL_rhel'' option and click the ``Next''
+single job, so choose the ``ALL_rhel`` option and click the ``Next``
 button. This will bring you to a preview of the selected job options and
 variable settings.
 +
