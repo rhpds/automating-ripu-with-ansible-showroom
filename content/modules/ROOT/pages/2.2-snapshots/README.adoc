@@ -55,7 +55,7 @@ instantly saving the contents of an entire logical volume or virtual
 disk. Unlike backups, snapshots do not make a copy of the data being
 backed up, but rather mark a point in time after which a copy of all
 modified data is copied going forward. For this reason, the underlying
-technique used for snapshots is often referred to as ``copy-on-write''
+technique used for snapshots is often referred to as ``copy-on-write``
 or COW.
 
 While COW snapshots are not a substitute for traditional full and
@@ -175,10 +175,10 @@ Logical volumes are contained in a storage pool known as a volume group.
 The storage available in a volume group comes from one or more physical
 volumes, that is, block devices underlying actual disks or disk
 partitions. Typically, the logical volumes where the RHEL OS is
-installed will be in a ``rootvg'' volume group. If best practices are
+installed will be in a ``rootvg`` volume group. If best practices are
 followed, applications and app data will be isolated in their own
 logicial volumes either in the same volume group or a separate volume
-group, ``appvg'' for example.
+group, ``appvg`` for example.
 
 To create logical volume snapshots, there must be free space in the
 volume group. That is, the total size of the logical volumes in the
@@ -254,7 +254,7 @@ calls must be authorized for the AAP control node.
 
 In our experience, having this access granted can be extremely
 challenging. The team that controls the VMware environment in most
-organizations is deeply invested in the ``ClickOps'' model of doing
+organizations is deeply invested in the ``ClickOps`` model of doing
 everything manually using the vSphere management UI. They may also be
 hesitant to trust that automation developed outside of their team can be
 trusted to perform the operations they would do manually to create a
@@ -330,7 +330,7 @@ perform a full backup and restore of your RHEL server. When taking a
 full backup, ReaR creates a bootable ISO image with the current state of
 the server. To use a ReaR backup to revert an in-place upgrade, we
 simply boot the server from the ISO image and then choose the
-``Automatic Recover'' option from the menu.
+``Automatic Recover`` option from the menu.
 
 While ReaR backup and recovery is not instantaneous like rolling back a
 snapshot, it is remarkably fast compared to recovery tools that require
@@ -346,8 +346,8 @@ recover your Linux server with confidence] to learn more.
 
 The best practice for allocating the local storage of a RHEL servers is
 to configure volumes that separate the OS from the apps and app data.
-For example, the OS filesystems would be under a ``rootvg'' volume group
-while the apps and app data would be in an ``appvg'' volume group or at
+For example, the OS filesystems would be under a ``rootvg`` volume group
+while the apps and app data would be in an ``appvg`` volume group or at
 least in their own dedicated logical volumes. This separation helps
 isolate the storage usage requirements of these two groups so they can
 be manged based on their individual requirements and are less likely to

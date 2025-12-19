@@ -36,7 +36,7 @@ demonstrated a few examples of this including using Leapp custom actors
 for reporting special pre-upgrade checks as well as running Ansible
 playbooks to handle common remediations and third-party tools and
 agents.
-* But the most important lesson we learned is ``You can do this!''
+* But the most important lesson we learned is ``You can do this!``
 
 [#step-2-activities-for-extra-credit]
 ==== Step 2 - Activities for Extra Credit
@@ -45,13 +45,13 @@ Hopefully, this workshop has opened your eyes to what is possible, but
 we have just scratched the surface.
 
 * Is it possible to upgrade from RHEL7 to RHEL9? While the Leapp
-framework doesn’t support a ``double upgrade'' directly, it is possible
+framework doesn't support a ``double upgrade`` directly, it is possible
 to take a host that was upgraded from RHEL7 to RHEL8 and then upgrade it
 from there to RHEL9. You can try this with one of the pet app instances
 in the workshop lab.
 +
 There are a couple things to be aware of if you want to try it. You will
-first need to run the ``AUTO / 04 Commit'' playbook job template. This
+first need to run the ``AUTO / 04 Commit`` playbook job template. This
 job will delete the snapshot created for your RHEL7 to RHEL8 upgrade, so
 be sure you are happy with everything before you do this. While rolling
 back to RHEL7 will then be impossible, you will be able to roll back to
@@ -59,7 +59,7 @@ RHEL8 if needed after upgrading to RHEL9.
 +
 Another consideration with going from RHEL7 to RHEL9 is the increased
 risk of application impacts. While RHEL system library forward binary
-compatibility is really solid between each RHEL major version, ``N+2''
+compatibility is really solid between each RHEL major version, ``N+2``
 compatibility is not guaranteed. Of course, the only way to know for
 sure is try it!
 * If you skipped over any of the optional exercises, it’s not too late

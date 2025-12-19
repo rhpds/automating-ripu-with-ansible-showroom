@@ -75,7 +75,7 @@ Leapp pre-upgrade reports we generated.
 link:../1.1-setup/README.md#step-4---access-the-rhel-web-console[Exercise
 1.1, Step 4]. This is the RHEL Web Console of the AAP controller host,
 but we need to access our pet app server hosts to see their pre-upgrade
-reports. Do this by clicking the ``student​@​ansible-1.example.com'' box
+reports. Do this by clicking the ``lab-user​@​ansible-1.example.com`` box
 in the top left corner of the RHEL Web Console to reveal the remote host
 menu. For example:
 +
@@ -91,7 +91,7 @@ Here is an example of one running RHEL7:
 +
 image::rhel7_os.svg[Operating System Red Hat Enterprise Linux Server 7.9 (Maipo)]
 * When you navigate to different hosts in the RHEL Web Console, look out
-for the ``limited access mode'' warning:
+for the ``limited access mode`` warning:
 +
 image::limited_access.svg[Web console is running in limited access mode]
 +
@@ -111,11 +111,10 @@ Now we are ready to use the RHEL Web Console to see the Leapp
 pre-upgrade reports. Let’s start by looking at one of the RHEL8 hosts
 and then we’ll look at one of the RHEL7 hosts in the next step.
 
-While you might be interested in learning about upgrading only RHEL7 or
-RHEL8, we recommend following the exercise steps for both. This workshop
-presents the skills you need with the RHEL7 and RHEL8 examples covering
+While you might be interested in learning about upgrading only RHEL7, 8, or 9, we recommend following the exercise steps for all of them. This workshop
+presents the skills you need with the RHEL7, RHEL8 and RHEL 9 examples covering
 different topics you must know irrespective of the OS version being
-upgraded.
+upgraded. Additionally, many times these upgrades will be chained together, for instance an upgrade from RHEL7 to RHEL8 followed by an immediate upgrade from RHEL8 to RHEL9. Therefore, we recommend following the steps for all of them.
 
 We are now here in the automation approach workflow:
 
@@ -131,7 +130,7 @@ use the main menu to navigate to Tools > Upgrade Report. This will
 display the Leapp pre-upgrade report that was generated for the selected
 host. For example, the report might look like this:
 +
-image::rhel8_report.svg[Example pre-upgrade report of RHEL8 host]
+image::rhel8_report.png[Example pre-upgrade report of RHEL8 host]
 +
 ____
 *Note*
@@ -149,47 +148,30 @@ checks. When any of these checks uncovers a potential risk, it is
 recorded as a finding in the report. These findings are listed in order
 from highest risk to lowest. In the report above, we see there are three
 high risk findings. Let’s review each of these.
-* The first finding we see listed has the title ``Leapp could not
-identify where GRUB core is located.'' You can see additional details
-for any finding by clicking on it in the list. For example, click on the
-first finding and you will see these details:
+* The first finding we see listed has the title ``GRUB2 core will be automatically updated during the upgrade``
+You can see additional details for any finding by clicking on it in the list. For example, click on the first finding and you will see the details
+
 +
-image::grub_core_finding.svg[Details view of grub core finding]
+image::grub_core_finding.png[Details view of grub core finding]
 +
-This finding is being reported because the EC2 instances deployed for
-the workshop do not have a separate /boot partition. We’ll ignore this
-one for now, but make a mental note as we may revisit this with a
-Challenge Lab in a later exercise.
-* The next finding is titled ``Remote root logins globally allowed using
-password.'' Click on it to see the details:
+This finding is reported on every upgrade, as it is potentially impactful.  The summary provides the details of the issue and the recommended action to take.  We'll ignore this one for now, but make a note of it for later.
 +
-image::remote_root_logins_finding.svg[Details view of remote root logins finding]
+image::rhsm_repos.png[Details view of RHSM repositories]
 +
-This finding is meant to raise awareness of a change to the default root
-login settings introduced with RHEL9. We can safely ignore this finding
-because surely everybody already follows best practices by never logging
-in directly as the root user.
-* That brings us to the final high risk finding. This one is a little
-embarrassing because it’s actually a known bug in the Leapp framework.
+This finding is a bit more serious.  It's marked as an inhibitor, so our upgrade will not proceed unless we take action to correct the cause of this inhibitor risk finding.  This one is an artifact of our lab environment, as we don't have access to the Red Hat Subscription Manager (RHSM) repositories in this environment. We'll create some automation to provide these repos for us in a later exercise.
 +
-image::leapp_bug_finding.svg[Details view usage of deprecated model bug finding]
+image:old_os.png[Details view of an outdated OS issue]
 +
-Luckily, it is completely benign and we can safely ignore it. This bug
-will be fixed with an update to the Leapp framework expected to be
-released soon.
-* The good news is that none of the findings with our RHEL8 host were
-the most severe ``inhibitor'' classification. When any inhibitor
-findings are reported, the RHEL upgrade is blocked and can’t proceed
-without first taking action to correct the cause of the inhibitor risk
-finding.
+This finding is also marked as an inhibitor, so our upgrade will not proceed unless we take action to correct the cause of this inhibitor. Fortunately, this one is pretty straightforward to resolve, by simply running a yum update command to bring the system up to date.  We will explore how to automate this in a later exercise.
+
+* As we saw here, there's a lot of information in the report, and it can be overwhelming.  The good news is that we can filter the findings to make it easier to focus on the most important ones.
 * There are a number of filtering options you can use to limit the
 findings that are displayed according to risk level, audience, etc.
-Click on the ``Filters'' button to experiment with this feature. For
-example, if you click the ``Is inhibitor?'' filter checkbox, you will
-see no findings displayed because there were no inhibitors.
+Click on the ``Filters`` button to experiment with this feature. For
+example, if you click the ``Is inhibitor?`` filter checkbox, you will
+see just the blocking inhibitor findings listed
 * Let’s now move on to the pre-upgrade report for one of our RHEL7
-hosts. Spoiler alert: we will have to deal with some inhibitor findings
-with this one!
+hosts.
 
 [#step-4-review-leapp-pre-upgrade-report-of-rhel7-host]
 ==== Step 4 - Review Leapp Pre-upgrade Report of RHEL7 Host
@@ -204,7 +186,7 @@ chosen is RHEL7. Then use the main menu to navigate to Tools > Upgrade
 Report. This will bring up the Leapp pre-upgrade report for the selected
 host. For example, the report might look like this:
 +
-image::rhel7_report.svg[Example pre-upgrade report of RHEL7 host]
+image::rhel7_report.png[Example pre-upgrade report of RHEL7 host]
 +
 ____
 *Note*
@@ -216,56 +198,25 @@ differences that materially break the flow of the exercises in this
 workshop, kindly let us know by raising an issue
 https://github.com/ansible/workshops/issues/new[here].
 ____
-* In the report for our RHEL7 pet app server above, we see there are six
+* In the report for our RHEL7 pet app server above, we see there are four
 high risk findings and two of those are inhibitor findings. Let’s start
 by reviewing the high risk findings that are not inhibitors.
-* The ``GRUB core will be updated during upgrade'' finding is no
+* The ``GRUB core will be updated during upgrade`` finding is no
 different than the finding with the same title we learned about in the
 RHEL8 pre-upgrade report, so we’ll ignore this for now.
-* The high risk finding ``Usage of deprecated Model'' is again because
-of the Leapp framework bug we talked about before. It’s annoying but
-benign and we can ignore it.
+* The RHSM Package Repositories finding is also the same as the one we saw in the
+RHEL8 pre-upgrade report, so we’ll ignore this for now.
 * Now let’s look at the new findings we are seeing only on our RHEL7
-pre-upgrade report. At the top of the list we see the ``Packages
-available in excluded repositories will not be installed'' finding.
-Clicking on the finding to bring up the detailed view, we see this:
-+
-image::excluded_repos_finding.svg[Details view of packages available in excluded repositories will not be installed]
-+
-This finding is warning that packages python3-pyxattr and rpcgen will
-not be upgraded because ``they are available only in target system
-repositories that are intentionally excluded from the list of
-repositories used during the upgrade,'' but then refers to an
-informational finding titled ``Excluded target system repositories'' for
-more information. Scroll down and click on that finding to show its
-details:
-+
-image::enablerepo_info_finding.svg[Details view of excluded target system repositories information finding]
-+
-Here we see the remediation hint suggests to run the `leapp` utility
-with the `--enablerepo` option. But wait, that’s assuming we are
-manually running the `leapp` command. Don’t worry, in an upcoming
-exercise, we’ll explore how this option can be given by setting a
-variable when submitting the upgrade playbook job. Stay tuned!
-* The next high risk entry on the list is the ``Difference in Python
+pre-upgrade report. The first entry on the list is the ``Difference in Python
 versions and support in RHEL8'' finding:
 +
-image::python_finding.svg[Details view of Difference in Python versions and support in RHEL8 finding]
+image::rhel7_python.png[Details view of Difference in Python versions and support in RHEL8 finding]
 +
 This finding could be a concern if we have any apps on our pet server
 that are using the system-provided Python interpreter. Let’s assume we
 don’t have any of those in which case we can blissfully ignore this
-finding.
-* That leaves us with our two inhibitor findings. The first is the
-``Possible problems with remote login using root account'' finding. You
-know the drill; click on the finding to review the details:
-+
-image::root_account_inhibitor.svg[Details view of possible problems with remote login using root account inhibitor finding]
-+
-Remember that with inhibitor findings, if we don’t take action to
-resolve the inhibitor, the Leapp framework will block the RHEL in-place
-upgrade from going forward.
-* The other inhibitor is the ``Missing required answers in the answer
+finding.  But be aware, when working with servers in the wild, it's important to understand the applications running on the server, as this could be a significant issue if you have any Python-based apps.
+* The other new high risk finding, and an inhibitor is the ``Missing required answers in the answer
 file'' finding. Here are the details for this one:
 +
 image::missing_answers_inhibitor.svg[Details view of missing required answers in the answer file]
@@ -273,6 +224,22 @@ image::missing_answers_inhibitor.svg[Details view of missing required answers in
 Here again, we will need to take action to remediate this finding. Don’t
 panic! In the next exercise, we will explore different options for
 automating the required remediation actions and recommendations.
+
+Lets take a look at our last system, the RHEL 9 one.
+
+[#step-5-review-leapp-pre-upgrade-report-of-rhel9-host]
+==== Step 5 - Review Leapp Pre-upgrade Report of RHEL9 Host
+
+Following the same steps as in the previous two exercises, let’s now take a look at the report from our RHEL9 host.
++
+image::rhel9_report.png[Example pre-upgrade report of RHEL9 host]
++
+* In the report for our RHEL9 pet app server above, we see there are only two high risk findings and one of them is an inhibitor. Additionally, both of these findings are related to the GRUB2 core update and the RHSM repositories. These are the same findings we saw in the RHEL8 and RHEL7 pre-upgrade reports, and there's not much new here.
+* However, there's a new finding that is marked as a low risk, ``SElinux will be set to permissive mode``
++
+image::rhel9_selinux.png[Details view of SELinux permissive]
++
+This finding is a low risk issue and it's not an inhibitor.  This finding is low, because the impact to the upgrade process is minimal. However, in many environments, this is a big deal, so we must take note of it as part of our post-upgrade checklist and re-enable SELinux after the upgrade.
 
 [#challenge-lab-what-about-ignoring-so-many-high-findings?]
 ==== Challenge Lab: What About Ignoring So Many High Findings?

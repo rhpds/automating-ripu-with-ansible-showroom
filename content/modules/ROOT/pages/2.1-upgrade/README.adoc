@@ -53,7 +53,7 @@ button. This will bring you to a preview of the selected job options and
 variable settings.
 +
 image::upgrade_preview.svg[Upgrade job preview on AAP Web UI]
-* If you are satisfied with the job preview, use the ``Launch'' button
+* If you are satisfied with the job preview, use the ``Launch`` button
 to start the job.
 
 [#step-2-learn-more-about-leapp]
