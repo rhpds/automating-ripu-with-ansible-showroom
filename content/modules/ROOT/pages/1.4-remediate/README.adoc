@@ -13,11 +13,7 @@ role
 ==== Step 1 - Explore Options for Resolving Inhibitors
 
 In the previous exercise, we reviewed the Leapp pre-upgrade reports that
-were generated for our RHEL7 and RHEL8 pet application servers. With the
-RHEL8 hosts, there were no inhibitor risk findings reported, so those
-are good to go and ready to try upgrading. However, there were a couple
-inhibitors reported for the RHEL7 hosts. We must take action to resolve
-them before those hosts can be upgraded.
+were generated for our RHEL pet application servers. Each server had a couple of inhibitors that will require attention before the RHEL upgrade can proceed.
 
 We are now here in our automation approach workflow:
 

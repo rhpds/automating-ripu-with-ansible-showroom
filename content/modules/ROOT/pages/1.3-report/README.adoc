@@ -231,15 +231,19 @@ Lets take a look at our last system, the RHEL 9 one.
 ==== Step 5 - Review Leapp Pre-upgrade Report of RHEL9 Host
 
 Following the same steps as in the previous two exercises, let’s now take a look at the report from our RHEL9 host.
+
 +
 image::rhel9_report.png[Example pre-upgrade report of RHEL9 host]
 +
+
 * In the report for our RHEL9 pet app server above, we see there are only two high risk findings and one of them is an inhibitor. Additionally, both of these findings are related to the GRUB2 core update and the RHSM repositories. These are the same findings we saw in the RHEL8 and RHEL7 pre-upgrade reports, and there's not much new here.
 * However, there's a new finding that is marked as a low risk, ``SElinux will be set to permissive mode``
+
 +
 image::rhel9_selinux.png[Details view of SELinux permissive]
 +
-This finding is a low risk issue and it's not an inhibitor.  This finding is low, because the impact to the upgrade process is minimal. However, in many environments, this is a big deal, so we must take note of it as part of our post-upgrade checklist and re-enable SELinux after the upgrade.
+
+This finding is a low risk issue and it's not an inhibitor.  This finding is low, because the impact to the upgrade process is minimal. However, in many environments, this is a big deal, so we must take note of it as part of our post-upgrade checklist and re-enable SELinux after the upgrade!
 
 [#challenge-lab-what-about-ignoring-so-many-high-findings?]
 ==== Challenge Lab: What About Ignoring So Many High Findings?
