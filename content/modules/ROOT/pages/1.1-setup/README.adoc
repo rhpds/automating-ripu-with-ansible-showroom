@@ -27,7 +27,7 @@ operating system (OS) to the next major version.
 |RHEL9 pet app host 1 |rhel9
 |===
 
-[#step-1---access-the-environment]
+[#step-1-access-the-environment]
 === Step 1 - Access the Environment
 
 We will use Visual Studio Code (VS Code) as it provides a convenient and
@@ -51,7 +51,7 @@ Code user experience. This is optional as the default settings will work
 fine for this workshop. Feel free to step though the wizard to explore
 the VS Code bells and whistles or you may just skip it.
 ____
-[#step-2---open-a-terminal-session]
+[#step-2-open-a-terminal-session]
 === Step 2 - Open a Terminal Session
 
 Terminal sessions provide access to the RHEL commands and utilities that
@@ -71,7 +71,7 @@ For example:
 image::ssh_login.png[Example ssh login to pet app host]
 
 
-[#step-3---access-the-aap-web-ui]
+[#step-3-access-the-aap-web-ui]
 === Step 3 - Access the AAP Web UI
 
 The AAP Web UI is where we will go to submit and check the status of the
@@ -90,7 +90,7 @@ image::aap_console_example.png[Example AAP Web UI dashboard]
 * We will learn more about how to use the AAP Web UI in the next
 exercise.
 
-[#step-4---access-the-rhel-web-console]
+[#step-4-access-the-rhel-web-console]
 === Step 4 - Access the RHEL Web Console
 
 We will use the RHEL Web Console to review the results of the Leapp
@@ -108,7 +108,7 @@ image::cockpit_example.png[Example RHEL Web Console]
 * We will revisit the RHEL Web Console when we are ready to review our
 pre-upgrade reports in an upcoming exercise.
 
-[#step-5---configure-AAP]
+[#step-5-configure-AAP]
 === Step 5 - Configure AAP
 
 The first thing we need to do is to configure AAP with our content.  A pre-defined configuration as code job template is available to do this.
@@ -121,7 +121,7 @@ image::initial_cac.png[Example of the initial CaC job template]
 + 
 image::completed_cac.png[AAP after running the CaC job template]
 
-[#step-6---challenge-labs]
+[#step-6-challenge-labs]
 === Step 6 - Challenge Labs
 
 You will soon discover that many exercises in the workshop come with a

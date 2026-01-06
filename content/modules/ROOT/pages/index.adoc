@@ -23,20 +23,6 @@ first completing the workshop
 https://labs.demoredhat.com/exercises/ansible_rhel[Ansible for Red Hat
 Enterprise Linux].
 
-== Table of Contents
-
-* link:#rhel-in-place-upgrade-automation-workshop[RHEL In-place Upgrade
-Automation Workshop]
-** link:#table-of-contents[Table of Contents]
-** link:#presentations[Presentations]
-** link:#time-planning[Time Planning]
-** link:#lab-diagram[Lab Diagram]
-** link:#workshop-exercises[Workshop Exercises]
-*** link:#section-1---pre-upgrade-analysis[Section 1 - Pre-upgrade Analysis]
-*** link:#section-2---rhel-os-upgrade[Section 2 - RHEL OS Upgrade]
-*** link:#section-3---rolling-back[Section 3 - Rolling Back]
-** link:#workshop-navigation[Workshop Navigation]
-
 == Presentations
 
 The exercises are self explanatory and guide the participants through
