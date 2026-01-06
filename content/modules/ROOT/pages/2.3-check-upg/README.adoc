@@ -70,7 +70,7 @@ Now let’s make sure our pet app servers are actually upgraded to the
 next RHEL version.
 
 * In
-link:../1.3-report/README.md#step-2---navigating-the-rhel-web-console[Exercise
+xref:1.3-report/README.adoc#step-2-navigating-the-rhel-web-console[Exercise
 1.3: Step 2], you used the RHEL Web Console to check the installed RHEL
 versions on your pet app servers. Let’s repeat those steps to see the
 RHEL versions reported after our upgrades.
@@ -97,7 +97,7 @@ Here is an example one that was previously RHEL7 now running RHEL8:
 image::rhel8_upgraded.svg[vocal-hyena running Red Hat Enterprise Linux Server 8.8 (Oopta)]
 * You can also check the RHEL and kernel versions from the command line
 following the steps you used with
-link:../1.1-setup/README.md#step-2---open-a-terminal-session[Exercise
+xref:1.1-setup/README.adoc#step-2-open-a-terminal-session[Exercise
 1.1: Step 2].
 +
 At the shell prompt of your pet app servers, use the
@@ -116,13 +116,13 @@ If you deployed a sample pet application in the previous optional
 exercise, continue here to verify the pet application is still
 functioning as expected after the RHEL upgrades:
 
-* link:../2.4-check-pet-app/README.md[Exercise 2.4 - How is the Pet App
+* xref:2.4-check-pet-app/README.adoc[Exercise 2.4 - How is the Pet App
 Doing?]
 
 Otherwise, you may skip ahead to the next section of the workshop where
 we will demonstrate rolling back the RHEL upgrade, starting with these
 exercises:
 
-* link:../3.1-rm-rf/README.md[Exercise 3.1 - (Optional) Trash the
+* xref:3.1-rm-rf/README.adoc[Exercise 3.1 - (Optional) Trash the
 Instance]
-* link:../3.2-rollback/README.md[Exercise 3.2 - Run Rollback Job]
+* xref:3.2-rollback/README.adoc[Exercise 3.2 - Run Rollback Job]

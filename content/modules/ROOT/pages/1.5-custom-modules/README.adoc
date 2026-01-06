@@ -7,9 +7,9 @@ complete the workshop, but it’s recommended if time allows. Review the
 objectives listed in the next section to decide if you want to do this
 exercise or if you would rather skip ahead to the next exercises:
 
-* link:../1.6-my-pet-app/README.md[Exercise 1.6 - (Optional) Deploy a
+* xref:1.6-my-pet-app/README.adoc[Exercise 1.6 - (Optional) Deploy a
 Pet Application]
-* link:../2.1-upgrade/README.md[Exercise 2.1 - Run the RHEL Upgrade
+* xref:2.1-upgrade/README.adoc[Exercise 2.1 - Run the RHEL Upgrade
 Jobs]
 
 == Objectives
@@ -75,8 +75,7 @@ configured in the bootloader.
 ** The /boot directory has any files that have been modified since the
 last reboot.
 * Go to your VS Code browser tab and open a terminal session. Refer back
-to
-https://github.com/swapdisk/workshops/blob/devel/exercises/ansible_ripu/1.1-setup/README.md#step-2---open-a-terminal-session[Exercise
+to xref:1.1-setup/README.adoc#step-2-open-a-terminal-session[Exercise
 1.1, Step 2] if you need a reminder of how we did that.
 * Login to one of your pet app servers using the `ssh` command. For
 example:

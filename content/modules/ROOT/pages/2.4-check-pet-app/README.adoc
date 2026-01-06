@@ -8,7 +8,7 @@ back
 
 == Guide
 
-In link:../1.6-my-pet-app/README.md[Exercise 1.6] we installed a sample
+In xref:1.6-my-pet-app/README.adoc[Exercise 1.6] we installed a sample
 pet application and tested its functionality. Now that we have upgraded
 the RHEL version of our app server, let’s retest to see if there has
 been any impact.
@@ -17,7 +17,7 @@ been any impact.
 === Step 1 - Retest our Pet Application
 
 It’s time to repeat the testing you did for
-link:../1.6-my-pet-app/README.md#step-3---test-the-pet-application[Step
+xref:1.6-my-pet-app/README.adoc#step-3-test-the-pet-application[Step
 3] in the previous exercise.
 
 * You should usually be able to access the application web user
@@ -49,7 +49,7 @@ after rolling back the upgrade.
 [#step-2-add-more-records-to-the-database]
 === Step 2 - Add More Records to the Database
 
-In link:../2.2-snapshots/README.md[Exercise 2.2], we considered the
+In xref:2.2-snapshots/README.adoc[Exercise 2.2], we considered the
 potential pitfalls of including app data in the scope of our snapshot.
 Imagine what would happen if your app at first appeared fine after the
 upgrade, but an issue was later discovered after the app had been

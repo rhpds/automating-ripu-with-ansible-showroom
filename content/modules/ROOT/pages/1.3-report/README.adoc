@@ -22,7 +22,7 @@ consider the pros and cons:
 * If we we’re using the Leapp framework to manually upgrade just a
 single RHEL host, we could simply get to a shell prompt on the host and
 look at the local report file output. In
-link:../1.1-setup/README.md#step-2---open-a-terminal-session[Exercise
+xref:1.1-setup/README.adoc#step-2-open-a-terminal-session[Exercise
 1.1, Step 2], we learned how to open an ssh session to one of our pet
 app servers. Follow those steps and after logging in, use this command
 to review the local Leapp pre-upgrade report file:
@@ -72,7 +72,7 @@ For this workshop, we will be using the RHEL Web Console to access the
 Leapp pre-upgrade reports we generated.
 
 * Return to the RHEL Web Console browser tab you opened from
-link:../1.1-setup/README.md#step-4---access-the-rhel-web-console[Exercise
+xref:1.1-setup/README.adoc#step-4-access-the-rhel-web-console[Exercise
 1.1, Step 4]. This is the RHEL Web Console of the AAP controller host,
 but we need to access our pet app server hosts to see their pre-upgrade
 reports. Do this by clicking the ``lab-user​@​ansible-1.example.com`` box

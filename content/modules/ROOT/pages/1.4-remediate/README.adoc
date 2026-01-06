@@ -63,7 +63,7 @@ decision or, more specifically, asking us to acknowledge we are aware
 that Leapp will disable the pam_pkcs11 PAM module during the RHEL
 upgrade.
 
-* In link:../1.2-preupg/README.md[Exercise 1.2 - Run Pre-upgrade Jobs],
+* In xref:1.2-preupg/README.adoc[Exercise 1.2 - Run Pre-upgrade Jobs],
 we launched a playbook that runs the pre-upgrade report using the
 `analysis` role from the `infra.leapp` Ansible collection. Look at the
 https://github.com/redhat-cop/infra.leapp/blob/main/roles/analysis/README.md[documentation
@@ -73,7 +73,7 @@ answer file.
 * Let’s try running the pre-upgrade job again with this variable
 defined. Launch the ``AUTO / 01 Analysis`` job template the same as you
 did under
-link:../1.2-preupg/README.md#step-2---use-aap-to-launch-an-analysis-playbook-job[Exercise
+xref:1.2-preupg/README.adoc#step-2-use-aap-to-launch-an-analysis-playbook-job[Exercise
 1.2, Step 2], except this time, we will add this setting when we get to
 the Variables prompt:
 +
@@ -208,9 +208,9 @@ Now we are ready to try upgrading our RHEL pet app servers, but before
 we get to that, there are two more optional exercises in this section of
 the workshop:
 
-* link:../1.5-custom-modules/README.md[Exercise 1.5 - Custom Pre-upgrade
+* xref:1.5-custom-modules/README.adoc[Exercise 1.5 - Custom Pre-upgrade
 Checks]
-* link:../1.6-my-pet-app/README.md[Exercise 1.6 - Deploy a Pet
+* xref:1.6-my-pet-app/README.adoc[Exercise 1.6 - Deploy a Pet
 Application]
 
 These exercises are not required to successfully complete the workshop,
@@ -218,5 +218,5 @@ but we recommend doing them if time allows. If you can’t wait and want
 skip ahead to upgrading your RHEL hosts, strap in for this exciting
 exercise:
 
-* link:../2.1-upgrade/README.md[Exercise 2.1 - Run the RHEL Upgrade
+* xref:2.1-upgrade/README.adoc[Exercise 2.1 - Run the RHEL Upgrade
 Jobs]
