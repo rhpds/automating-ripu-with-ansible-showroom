@@ -1,14 +1,14 @@
-== Workshop Exercise - Your Lab Environment
+= Workshop Exercise - Your Lab Environment
 
-=== Objectives
+== Objectives
 
 * Understand the lab topology and how to access the environment
 * Understand how to perform the workshop exercises
 * Understand challenge labs
 
-=== Guide
+== Guide
 
-==== Your Lab Environment
+=== Your Lab Environment
 
 The workshop is provisioned with a pre-configured lab environment. You
 will have access to a host deployed with Ansible Automation Platform
@@ -28,7 +28,7 @@ operating system (OS) to the next major version.
 |===
 
 [#step-1---access-the-environment]
-==== Step 1 - Access the Environment
+=== Step 1 - Access the Environment
 
 We will use Visual Studio Code (VS Code) as it provides a convenient and
 intuitive way to use a web browser to edit files and access terminal
@@ -52,7 +52,7 @@ fine for this workshop. Feel free to step though the wizard to explore
 the VS Code bells and whistles or you may just skip it.
 ____
 [#step-2---open-a-terminal-session]
-==== Step 2 - Open a Terminal Session
+=== Step 2 - Open a Terminal Session
 
 Terminal sessions provide access to the RHEL commands and utilities that
 will help us understand what's going on ``behind the curtain`` when the
@@ -72,7 +72,7 @@ image::ssh_login.png[Example ssh login to pet app host]
 
 
 [#step-3---access-the-aap-web-ui]
-==== Step 3 - Access the AAP Web UI
+=== Step 3 - Access the AAP Web UI
 
 The AAP Web UI is where we will go to submit and check the status of the
 Ansible playbook jobs we will use to automate the RHEL in-place upgrade
@@ -91,7 +91,7 @@ image::aap_console_example.png[Example AAP Web UI dashboard]
 exercise.
 
 [#step-4---access-the-rhel-web-console]
-==== Step 4 - Access the RHEL Web Console
+=== Step 4 - Access the RHEL Web Console
 
 We will use the RHEL Web Console to review the results of the Leapp
 pre-upgrade reports we generate for our pet app servers.
@@ -109,7 +109,7 @@ image::cockpit_example.png[Example RHEL Web Console]
 pre-upgrade reports in an upcoming exercise.
 
 [#step-5---configure-AAP]
-==== Step 5 - Configure AAP
+=== Step 5 - Configure AAP
 
 The first thing we need to do is to configure AAP with our content.  A pre-defined configuration as code job template is available to do this.
 
@@ -122,14 +122,14 @@ image::initial_cac.png[Example of the initial CaC job template]
 image::completed_cac.png[AAP after running the CaC job template]
 
 [#step-6---challenge-labs]
-==== Step 6 - Challenge Labs
+=== Step 6 - Challenge Labs
 
 You will soon discover that many exercises in the workshop come with a
 ``Challenge Lab`` step. These labs are meant to give you a small task to
 solve using what you have learned so far. The solution of the task is
 shown underneath a warning sign.
 
-=== Conclusion
+== Conclusion
 
 In this exercise, we learned about the lab environment we will be using
 to continue through the workshop exercises. We verified that we are able

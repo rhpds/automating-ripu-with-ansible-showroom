@@ -1,6 +1,6 @@
-== Workshop Exercise - Review Pre-upgrade Reports
+= Workshop Exercise - Review Pre-upgrade Reports
 
-=== Objectives
+== Objectives
 
 * Understand the different options for managing Leapp pre-upgrade
 reports
@@ -8,10 +8,10 @@ reports
 * Learn how to filter pre-upgrade report entries
 * Embrace failure!
 
-=== Guide
+== Guide
 
 [#step-1-managing-leapp-pre-upgrade-results]
-==== Step 1 - Managing Leapp Pre-upgrade Results
+=== Step 1 - Managing Leapp Pre-upgrade Results
 
 In the previous exercise, we used a playbook job template to generate a
 Leapp pre-upgrade report on each of our pet app servers. Now we need to
@@ -66,7 +66,7 @@ custom dashboards that can filter reports by environment (e.g.,
 Dev/Test/Prod), location, app ID, owning team, etc.
 
 [#step-2-navigating-the-rhel-web-console]
-==== Step 2 - Navigating the RHEL Web Console
+=== Step 2 - Navigating the RHEL Web Console
 
 For this workshop, we will be using the RHEL Web Console to access the
 Leapp pre-upgrade reports we generated.
@@ -105,7 +105,7 @@ navigating around the console and switching between hosts, move on to
 the next step where we will look at our first pre-upgrade report.
 
 [#step-3-review-leapp-pre-upgrade-report-of-rhel8-host]
-==== Step 3 - Review Leapp Pre-upgrade Report of RHEL8 Host
+=== Step 3 - Review Leapp Pre-upgrade Report of RHEL8 Host
 
 Now we are ready to use the RHEL Web Console to see the Leapp
 pre-upgrade reports. Let’s start by looking at one of the RHEL8 hosts
@@ -174,7 +174,7 @@ see just the blocking inhibitor findings listed
 hosts.
 
 [#step-4-review-leapp-pre-upgrade-report-of-rhel7-host]
-==== Step 4 - Review Leapp Pre-upgrade Report of RHEL7 Host
+=== Step 4 - Review Leapp Pre-upgrade Report of RHEL7 Host
 
 In the previous step, we reviewed the pre-upgrade report for one of our
 RHEL8 hosts. Now let’s take a look at the report from one of our RHEL7
@@ -228,7 +228,7 @@ automating the required remediation actions and recommendations.
 Lets take a look at our last system, the RHEL 9 one.
 
 [#step-5-review-leapp-pre-upgrade-report-of-rhel9-host]
-==== Step 5 - Review Leapp Pre-upgrade Report of RHEL9 Host
+=== Step 5 - Review Leapp Pre-upgrade Report of RHEL9 Host
 
 Following the same steps as in the previous two exercises, let’s now take a look at the report from our RHEL9 host.
 
@@ -246,7 +246,7 @@ image::rhel9_selinux.png[Details view of SELinux permissive]
 This finding is a low risk issue and it's not an inhibitor.  This finding is low, because the impact to the upgrade process is minimal. However, in many environments, this is a big deal, so we must take note of it as part of our post-upgrade checklist and re-enable SELinux after the upgrade!
 
 [#challenge-lab-what-about-ignoring-so-many-high-findings?]
-==== Challenge Lab: What About Ignoring So Many High Findings?
+=== Challenge Lab: What About Ignoring So Many High Findings?
 
 You may be wondering why are we only worrying about the inhibitor
 findings. What about all the other high risk findings showing up in red
@@ -294,7 +294,7 @@ there to make us aware of potential failure modes, but experience has
 shown that they are not a problem in many cases. Don’t become petrified
 when you see those red findings on the report. Upgrade early and often!
 
-=== Conclusion
+== Conclusion
 
 In this exercise, we learned about the different options for managing
 Leapp pre-upgrade reports. We used the RHEL Web Console to look at the

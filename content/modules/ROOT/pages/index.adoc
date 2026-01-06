@@ -1,4 +1,4 @@
-== RHEL In-place Upgrade Automation Workshop
+= RHEL In-place Upgrade Automation Workshop
 
 This workshop will introduce a comprehensive approach to automate
 in-place upgrades for Red Hat Enterprise Linux (RHEL). The solution uses
@@ -23,7 +23,7 @@ first completing the workshop
 https://labs.demoredhat.com/exercises/ansible_rhel[Ansible for Red Hat
 Enterprise Linux].
 
-=== Table of Contents
+== Table of Contents
 
 * link:#rhel-in-place-upgrade-automation-workshop[RHEL In-place Upgrade
 Automation Workshop]
@@ -37,7 +37,7 @@ Automation Workshop]
 *** link:#section-3---rolling-back[Section 3 - Rolling Back]
 ** link:#workshop-navigation[Workshop Navigation]
 
-=== Presentations
+== Presentations
 
 The exercises are self explanatory and guide the participants through
 all the phases of an automated RHEL in-place upgrade. All concepts are
@@ -48,7 +48,7 @@ information on the benefits of the approach demonstrated in this
 workshop: link:../../decks/ansible_ripu.pdf[RHEL In-place Upgrade
 Automation]
 
-=== Time Planning
+== Time Planning
 
 The time required to complete the workshop depends on the number of
 participants and how familiar they are with Linux and Ansible. The
@@ -61,7 +61,7 @@ that may apply to your specific environment and requirements. The lab
 environment provisioned could even be used for a multi-day deep dive
 workshop, but that is beyond the scope of this guide.
 
-=== Lab Diagram
+== Lab Diagram
 
 The lab environment provisioned for the workshop includes a number of
 RHEL cloud instances. One instance is dedicated to hosting AAP and is
@@ -72,14 +72,14 @@ capability.
 
 image::ripu_lab_diagram.svg[RHEL In-place Upgrade Automation Workshop lab diagram]
 
-=== Workshop Exercises
+== Workshop Exercises
 
 The workshop is composed of three sections each of which includes a
 number of exercises. Each exercise builds upon the steps performed and
 concepts learned in the previous exercises, so it is important to do
 them in the prescribed order.
 
-==== Section 1 - Pre-upgrade Analysis
+=== Section 1 - Pre-upgrade Analysis
 
 * xref:1.1-setup/README.adoc[Exercise 1.1 - Workshop Lab Environment]
 * xref:1.2-preupg/README.adoc[Exercise 1.2 - Run Pre-upgrade Jobs]
@@ -88,21 +88,21 @@ them in the prescribed order.
 * xref:1.5-custom-modules/README.adoc[Exercise 1.5 - Custom Pre-upgrade Checks]
 * xref:1.6-my-pet-app/README.adoc[Exercise 1.6 - Deploy a Pet App]
 
-==== Section 2 - RHEL OS Upgrade
+=== Section 2 - RHEL OS Upgrade
 
 * xref:2.1-upgrade/README.adoc[Exercise 2.1 - Run OS Upgrade Jobs]
 * xref:2.2-snapshots/README.adoc[Exercise 2.2 - Let’s Talk About Snapshots]
 * xref:2.3-check-upg/README.adoc[Exercise 2.3 - Check if the Upgrade Worked]
 * xref:2.4-check-pet-app/README.adoc[Exercise 2.4 - (Optional) How is the Pet App Doing?]
 
-==== Section 3 - Rolling Back
+=== Section 3 - Rolling Back
 
 * xref:3.1-rm-rf/README.adoc[Exercise 3.1 - (Optional) Trash the Instance]
 * xref:3.2-rollback/README.adoc[Exercise 3.2 - Run Rollback Job]
 * xref:3.3-check-undo/README.adoc[Exercise 3.3 - Check if Upgrade Undone]
 * xref:3.4-conclusion/README.adoc[Exercise 3.4 - Rinse and Repeat]
 
-=== Workshop Navigation
+== Workshop Navigation
 
 Your will find links to the previous and next exercises at the bottom of
 each exercise page. Click the link below to get started.

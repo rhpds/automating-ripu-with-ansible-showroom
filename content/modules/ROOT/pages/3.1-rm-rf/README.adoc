@@ -1,6 +1,6 @@
-== Workshop Exercise - Trash the Instance
+= Workshop Exercise - Trash the Instance
 
-=== Optional Exercise
+== Optional Exercise
 
 This is an optional exercise. It is not required to successfully
 complete the workshop, but it will help demonstrate the effectiveness of
@@ -10,12 +10,12 @@ skip ahead to the next exercise:
 
 * link:3.2-rollback/README.md[Exercise 3.2 - Run Rollback Job]
 
-=== Objectives
+== Objectives
 
 * Simulate a failed OS upgrade or application impact
 * Demonstrate the scope of rolling back a snapshot
 
-=== Guide
+== Guide
 
 Have you ever wanted to try doing `rm -rf /*` on a RHEL host just to see
 what happens? Or maybe you have accidentally done an equally destructive
@@ -26,7 +26,7 @@ demonstrate how rolling back can save the day.
 Let’s get started!
 
 [#step-1-select-a-pet-app-server]
-==== Step 1 - Select a Pet App Server
+=== Step 1 - Select a Pet App Server
 
 In the next exercise, we will be rolling back the RHEL upgrade on one of
 our servers.
@@ -49,7 +49,7 @@ user. For example:
 Verify you see a root prompt like the example above.
 
 [#step-2-break-your-application]
-==== Step 2 - Break your application
+=== Step 2 - Break your application
 
 * In
 link:../1.6-my-pet-app/README.md#step-5---run-another-pre-upgrade-report[Exercise
@@ -82,7 +82,7 @@ We cannot execute
 This is a realistic example of application impact that can be reversed
 by rolling back the upgrade.
 
-=== Conclusion
+== Conclusion
 
 Congratulations, you have trashed one of your app servers. Wasn’t that
 fun?

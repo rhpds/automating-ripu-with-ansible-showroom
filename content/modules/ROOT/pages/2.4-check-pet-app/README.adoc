@@ -1,12 +1,12 @@
-== Workshop Exercise - How is the Pet App Doing?
+= Workshop Exercise - How is the Pet App Doing?
 
-=== Objectives
+== Objectives
 
 * Confirm our pet app is still functioning as expected after the upgrade
 * Add new records to the app database to see what happens when rolling
 back
 
-=== Guide
+== Guide
 
 In link:../1.6-my-pet-app/README.md[Exercise 1.6] we installed a sample
 pet application and tested its functionality. Now that we have upgraded
@@ -14,7 +14,7 @@ the RHEL version of our app server, let’s retest to see if there has
 been any impact.
 
 [#step-1-retest-our-pet-application]
-==== Step 1 - Retest our Pet Application
+=== Step 1 - Retest our Pet Application
 
 It’s time to repeat the testing you did for
 link:../1.6-my-pet-app/README.md#step-3---test-the-pet-application[Step
@@ -47,7 +47,7 @@ narrow down the root cause. Make note of any issues so you can retest
 after rolling back the upgrade.
 
 [#step-2-add-more-records-to-the-database]
-==== Step 2 - Add More Records to the Database
+=== Step 2 - Add More Records to the Database
 
 In link:../2.2-snapshots/README.md[Exercise 2.2], we considered the
 potential pitfalls of including app data in the scope of our snapshot.
@@ -64,7 +64,7 @@ the upgrade? That is exactly the problem we will demonstrate next
 because the pet app servers deployed in this workshop do not have
 separate volumes to isolate the OS from the app data.
 
-=== Conclusion
+== Conclusion
 
 In this exercise, we observed that the RHEL in-place upgrade left our
 application untouched and we found that it still works as expected after

@@ -1,6 +1,6 @@
-== Workshop Exercise - Custom Modules
+= Workshop Exercise - Custom Modules
 
-=== Optional Exercise
+== Optional Exercise
 
 This is an optional exercise. It is not required to successfully
 complete the workshop, but it’s recommended if time allows. Review the
@@ -12,17 +12,17 @@ Pet Application]
 * link:../2.1-upgrade/README.md[Exercise 2.1 - Run the RHEL Upgrade
 Jobs]
 
-=== Objectives
+== Objectives
 
 * Learn what are custom modules
 * Install a Leapp custom actor to implement additional pre-upgrade
 checks
 * See where to go to learn more about making your own custom actors
 
-=== Guide
+== Guide
 
 [#step-1-what-are-custom-modules?]
-==== Step 1 - What are Custom Modules?
+=== Step 1 - What are Custom Modules?
 
 Custom modules is a generic term that refers to any custom capabilities
 that may be layered on the RHEL in-place upgrades automation approach to
@@ -58,7 +58,7 @@ before and after the task that imports the `infra.leapp` collection
 `upgrade` role from the to actually perform RHEL OS upgrade.
 
 [#step-2-install-a-leapp-custom-actor]
-==== Step 2 - Install a Leapp Custom Actor
+=== Step 2 - Install a Leapp Custom Actor
 
 There is a collection of example custom actor at the GitHub repo
 https://github.com/oamg/leapp-supplements[oamg/leapp-supplements]. We
@@ -153,7 +153,7 @@ later than the last reboot. This host is now out of compliance with our
 reboot hygiene policy!
 
 [#step-3-generate-a-new-pre-upgrade-report]
-==== Step 3 - Generate a New Pre-upgrade Report
+=== Step 3 - Generate a New Pre-upgrade Report
 
 We are now ready to try running a pre-upgrade report including the
 checks from our custom actor.
@@ -183,7 +183,7 @@ sudo reboot
 this inhibitor finding has disappeared with the new report.
 
 [#step-4-learn-more-about-customizing-the-in-place-upgrade]
-==== Step 4 - Learn More About Customizing the In-place Upgrade
+=== Step 4 - Learn More About Customizing the In-place Upgrade
 
 Read the knowledge article
 https://access.redhat.com/articles/4977891[Customizing your Red Hat
@@ -205,7 +205,7 @@ doesn’t already exist in the mainstream Leapp framework.
 GitHub repo where you can find example custom actors and contribute your
 own. It also has the `Makefile` for custom actor RPM packaging.
 
-=== Conclusion
+== Conclusion
 
 In this exercise, we learned that custom modules can be Leapp custom
 actors or simply custom tasks added to your upgrade playbook. We

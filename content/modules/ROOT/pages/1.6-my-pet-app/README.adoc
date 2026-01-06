@@ -1,6 +1,6 @@
-== Workshop Exercise - Deploy a Pet App
+= Workshop Exercise - Deploy a Pet App
 
-=== Optional Exercise
+== Optional Exercise
 
 This is an optional exercise. It is not required to successfully
 complete the workshop, but we recommended trying it if time allows.
@@ -10,17 +10,17 @@ exercise:
 
 * link:../2.1-upgrade/README.md[Exercise 2.1 - Run OS Upgrade Jobs]
 
-=== Objectives
+== Objectives
 
 * Discuss how applications are deployed and maintained in traditional
 server environments
 * Install our example pet application or bring your own
 * Consider how to test if your application is functioning as expected
 
-=== Guide
+== Guide
 
 [#step-1-the-traditional-application-lifecycle]
-==== Step 1 - The Traditional Application Lifecycle
+=== Step 1 - The Traditional Application Lifecycle
 
 Let’s take a step back and think about why we want to do an in-place
 upgrade. Wouldn’t it be best practice to deploy a new server or VM
@@ -52,7 +52,7 @@ see if the app still functions as expected under the new RHEL version
 after the upgrade.
 
 [#step-2-installing-our-beloved-pet-application]
-==== Step 2 - Installing Our Beloved Pet Application
+=== Step 2 - Installing Our Beloved Pet Application
 
 In this step, we are going to install an example application. We are
 going to install the old fashioned way: manually by following a
@@ -184,7 +184,7 @@ o.s.s.petclinic.PetClinicApplication     : Started PetClinicApplication in 6.945
 Type Ctrl-C to quit the `tailf` command.
 
 [#step-3-test-the-pet-application]
-==== Step 3 - Test the Pet Application
+=== Step 3 - Test the Pet Application
 
 Now that we have installed our application and verified it is running,
 it’s time to test how it works.
@@ -217,7 +217,7 @@ its expected behavior. After the upgrade, we will test it again to
 verify it has not been impacted.
 
 [#step-4-configure-the-application-to-start-on-reboot]
-==== Step 4 - Configure the Application to Start on Reboot
+=== Step 4 - Configure the Application to Start on Reboot
 
 Right now, our application was started manually. We need to configure
 the app so it will start up automatically when our server is rebooted.
@@ -266,7 +266,7 @@ ____
 FIXME: Shame on us for not using DNS!
 
 [#step-5-run-another-pre-upgrade-report]
-==== Step 5 - Run Another Pre-upgrade Report
+=== Step 5 - Run Another Pre-upgrade Report
 
 Whenever changes are made to a server, its a good idea to rerun the
 Leapp pre-upgrade report to make sure those changes have not introduced
@@ -292,7 +292,7 @@ during the upgrade if there are unresolvable dependencies.
 There is only one surefire way to know if the package will be removed or
 not. Let’s run the upgrade and see what happens!
 
-=== Conclusion
+== Conclusion
 
 In this exercise, we discussed the sorry state of traditional
 application maintenance, untracked drift and technical debt. We

@@ -1,11 +1,11 @@
-== Workshop Exercise - Run Rollback Job
+= Workshop Exercise - Run Rollback Job
 
-=== Objectives
+== Objectives
 
 * Demonstrate using an Ansible playbook for rolling back a RHEL upgrade
 * Verify the RHEL major version is reverted back
 
-=== Guide
+== Guide
 
 In this exercise, we will demonstrate rolling back one of our pet app
 servers, just as we would if the RHEL upgrade had failed or if we had
@@ -20,7 +20,7 @@ After rolling back, the pet app server will be restored to as it was
 just before entering the upgrade phase of the workflow.
 
 [#step-1-launch-the-rollback-job-template]
-==== Step 1 - Launch the Rollback Job Template
+=== Step 1 - Launch the Rollback Job Template
 
 In this step, we will be rolling back the RHEL in-place upgrade on one
 of our pet application servers.
@@ -52,7 +52,7 @@ If everything looks good, use the ``Launch`` button to start the
 playbook job.
 
 [#step-2-observe-the-rollback-job-output]
-==== Step 2 - Observe the Rollback Job Output
+=== Step 2 - Observe the Rollback Job Output
 
 After launching the rollback playbook job, the AAP Web UI will navigate
 automatically to the job output page.
@@ -72,7 +72,7 @@ merges finish in the background. The instance was actually rolled back
 and service ready in just under a minute. Impressive, right?
 
 [#step-3-check-the-rhel-version]
-==== Step 3 - Check the RHEL Version
+=== Step 3 - Check the RHEL Version
 
 Repeat the steps you followed with
 link:../2.3-check-upg/README.md#step-2---verify-the-hosts-are-upgraded-to-next-rhel-version[Exercise
@@ -84,7 +84,7 @@ from RHEL7 to RHEL8, you should now see it is back to RHEL7:
 +
 image::commands_after_rollback.svg[command output showing the host is back to RHEL7 installed]
 
-=== Conclusion
+== Conclusion
 
 In this exercise, we used automation to quickly reverse the RHEL
 in-place upgrade and restore the app server back to its original state.
