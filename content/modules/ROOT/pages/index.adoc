@@ -92,9 +92,3 @@ them in the prescribed order.
 
 Your will find links to the previous and next exercises at the bottom of
 each exercise page. Click the link below to get started.
-
-'''''
-
-*Navigation*
-
-xref:1.1-setup/README.adoc[Next Exercise]
