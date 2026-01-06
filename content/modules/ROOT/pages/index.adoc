@@ -12,8 +12,7 @@ enterprise environment.
 There are four key features that the solution approach recommends to
 deliver success at scale:
 
-image::images/ripu_key_features.svg[Automate Everything,
-Snapshot/rollback, Custom Modules, Reporting Dashboard]
+image::ripu_key_features.svg[Automate Everything, Snapshot/rollback, Custom Modules, Reporting Dashboard]
 
 As you progress through this workshop, you will learn more about the
 importance of these features and the different options for how you might
@@ -71,8 +70,7 @@ the remaining hosts which will be upgraded in-place to the next RHEL
 major version. The automation uses LVM to manage the snapshot/rollback
 capability.
 
-image::images/ripu_lab_diagram.svg[RHEL In-place Upgrade Automation
-Workshop lab diagram]
+image::ripu_lab_diagram.svg[RHEL In-place Upgrade Automation Workshop lab diagram]
 
 === Workshop Exercises
 
