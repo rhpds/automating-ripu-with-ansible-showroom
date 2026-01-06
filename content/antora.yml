@@ -1,5 +1,5 @@
 name: modules
-title: Default Title
+title: Automating RHEL In Place Upgrades with Ansible
 version: master
 nav:
   - modules/ROOT/nav.adoc
