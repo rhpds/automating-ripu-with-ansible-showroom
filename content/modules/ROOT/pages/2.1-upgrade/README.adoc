@@ -1,11 +1,11 @@
-== Workshop Exercise - Run OS Upgrade Jobs
+= Workshop Exercise - Run OS Upgrade Jobs
 
-=== Objectives
+== Objectives
 
 * Use a workflow job template to create snapshots and start the upgrades
 * Learn about how the Leapp framework goes about upgrading the RHEL OS
 
-=== Guide
+== Guide
 
 We are ready to start the upgrade phase of our RHEL in-place automation
 journey:
@@ -20,7 +20,7 @@ perform the upgrade where the host is advanced to the new RHEL major
 version.
 
 [#step-1-launch-the-upgrade-workflow-job-template]
-==== Step 1 - Launch the Upgrade Workflow Job Template
+=== Step 1 - Launch the Upgrade Workflow Job Template
 
 We are about to start the RHEL in-place upgrade of our pet application
 servers. The hosts will not be available for login or application access
@@ -57,7 +57,7 @@ image::upgrade_preview.svg[Upgrade job preview on AAP Web UI]
 to start the job.
 
 [#step-2-learn-more-about-leapp]
-==== Step 2 - Learn More About Leapp
+=== Step 2 - Learn More About Leapp
 
 After launching the upgrade job, the AAP Web UI will navigate
 automatically to the workflow job output page of the job we just
@@ -103,7 +103,7 @@ framework architecture and internal design by reading the upstream
 https://leapp.readthedocs.io/en/latest/index.html[Leapp Developer
 Documentation].
 
-=== Conclusion
+== Conclusion
 
 In this exercise, we launched a workflow job template to create
 snapshots and start the upgrades of our pet app servers. We learned more

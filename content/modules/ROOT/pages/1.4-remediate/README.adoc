@@ -1,16 +1,16 @@
-== Workshop Exercise - Perform Recommended Remediation
+= Workshop Exercise - Perform Recommended Remediation
 
-=== Objectives
+== Objectives
 
 * Consider different options for resolving inhibitor risk findings
 * Learn how to use the `leapp_answerfile` variable of the `analysis`
 role
 * Use a remediation playbook to proactively prepare for pre-upgrade
 
-=== Guide
+== Guide
 
 [#step-1-explore-options-for-resolving-inhibitors]
-==== Step 1 - Explore Options for Resolving Inhibitors
+=== Step 1 - Explore Options for Resolving Inhibitors
 
 In the previous exercise, we reviewed the Leapp pre-upgrade reports that
 were generated for our RHEL pet application servers. Each server had a couple of inhibitors that will require attention before the RHEL upgrade can proceed.
@@ -52,7 +52,7 @@ Automation Platform (AAP) to perform remediations in bulk across a large
 RHEL estate.
 
 [#step-2-managing-the-leapp-answer-file]
-==== Step 2 - Managing the Leapp Answer File
+=== Step 2 - Managing the Leapp Answer File
 
 The Leapp framework uses an answer file as a means of accepting user
 input choices. This is explained in greater detail in the
@@ -122,7 +122,7 @@ But we still have the ``Possible problems with remote login using root
 account'' inhibitor which we need to fix. Let’s look at that next.
 
 [#step-3-resolving-inhibitors-using-a-remediation-playbook]
-==== Step 3 - Resolving Inhibitors Using a Remediation Playbook
+=== Step 3 - Resolving Inhibitors Using a Remediation Playbook
 
 In the previous step, we were able to resolve an inhibitor finding by
 simply setting the `leapp_answerfile` input variable supported by the
@@ -195,7 +195,7 @@ image::rhel7_no_inhibitors.svg[Pre-upgrade report of RHEL7 host with no more inh
 With no inhibitors indicated on our RHEL7 and RHEL8 pet servers, we are
 ready to try the RHEL upgrade.
 
-=== Conclusion
+== Conclusion
 
 In this exercise, we looked at the different ways we can resolve
 inhibitor risk findings. We learned how to use the `leapp_answerfile`

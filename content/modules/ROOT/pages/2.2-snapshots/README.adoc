@@ -1,6 +1,6 @@
-== Workshop Exercise - Let’s Talk About Snapshots
+= Workshop Exercise - Let’s Talk About Snapshots
 
-=== Objectives
+== Objectives
 
 * Understand the difference between backups and snapshots
 * Learn about some of the different ways of doing snapshots
@@ -8,7 +8,7 @@
 automating snapshots
 * Consider the appropriate snapshot scope for your organization
 
-=== Guide
+== Guide
 
 In the previous exercise, we launched the automation to start the RHEL
 in-place upgrades of our pet application servers. The first step of the
@@ -25,7 +25,7 @@ Let’s start by defining exactly what we mean when we talk about
 snapshots.
 
 [#step-1-what-are-snapshots-and-what-are-they-not]
-==== Step 1 - What are Snapshots and What are They Not
+=== Step 1 - What are Snapshots and What are They Not
 
 Most organizations with a mature traditional computing environment will
 have standards and tools implemented for doing backups. Typically,
@@ -67,7 +67,7 @@ back in time that makes snapshots ideal for reducing the risk of
 performing RHEL in-place upgrades.
 
 [#step-2-assessing-different-snapshot-solutions]
-==== Step 2 - Assessing Different Snapshot Solutions
+=== Step 2 - Assessing Different Snapshot Solutions
 
 There are a number of different types of snapshot solutions you may
 choose from. Each has their own benefits and drawbacks as summarized in
@@ -152,7 +152,7 @@ Not really a snapshot, but does offer boot ISO full recovery capability
 
 The following sections explain the pros and cons in detail.
 
-===== LVM
+==== LVM
 
 The Logical Volume Manager (LVM) is a set of tools included in RHEL that
 provide a way to create and manage virtual block devices known as
@@ -236,7 +236,7 @@ and free space usage carefully monitored. However, if that challenge can
 be met, LVM snapshots offer a reliable snapshot solution without the
 headache of depending on external infrastructure such as VMware.
 
-===== VMware
+==== VMware
 
 A VMware snapshot preserves the state and data of a VM at a specific
 point in time. Because VMware snapshots operate at the hypervisor level,
@@ -279,7 +279,7 @@ considering this option, engage early with the team that controls the
 VMware environment for your organization and be prepared for potential
 resistance.
 
-===== Amazon EBS
+==== Amazon EBS
 
 Amazon Elastic Block Store (Amazon EBS) provides the block storage
 volumes used for the virtual disks attached to AWS EC2 instances. When a
@@ -300,7 +300,7 @@ volume that corresponds to the target host in the Ansible inventory
 managed by AAP, but this can be solved by setting identifying tags on
 your EC2 instances.
 
-===== Break Mirror
+==== Break Mirror
 
 This method is an alternative to LVM that can be used with bare metal
 servers where the root disk is on a hardware RAID mirror set.
@@ -322,7 +322,7 @@ prepared for a significant development and testing effort because the
 API implementations are not always the same across different vendors and
 server models.
 
-===== ReaR
+==== ReaR
 
 ReaR (Relax and Recover) is a backup and recovery tool that is included
 with RHEL. ReaR doesn’t use snapshots, but it does make it very easy to
@@ -342,7 +342,7 @@ https://www.redhat.com/sysadmin/rear-backup-and-recover[ReaR: Backup and
 recover your Linux server with confidence] to learn more.
 
 [#step-3-snapshot-scope]
-==== Step 3 - Snapshot Scope
+=== Step 3 - Snapshot Scope
 
 The best practice for allocating the local storage of a RHEL servers is
 to configure volumes that separate the OS from the apps and app data.
@@ -413,7 +413,7 @@ leading to unpredictable issues. When rolling back app data for any
 reason, be aware of the potential headaches that may result.
 
 [#step-4-choosing-the-best-snapshot-solution]
-==== Step 4 - Choosing the Best Snapshot Solution
+=== Step 4 - Choosing the Best Snapshot Solution
 
 There are a number of factors you should consider when deciding which
 method of snapshot/rollback will work best in your environment.
@@ -434,7 +434,7 @@ Whatever your decision, remember that an effective snapshot/rollback
 capability integrated with your end-to-end automation is the most
 important feature of any RHEL in-place upgrade solution.
 
-=== Conclusion
+== Conclusion
 
 In this exercise, we learned about the pros and cons of a number of
 different methods of achieving an automated snapshot/rollback

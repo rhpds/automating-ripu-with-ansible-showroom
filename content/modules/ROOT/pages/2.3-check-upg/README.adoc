@@ -1,11 +1,11 @@
-== Workshop Exercise - Check if the Upgrades Worked
+= Workshop Exercise - Check if the Upgrades Worked
 
-=== Objectives
+== Objectives
 
 * Review the upgrade playbook job log
 * Verify our pet application servers are running the newer RHEL version
 
-=== Guide
+== Guide
 
 In the previous exercises, we review pre-upgrade reports and performed
 some recommended remediations. If you tried the optional exercises, you
@@ -22,7 +22,7 @@ image::ripu-workflow-hl-validate.svg[Automation approach workflow diagram with a
 Let’s get started!
 
 [#step-1-review-the-upgrade-playbook-job-log]
-==== Step 1 - Review the Upgrade Playbook Job Log
+=== Step 1 - Review the Upgrade Playbook Job Log
 
 The first thing we want to do is see if the job running the upgrade
 playbooks has finished successfully.
@@ -64,7 +64,7 @@ If there are no failed runs, the RHEL in-place upgrade is done on all of
 our pet app servers.
 
 [#step-2-verify-the-hosts-are-upgraded-to-next-rhel-version]
-==== Step 2 - Verify the Hosts are Upgraded to Next RHEL Version
+=== Step 2 - Verify the Hosts are Upgraded to Next RHEL Version
 
 Now let’s make sure our pet app servers are actually upgraded to the
 next RHEL version.
@@ -106,7 +106,7 @@ showing a pet app server that was upgraded to RHEL9:
 +
 image::rhel9_commands.svg[command output showing RHEL9 is installed]
 
-=== Conclusion
+== Conclusion
 
 In this exercise, we observed that the upgrade playbook runs completed
 successfully. We then used the RHEL Web Console and the command line to

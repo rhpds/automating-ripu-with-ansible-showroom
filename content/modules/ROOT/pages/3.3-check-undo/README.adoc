@@ -1,20 +1,20 @@
-== Workshop Exercise - Check if Upgrade Undone
+= Workshop Exercise - Check if Upgrade Undone
 
-=== Objectives
+== Objectives
 
 * Validate that all changes and impacts caused by the upgrade are undone
 after rolling back
 * Revisit the topic of snapshot scope
 * Consider next steps after rolling back
 
-=== Guide
+== Guide
 
 In the previous exercise, we rolled back one of our pet app servers. Now
 we will take a closer look at where that has left us and consider where
 do we go from there.
 
 [#step-1-our-state-after-rolling-back]
-==== Step 1 - Our State After Rolling Back
+=== Step 1 - Our State After Rolling Back
 
 In this step, we will repeat the observations we made on our host after
 the upgrade with the expectation that everything is back as it was
@@ -68,7 +68,7 @@ they are aware of the risk to app data if you choose to do everything
 scope snapshots.
 
 [#step-2-what’s-next?]
-==== Step 2 - What’s Next?
+=== Step 2 - What’s Next?
 
 No matter what the reason is for rolling back, the next step will be to
 decide what to do next.
@@ -99,7 +99,7 @@ upgrade will still be available. If no significant changes are made
 after rolling back, it is not necessary to generate a fresh pre-upgrade
 report before trying another upgrade.
 
-=== Conclusion
+== Conclusion
 
 In this exercise, we reviewed the state of our pet app server after
 rolling back and we considered next steps for some different scenarios.

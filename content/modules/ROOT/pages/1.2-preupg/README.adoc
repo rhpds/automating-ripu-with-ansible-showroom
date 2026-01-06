@@ -1,15 +1,15 @@
-== Workshop Exercise - Run Pre-upgrade Jobs
+= Workshop Exercise - Run Pre-upgrade Jobs
 
-=== Objectives
+== Objectives
 
 * Understand the end-to-end RHEL in-place upgrade workflow
 * Understand how to use AAP job templates to run Ansible playbooks
 * Run the pre-upgrade analysis jobs
 
-=== Guide
+== Guide
 
 [#step-1-rhel-in-place-upgrade-automation-workflow]
-==== Step 1 - RHEL In-place Upgrade Automation Workflow
+=== Step 1 - RHEL In-place Upgrade Automation Workflow
 
 Red Hat Enterprise Linux (RHEL) comes with the Leapp utility, the
 underlying framework that our automation approach uses to upgrade the
@@ -35,7 +35,7 @@ The image:playbook_icon.svg[arrow pointing down at server] icon
 indicates workflow steps that are automated by Ansible playbooks.
 ____
 
-===== Analysis
+==== Analysis
 
 During the analysis phase, no changes are made yet. When the analysis
 playbook is executed, it uses the Leapp utility to scan the host for
@@ -48,7 +48,7 @@ should be run again to verify the risks are resolved. This iteration
 continues until everyone reviewing the report is comfortable that any
 remaining findings are acceptable.
 
-===== Upgrade
+==== Upgrade
 
 After the analysis phase is done and the report indicates acceptable
 risk, a maintenance window can be scheduled and the upgrade phase can
@@ -63,7 +63,7 @@ host will reboot under the newly upgraded RHEL major version. Now the
 ops and app teams can assess if the upgrade was successful by verifying
 all application services are working as expected.
 
-===== Commit
+==== Commit
 
 If there are any application impacts discovered that can’t be easily
 corrected within the scheduled maintenance window, the decision can be
@@ -76,7 +76,7 @@ everyone is comfortable with the upgraded host, the commit playbook
 should be executed to delete the snapshot. The RHEL in-place upgrade is
 done.
 
-===== Let’s Get Started
+==== Let’s Get Started
 
 The RHEL in-place upgrade automation approach workflow is designed to
 reduce the risks inherent in doing an in-place upgrade versus deploying
@@ -88,7 +88,7 @@ outages is to proceed with upgrades in properly configured Dev and Test
 environments before moving on to production hosts.
 
 [#step-2-use-aap-to-launch-an-analysis-playbook-job]
-==== Step 2 - Use AAP to Launch an Analysis Playbook Job
+=== Step 2 - Use AAP to Launch an Analysis Playbook Job
 
 As we progress through the workshop, we’ll refer back to this diagram to
 track where we are in our automation approach workflow. We are starting
@@ -143,7 +143,7 @@ image::analysis_preview.png[Analysis job preview on AAP Web UI]
 to start the playbook job.
 
 [#step-3-review-the-playbook-job-output]
-==== Step 3 - Review the Playbook Job Output
+=== Step 3 - Review the Playbook Job Output
 
 After launching the analysis playbook job, the AAP Web UI will navigate
 automatically to the job output page for the job you just started.
@@ -163,7 +163,7 @@ like this example:
 image::analysis_job_recap.svg[Analysis job ``PLAY RECAP`` as seen at the end of the job output]
 
 [#step-4-challenge-lab-analysis-playbook]
-==== Step 4 - Challenge Lab: Analysis Playbook
+=== Step 4 - Challenge Lab: Analysis Playbook
 
 Let’s take a closer look at the playbook we just ran.
 
@@ -208,7 +208,7 @@ When you are ready to develop your own custom playbooks to run upgrades
 for your enterprise, you should consider using roles from the
 `infra.leapp` Ansible collection to make your job easier.
 
-=== Conclusion
+== Conclusion
 
 In this exercise, we learned about the end-to-end workflow used by our
 automation approach for doing RHEL in-place upgrades. We used a job
