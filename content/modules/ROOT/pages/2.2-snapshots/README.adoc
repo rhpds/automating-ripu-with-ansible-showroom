@@ -335,34 +335,26 @@ With these concepts in mind, let’s consider if we want to include the
 apps and app data in what gets rolled back if we need to revert the RHEL
 upgrade:
 
-Snapshot scope
+[%header, cols=".^15%,.^40%a,.^45%a", frame=all, grid=all]
+|===
+^| Snapshot scope
+^| Benefits
+^| Drawbacks
 
-Benefits
-
-Drawbacks
-
-OS only
-
-Simplifies storage requirements
-
-Preserves isolation of OS changes from apps and app data
-
-Reduces risk of rolling back impacting external apps
-
-Probably not possible with VMware snapshots
-
-Discipline required to avoid temptation of trying quick app changes to
+| OS only
+| * Simplifies storage requirements
+* Preserves isolation of OS changes from apps and app data
+* Reduces risk of rolling back impacting external apps
+| * Probably not possible with VMware snapshots
+* Discipline required to avoid temptation of trying quick app changes to
 fix impacts
 
-OS and apps/data
-
-Reduces risk if trying to fix app impact during maintenance window
-
-Helpful if app impact could lead to app data corruption
-
-More storage space required
-
-Rolling back app data could impact external systems
+| OS and apps/data
+| * Reduces risk if trying to fix app impact during maintenance window
+* Helpful if app impact could lead to app data corruption
+| * More storage space required
+* Rolling back app data could impact external systems
+|===
 
 When snapshots only include the upgraded OS volumes, the best practice
 of isolating OS changes from app changes is followed. In this case, it
