@@ -232,9 +232,7 @@ Lets take a look at our last system, the RHEL 9 one.
 
 Following the same steps as in the previous two exercises, let’s now take a look at the report from our RHEL9 host.
 
-+
 image::rhel9_report.png[Example pre-upgrade report of RHEL9 host]
-+
 
 * In the report for our RHEL9 pet app server above, we see there are only two high risk findings and one of them is an inhibitor. Additionally, both of these findings are related to the GRUB2 core update and the RHSM repositories. These are the same findings we saw in the RHEL8 and RHEL7 pre-upgrade reports, and there's not much new here.
 * However, there's a new finding that is marked as a low risk, ``SElinux will be set to permissive mode``
