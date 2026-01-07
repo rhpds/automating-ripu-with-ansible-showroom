@@ -23,7 +23,7 @@ recursive command and already know the consequences. In this exercise,
 we are going to intentionally mess up one of our pet app servers to
 demonstrate how rolling back can save the day.
 
-Let’s get started!
+Let's get started!
 
 [#step-1-select-a-pet-app-server]
 === Step 1 - Select a Pet App Server
@@ -84,7 +84,7 @@ by rolling back the upgrade.
 
 == Conclusion
 
-Congratulations, you have trashed one of your app servers. Wasn’t that
+Congratulations, you have trashed one of your app servers. Wasn't that
 fun?
 
 In the next exercise, you will untrash it by rolling back the upgrade.

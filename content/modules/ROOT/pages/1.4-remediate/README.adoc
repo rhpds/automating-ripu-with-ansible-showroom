@@ -19,7 +19,7 @@ We are now here in our automation approach workflow:
 
 image::ripu-workflow-hl-remediate.svg[Automation approach workflow diagram with apply recommended remediations step highlighted]
 
-. Let’s start by dissecting one of our inhibitor findings:
+. Let's start by dissecting one of our inhibitor findings:
 +
 image::missing_answers_dissected.svg[Details view of missing required answers in the answer file]
 +
@@ -42,12 +42,12 @@ there are a number of options we can choose from for how to execute the
 command. Obviously, we could go with the quick and dirty method of
 getting to a root shell prompt on the host to cut and paste the command
 or manually edit the answerfile. Of course, going that way is prone to
-human error and doesn’t scale well. Another option would be to use the
-``Run Remediation`` button shown above the command. Using this option,
+human error and doesn't scale well. Another option would be to use the
+"Run Remediation" button shown above the command. Using this option,
 the RHEL Web Console executes the command for us. While doing this is
-less prone to human error, it still doesn’t scale well as it’s only
+less prone to human error, it still doesn't scale well as it's only
 going to run on this single host.
-. In the next steps, we’ll look at how we can use the scale of Ansible
+. In the next steps, we'll look at how we can use the scale of Ansible
 Automation Platform (AAP) to perform remediations in bulk across a large
 RHEL estate.
 
@@ -70,8 +70,8 @@ https://github.com/redhat-cop/infra.leapp/blob/main/roles/analysis/README.md[doc
 for this role]. Do you see where it supports a `leapp_answerfile` input
 variable. We can set the variable to automatically populate the Leapp
 answer file.
-. Let’s try running the pre-upgrade job again with this variable
-defined. Launch the ``AUTO / 01 Analysis`` job template the same as you
+. Let's try running the pre-upgrade job again with this variable
+defined. Launch the "AUTO / 01 Analysis" job template the same as you
 did under
 xref:1.2-preupg/README.adoc#step-2-use-aap-to-launch-an-analysis-playbook-job[Exercise
 1.2, Step 2], except this time, we will add this setting when we get to
@@ -86,20 +86,20 @@ For example:
 +
 image::analysis_leapp_answerfile.svg[Setting the `leapp_answerfile` input variable]
 +
-After making the variable setting as shown above, click the ``Next``
+After making the variable setting as shown above, click the "Next"
 button. This will lead to the job template survey prompt. Previously, we
-used the ``ALL_rhel`` option to run the pre-upgrade on all our pet
+used the "ALL_rhel" option to run the pre-upgrade on all our pet
 servers. However, our `leapp_answerfile` setting is specific to our
-RHEL7 hosts, so choose the ``rhel7`` option this time:
+RHEL7 hosts, so choose the "rhel7" option this time:
 +
-image::analysis_survey_rhel7_only.svg[Choose ``rhel7`` at the survey prompt]
+image::analysis_survey_rhel7_only.svg[Choose "rhel7" at the survey prompt]
 +
-Click the ``Next`` button to proceed to the preview prompt. If you are
-satisfied with the job preview, use the ``Launch`` button to start the
+Click the "Next" button to proceed to the preview prompt. If you are
+satisfied with the job preview, use the "Launch" button to start the
 job.
 . As before, the AAP Web UI will navigate automatically to the job
 output page after you start the job. The job will take a few minutes to
-finish and then you should see the ``PLAY RECAP`` at the end of the job
+finish and then you should see the "PLAY RECAP" at the end of the job
 output.
 . Now go back to your RHEL Web Console browser tab and navigate to the
 pre-upgrade report of one of the RHEL7 hosts.
@@ -111,24 +111,24 @@ You may need to refresh the browser using Ctrl-R to see the newly
 generated report.
 ____
 +
-You should see that the ``Missing required answers in the answer file``
+You should see that the "Missing required answers in the answer file"
 inhibitor finding is no longer being reported.
 +
 For example:
 +
 image::rhel7_answer_fixed.svg[Pre-upgrade report of RHEL7 host without answer file inhibitor]
 +
-But we still have the ``Possible problems with remote login using root
-account`` inhibitor which we need to fix. Let’s look at that next.
+But we still have the "Possible problems with remote login using root
+account" inhibitor which we need to fix. Let's look at that next.
 
 [#step-3-resolving-inhibitors-using-a-remediation-playbook]
 === Step 3 - Resolving Inhibitors Using a Remediation Playbook
 
 In the previous step, we were able to resolve an inhibitor finding by
 simply setting the `leapp_answerfile` input variable supported by the
-`infra.leapp` Ansible collection `analysis` role. While that’s a
+`infra.leapp` Ansible collection `analysis` role. While that's a
 convenient way to resolve an answerfile inhibitor, our next inhibitor
-can’t be resolved that way.
+can't be resolved that way.
 
 . Here is our other inhibitor finding:
 +
@@ -138,9 +138,9 @@ Like the previous inhibitor finding, this one also provides a detailed
 summary and a a fairly prescriptive recommended remediation. However, it
 does not recommend an exact remediation command. Instead, the
 remediation recommends making edits to the `/etc/ssh/sshd_config` file.
-. Of course, we’re not going to just login to a root shell and `vi` the
-configuration file, are we? Right, let’s make a playbook to automate the
-required remediations. Here’s a task that should do the trick:
+. Of course, we're not going to just login to a root shell and `vi` the
+configuration file, are we? Right, let's make a playbook to automate the
+required remediations. Here's a task that should do the trick:
 +
 [source,yaml]
 ----
@@ -157,7 +157,7 @@ required remediations. Here’s a task that should do the trick:
     - Restart sshd
 ----
 +
-While we’re at it, let’s also add a task to take care of the answer file
+While we're at it, let's also add a task to take care of the answer file
 inhibitor using the `leapp answer` command. For example:
 +
 [source,yaml]
@@ -172,21 +172,21 @@ inhibitor using the `leapp answer` command. For example:
 . You will find the tasks above in the playbook
 https://github.com/rhpds/leapp-project/blob/prod/remediate_rhel7.yml[`remediate_rhel7.yml`].
 There are a few more remediation task examples in this playbook as well.
-The ``OS / Remediate`` job template is already set up to execute this
-playbook, so let’s use it to remediate our RHEL7 hosts.
+The "OS / Remediate" job template is already set up to execute this
+playbook, so let's use it to remediate our RHEL7 hosts.
 . Return to your AAP Web UI browser tab. Navigate to Resources >
-Templates on the AAP Web UI and open the ``OS / Remediate`` job
-template. Click the ``Launch`` button to get started.
+Templates on the AAP Web UI and open the "OS / Remediate" job
+template. Click the "Launch" button to get started.
 . This will bring you to the job template survey prompt. Again, choose
-the ``rhel7`` option at the ``Select inventory group`` prompt because
+the "rhel7" option at the "Select inventory group" prompt because
 our remediation playbook is specific to the pre-upgrade findings of our
-RHEL7 hosts. Then click the ``Next`` button. If you are satisfied with
-the job preview, use the ``Launch`` button to submit the job. This
+RHEL7 hosts. Then click the "Next" button. If you are satisfied with
+the job preview, use the "Launch" button to submit the job. This
 playbook includes only a small number of tasks and should run pretty
 quickly.
-. When the ``OS / Remediate`` job is finished, launch the ``AUTO / 01
-Analysis'' job template one more time again taking care to choose the
-``rhel7`` option at the ``Select inventory group`` prompt. When the job
+. When the "OS / Remediate" job is finished, launch the "AUTO / 01
+Analysis" job template one more time again taking care to choose the
+"rhel7" option at the "Select inventory group" prompt. When the job
 completes, go back to the RHEL Web Console of your RHEL7 host and
 refresh the report. You should now see there are no inhibitors:
 +
@@ -214,7 +214,7 @@ Checks]
 Application]
 
 These exercises are not required to successfully complete the workshop,
-but we recommend doing them if time allows. If you can’t wait and want
+but we recommend doing them if time allows. If you can't wait and want
 skip ahead to upgrading your RHEL hosts, strap in for this exciting
 exercise:
 

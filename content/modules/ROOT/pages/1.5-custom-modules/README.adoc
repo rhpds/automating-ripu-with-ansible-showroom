@@ -3,7 +3,7 @@
 == Optional Exercise
 
 This is an optional exercise. It is not required to successfully
-complete the workshop, but it’s recommended if time allows. Review the
+complete the workshop, but it's recommended if time allows. Review the
 objectives listed in the next section to decide if you want to do this
 exercise or if you would rather skip ahead to the next exercises:
 
@@ -40,9 +40,9 @@ implement additional tasks in your upgrade playbook to take care of
 updating the Chef client package and making any required changes to the
 Chef node attributes and run list that would be required under the new
 OS version.
-* We use the generic term ``custom modules`` because there is no single
+* We use the generic term "custom modules" because there is no single
 blueprint for how to design and implement the logic and automation for
-different organization’s diverse requirements. Custom module
+different organization's diverse requirements. Custom module
 requirements may call for a Leapp custom actor, custom Ansible
 automation, or even an integrated design using both.
 * Custom Leapp actors are best for implementing any additional
@@ -66,7 +66,7 @@ will use one of these to demonstrate adding a custom check to our
 pre-upgrade reports.
 
 . The example custom actor we are going to install implements checks for
-compliance with an imaginary organization's ``reboot hygiene`` policy.
+compliance with an imaginary organization's "reboot hygiene" policy.
 The actor will block the upgrade by reporting inhibitor risk if any of
 the following conditions are detected:
 .. The host uptime is greater than the maximum defined by the policy.
@@ -101,8 +101,8 @@ We are now ready to try running a pre-upgrade report including the
 checks from our custom actor.
 
 . Return to your AAP Web UI browser tab. Navigate to Resources >
-Templates and open the ``AUTO / 01 Analysis`` job template. Launch the
-job choosing the ``ALL_rhel`` option at the ``Select inventory group``
+Templates and open the "AUTO / 01 Analysis" job template. Launch the
+job choosing the "ALL_rhel" option at the "Select inventory group"
 prompt.
 . When the job completes, go back to the RHEL Web Console and use the
 remote host menu to navigate to the pet app server where you installed
@@ -142,7 +142,7 @@ Leapp]: this documentation covers the internal workflow architecture of
 the Leapp framework and how to develop and test your own custom actors.
 * https://oamg.github.io/leapp-dashboard/#/[Leapp Dashboard]: dig around
 here to make sure the custom actor functionality you are considering
-doesn’t already exist in the mainstream Leapp framework.
+doesn't already exist in the mainstream Leapp framework.
 * https://github.com/oamg/leapp-supplements[oamg/leapp-supplements]:
 GitHub repo where you can find example custom actors and contribute your
 own. It also has the `Makefile` for custom actor RPM packaging.

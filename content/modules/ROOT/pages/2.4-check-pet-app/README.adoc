@@ -10,13 +10,13 @@ back
 
 In xref:1.6-my-pet-app/README.adoc[Exercise 1.6] we installed a sample
 pet application and tested its functionality. Now that we have upgraded
-the RHEL version of our app server, let’s retest to see if there has
+the RHEL version of our app server, let's retest to see if there has
 been any impact.
 
 [#step-1-retest-our-pet-application]
 === Step 1 - Retest our Pet Application
 
-It’s time to repeat the testing you did for
+It's time to repeat the testing you did for
 xref:1.6-my-pet-app/README.adoc#step-3-test-the-pet-application[Step
 3] in the previous exercise.
 
@@ -38,11 +38,11 @@ determine the new URL for the application web user interface:
 echo "http://$(curl -s ifconfig.me):8080"
 ----
 ____
-. Did you previously use the ``Edit Owner`` or ``Add New Pet`` buttons
+. Did you previously use the "Edit Owner" or "Add New Pet" buttons
 to change any data or add new records? If so, check to see if that data
 is still there and displayed correctly.
 . If you observe any changes in your application behavior or the
-application isn’t working at all, troubleshoot the issue to try to
+application isn't working at all, troubleshoot the issue to try to
 narrow down the root cause. Make note of any issues so you can retest
 after rolling back the upgrade.
 
@@ -56,7 +56,7 @@ upgrade, but an issue was later discovered after the app had been
 returned to production use.
 
 . Add a new record to the database. For example, add a new pet record
-with the name ``Post Upgrade`` to make it easy to distinguish. Remember
+with the name "Post Upgrade" to make it easy to distinguish. Remember
 this record to see what happens after we revert the OS upgrade in the
 next section of the workshop.
 . What will be the business impact if data updates are rolled back with

@@ -67,8 +67,8 @@ The business will not be happy about losing their changes, so make sure
 they are aware of the risk to app data if you choose to do everything
 scope snapshots.
 
-[#step-2-what’s-next?]
-=== Step 2 - What’s Next?
+[#step-2-what's-next?]
+=== Step 2 - What's Next?
 
 No matter what the reason is for rolling back, the next step will be to
 decide what to do next.
@@ -79,13 +79,13 @@ standard tools and agents. If so, assess what happened and use the
 experience to improve your automation to prevent similar issues going
 forward.
 +
-Developing robust automation is an iterative process. Remember it’s good
+Developing robust automation is an iterative process. Remember it's good
 to fail fast! Failed upgrades early in the development of your
 automation should be expected and will inform you about what needs
 fixed. Having an automated rollback capability helps accelerate the
 development of robust playbooks.
 . What if you rolled back because application impact was discovered
-after the upgrade. In this case, it’s important for the app team to
+after the upgrade. In this case, it's important for the app team to
 investigate the cause of the impact. Once the cause is understood, roll
 back so what was learned can be applied to avoid the issue next time.
 +
@@ -104,6 +104,6 @@ report before trying another upgrade.
 In this exercise, we reviewed the state of our pet app server after
 rolling back and we considered next steps for some different scenarios.
 
-In the next and final exercise of the workshop, we’ll review what we
+In the next and final exercise of the workshop, we'll review what we
 learned and explore some additional things you may want to play with in
 the workshop lab environment.

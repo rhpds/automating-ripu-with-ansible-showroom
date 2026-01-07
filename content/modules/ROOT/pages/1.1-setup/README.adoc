@@ -14,7 +14,7 @@ The workshop is provisioned with a pre-configured lab environment. You
 will have access to a host deployed with Ansible Automation Platform
 (AAP) which you will use to control the playbook and workflow jobs that
 automate the RHEL in-place upgrade workflow steps. You will also have
-access to some ''pet'' application hosts, with RHEL 7, 8, and 9.
+access to some "pet" application hosts, with RHEL 7, 8, and 9.
  These are the hosts where we will be upgrading the RHEL
 operating system (OS) to the next major version.
 
@@ -35,8 +35,8 @@ intuitive way to use a web browser to edit files and access terminal
 sessions. If you are a command line hero, direct SSH access is available
 if VS Code is not to your liking.
 
-. You can open VS Code in your web browser using the ``Console URL``
-link under ``Code-Server Console (Bastion)`` on the workshop launch page provided
+. You can open VS Code in your web browser using the "Console URL"
+link under "Code-Server Console (Bastion)" on the workshop launch page provided
 by your instructor. The password is given below the link. For example:
 +
 image::vscode_link.png[Example link to VS Code WebUI]
@@ -55,7 +55,7 @@ ____
 === Step 2 - Open a Terminal Session
 
 Terminal sessions provide access to the RHEL commands and utilities that
-will help us understand what's going on ``behind the curtain`` when the
+will help us understand what's going on "behind the curtain" when the
 RHEL in-place upgrade automation is doing its thing.
 
 . Use VS Code to open a terminal session. For example:
@@ -78,8 +78,8 @@ The AAP Web UI is where we will go to submit and check the status of the
 Ansible playbook jobs we will use to automate the RHEL in-place upgrade
 workflow.
 
-. Let’s open the AAP Web UI in a new web browser tab using the
-``Console`` link under ``Red Hat Ansible Automation Controller`` on the
+. Let's open the AAP Web UI in a new web browser tab using the
+"Console" link under "Red Hat Ansible Automation Controller" on the
 workshop launch page. For example:
 +
 image::aap_link.png[Example link to AAP Web UI]
@@ -96,8 +96,8 @@ exercise.
 We will use the RHEL Web Console to review the results of the Leapp
 pre-upgrade reports we generate for our pet app servers.
 
-. Open a new web browser tab using the ``Console`` link under ``Cockpit``
-Interactive Linux Server Admin Interface'' on the workshop launch page.
+. Open a new web browser tab using the "Console" link under "Cockpit
+Interactive Linux Server Admin Interface" on the workshop launch page.
 For example:
 +
 image::cockpit_link.png[Example link to RHEL Web Console]
@@ -113,11 +113,11 @@ pre-upgrade reports in an upcoming exercise.
 
 The first thing we need to do is to configure AAP with our content.  A pre-defined configuration as code job template is available to do this.
 
-. Navigate to the AAP Web UI and go to the ``Templates`` tab inside Automation Execution (Automation Controller).  You should see a job template named ``Z / CaC / Controller``.  This is our pre-defined job template to configure AAP.  Click on the ``Launch`` button to run this job template.
+. Navigate to the AAP Web UI and go to the "Templates" tab inside Automation Execution (Automation Controller).  You should see a job template named "Z / CaC / Controller".  This is our pre-defined job template to configure AAP.  Click on the "Launch" button to run this job template.
 +
 image::initial_cac.png[Example of the initial CaC job template]
 . The job template will configure AAP with our content and create the necessary job templates for the workshop exercises.  This may take a few minutes to complete.
-. Once the job template has completed, navigate to the ``Templates`` tab again and you should see a list of job templates available for the workshop exercises.
+. Once the job template has completed, navigate to the "Templates" tab again and you should see a list of job templates available for the workshop exercises.
 + 
 image::leapp_custom_actor.png[AAP after running the CaC job template]
 
@@ -128,7 +128,7 @@ image::leapp_custom_actor.png[AAP after running the CaC job template]
 === Step 6 - Challenge Labs
 
 You will soon discover that many exercises in the workshop come with a
-``Challenge Lab`` step. These labs are meant to give you a small task to
+"Challenge Lab" step. These labs are meant to give you a small task to
 solve using what you have learned so far. The solution of the task is
 shown underneath a warning sign.
 

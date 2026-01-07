@@ -16,10 +16,10 @@ reports
 In the previous exercise, we used a playbook job template to generate a
 Leapp pre-upgrade report on each of our pet app servers. Now we need to
 review the findings listed in those reports. There are a number of
-different ways that we can access the reports. Let’s review these and
+different ways that we can access the reports. Let's review these and
 consider the pros and cons:
 
-* If we we’re using the Leapp framework to manually upgrade just a
+* If we we're using the Leapp framework to manually upgrade just a
 single RHEL host, we could simply get to a shell prompt on the host and
 look at the local report file output. In
 xref:1.1-setup/README.adoc#step-2-open-a-terminal-session[Exercise
@@ -32,7 +32,7 @@ to review the local Leapp pre-upgrade report file:
 sudo less /var/log/leapp/leapp-report.txt
 ----
 +
-This is a ``quick and dirty`` way to review the report, but doesn’t
+This is a "quick and dirty" way to review the report, but doesn't
 scale if you need to review reports for a large number of hosts.
 +
 ____
@@ -45,7 +45,7 @@ ____
 https://www.redhat.com/en/technologies/management/insights[Red Hat
 Insights], you can see the Leapp pre-upgrade reports on your Insights
 console. The pet app servers provisioned for this workshop are not
-registered to Insights, so we can’t demonstrate this here. Read the blog
+registered to Insights, so we can't demonstrate this here. Read the blog
 article
 https://www.redhat.com/en/blog/take-unknowns-out-rhel-upgrades-red-hat-insights[Take
 the unknowns out of RHEL upgrades with Red Hat Insights] to see an
@@ -75,7 +75,7 @@ Leapp pre-upgrade reports we generated.
 xref:1.1-setup/README.adoc#step-4-access-the-rhel-web-console[Exercise
 1.1, Step 4]. This is the RHEL Web Console of the AAP controller host,
 but we need to access our pet app server hosts to see their pre-upgrade
-reports. Do this by clicking the ``lab-user​@​ansible-1.example.com`` box
+reports. Do this by clicking the "lab-user​@​ansible-1.example.com" box
 in the top left corner of the RHEL Web Console to reveal the remote host
 menu. For example:
 +
@@ -92,7 +92,7 @@ Here is an example of one running RHEL7:
 +
 image::rhel7_os.png[Operating System Red Hat Enterprise Linux Server 7.9 (Maipo)]
 . When you navigate to different hosts in the RHEL Web Console, look out
-for the ``limited access mode`` warning:
+for the "limited access mode" warning:
 +
 image::limited_access.svg[Web console is running in limited access mode]
 +
@@ -109,8 +109,8 @@ the next step where we will look at our first pre-upgrade report.
 === Step 3 - Review Leapp Pre-upgrade Report of RHEL8 Host
 
 Now we are ready to use the RHEL Web Console to see the Leapp
-pre-upgrade reports. Let’s start by looking at one of the RHEL8 hosts
-and then we’ll look at one of the RHEL7 hosts in the next step.
+pre-upgrade reports. Let's start by looking at one of the RHEL8 hosts
+and then we'll look at one of the RHEL7 hosts in the next step.
 
 While you might be interested in learning about upgrading only RHEL7, 8, or 9, we recommend following the exercise steps for all of them. This workshop
 presents the skills you need with the RHEL7, RHEL8 and RHEL 9 examples covering
@@ -148,8 +148,8 @@ system data and assesses upgradeability based on a large collection of
 checks. When any of these checks uncovers a potential risk, it is
 recorded as a finding in the report. These findings are listed in order
 from highest risk to lowest. In the report above, we see there are three
-high risk findings. Let’s review each of these.
-. The first finding we see listed has the title ``GRUB2 core will be automatically updated during the upgrade``
+high risk findings. Let's review each of these.
+. The first finding we see listed has the title "GRUB2 core will be automatically updated during the upgrade"
 You can see additional details for any finding by clicking on it in the list. For example, click on the first finding and you will see the details
 
 +
@@ -165,17 +165,17 @@ This finding is a bit more serious.  It's marked as an inhibitor, so our upgrade
 * As we saw here, there's a lot of information in the report, and it can be overwhelming.  The good news is that we can filter the findings to make it easier to focus on the most important ones.
 * There are a number of filtering options you can use to limit the
 findings that are displayed according to risk level, audience, etc.
-Click on the ``Filters`` button to experiment with this feature. For
-example, if you click the ``Is inhibitor?`` filter checkbox, you will
+Click on the "Filters" button to experiment with this feature. For
+example, if you click the "Is inhibitor?" filter checkbox, you will
 see just the blocking inhibitor findings listed
-* Let’s now move on to the pre-upgrade report for one of our RHEL7
+* Let's now move on to the pre-upgrade report for one of our RHEL7
 hosts.
 
 [#step-4-review-leapp-pre-upgrade-report-of-rhel7-host]
 === Step 4 - Review Leapp Pre-upgrade Report of RHEL7 Host
 
 In the previous step, we reviewed the pre-upgrade report for one of our
-RHEL8 hosts. Now let’s take a look at the report from one of our RHEL7
+RHEL8 hosts. Now let's take a look at the report from one of our RHEL7
 hosts.
 
 . Navigate to the RHEL Web Console remote host menu and click on the
@@ -197,29 +197,29 @@ workshop, kindly let us know by raising an issue
 https://github.com/ansible/workshops/issues/new[here].
 ____
 . In the report for our RHEL7 pet app server above, we see there are four
-high risk findings and two of those are inhibitor findings. Let’s start
+high risk findings and two of those are inhibitor findings. Let's start
 by reviewing the high risk findings that are not inhibitors.
-. The ``GRUB core will be updated during upgrade`` finding is no
+. The "GRUB core will be updated during upgrade" finding is no
 different than the finding with the same title we learned about in the
-RHEL8 pre-upgrade report, so we’ll ignore this for now.
+RHEL8 pre-upgrade report, so we'll ignore this for now.
 . The RHSM Package Repositories finding is also the same as the one we saw in the
-RHEL8 pre-upgrade report, so we’ll ignore this for now.
-. Now let’s look at the new findings we are seeing only on our RHEL7
-pre-upgrade report. The first entry on the list is the ``Difference in Python
-versions and support in RHEL8'' finding:
+RHEL8 pre-upgrade report, so we'll ignore this for now.
+. Now let's look at the new findings we are seeing only on our RHEL7
+pre-upgrade report. The first entry on the list is the "Difference in Python
+versions and support in RHEL8" finding:
 +
 image::rhel7_python.png[Details view of Difference in Python versions and support in RHEL8 finding]
 +
 This finding could be a concern if we have any apps on our pet server
-that are using the system-provided Python interpreter. Let’s assume we
-don’t have any of those in which case we can blissfully ignore this
+that are using the system-provided Python interpreter. Let's assume we
+don't have any of those in which case we can blissfully ignore this
 finding.  But be aware, when working with servers in the wild, it's important to understand the applications running on the server, as this could be a significant issue if you have any Python-based apps.
-. The other new high risk finding, and an inhibitor is the ``Missing required answers in the answer
-file'' finding. Here are the details for this one:
+. The other new high risk finding, and an inhibitor is the "Missing required answers in the answer
+file" finding. Here are the details for this one:
 +
 image::missing_answers_inhibitor.svg[Details view of missing required answers in the answer file]
 +
-Here again, we will need to take action to remediate this finding. Don’t
+Here again, we will need to take action to remediate this finding. Don't
 panic! In the next exercise, we will explore different options for
 automating the required remediation actions and recommendations.
 
@@ -228,10 +228,9 @@ Lets take a look at our last system, the RHEL 9 one.
 [#step-5-review-leapp-pre-upgrade-report-of-rhel9-host]
 === Step 5 - Review Leapp Pre-upgrade Report of RHEL9 Host
 
-Following the same steps as in the previous two exercises, let’s now take a look at the report from our RHEL9 host.
+Following the same steps as in the previous two exercises, let's now take a look at the report from our RHEL9 host.
 
 image::rhel9_report.png[Example pre-upgrade report of RHEL9 host]
-
 
 . In the report for our RHEL9 app server above, we see there are only two high risk findings and one of them is an inhibitor. Additionally, both of these findings are related to the GRUB2 core update and the RHSM repositories. These are the same findings we saw in the RHEL8 and RHEL7 pre-upgrade reports, and there's not much new here.
 . However, there's a new finding that is marked as a low risk, ``SElinux will be set to permissive mode``
@@ -247,7 +246,7 @@ You may be wondering why are we only worrying about the inhibitor
 findings. What about all the other high risk findings showing up in red
 on the report? Red means danger! Why would we be going forward with
 attempting an upgrade without first resolving all the findings on the
-report? It’s a fair question.
+report? It's a fair question.
 
 ____
 *Tip*
@@ -286,7 +285,7 @@ environments first. Any issues that can be worked out with Dev and Test
 servers will help you be prepared to avoid those issues in production.
 . The high risk findings reported by the Leapp pre-upgrade report are
 there to make us aware of potential failure modes, but experience has
-shown that they are not a problem in many cases. Don’t become petrified
+shown that they are not a problem in many cases. Don't become petrified
 when you see those red findings on the report. Upgrade early and often!
 
 == Conclusion

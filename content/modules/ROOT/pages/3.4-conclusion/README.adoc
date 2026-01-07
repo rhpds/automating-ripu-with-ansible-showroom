@@ -13,7 +13,7 @@ Automation Workshop. You are now armed with the knowledge needed to
 start developing an automation solution to help your organization manage
 RHEL upgrades at scale.
 
-Let’s review what we learned and think about what’s next.
+Let's review what we learned and think about what's next.
 
 [#step-1-what-you-learned]
 === Step 1 - What You Learned
@@ -36,7 +36,7 @@ demonstrated a few examples of this including using Leapp custom actors
 for reporting special pre-upgrade checks as well as running Ansible
 playbooks to handle common remediations and third-party tools and
 agents.
-* But the most important lesson we learned is ``You can do this!``
+* But the most important lesson we learned is "You can do this!"
 
 [#step-2-activities-for-extra-credit]
 === Step 2 - Activities for Extra Credit
@@ -45,13 +45,13 @@ Hopefully, this workshop has opened your eyes to what is possible, but
 we have just scratched the surface.
 
 * Is it possible to upgrade from RHEL7 to RHEL9? While the Leapp
-framework doesn't support a ``double upgrade`` directly, it is possible
+framework doesn't support a "double upgrade" directly, it is possible
 to take a host that was upgraded from RHEL7 to RHEL8 and then upgrade it
 from there to RHEL9. You can try this with one of the pet app instances
 in the workshop lab.
 +
 There are a couple things to be aware of if you want to try it. You will
-first need to run the ``AUTO / 04 Commit`` playbook job template. This
+first need to run the "AUTO / 04 Commit" playbook job template. This
 job will delete the snapshot created for your RHEL7 to RHEL8 upgrade, so
 be sure you are happy with everything before you do this. While rolling
 back to RHEL7 will then be impossible, you will be able to roll back to
@@ -59,10 +59,10 @@ RHEL8 if needed after upgrading to RHEL9.
 +
 Another consideration with going from RHEL7 to RHEL9 is the increased
 risk of application impacts. While RHEL system library forward binary
-compatibility is really solid between each RHEL major version, ``N+2``
+compatibility is really solid between each RHEL major version, "N+2"
 compatibility is not guaranteed. Of course, the only way to know for
 sure is try it!
-* If you skipped over any of the optional exercises, it’s not too late
+* If you skipped over any of the optional exercises, it's not too late
 to go back and try them now:
 ** xref:1.5-custom-modules/README.adoc[Exercise 1.5 - Custom
 Pre-upgrade Checks]
@@ -115,7 +115,7 @@ workshop lab environment.
 
 * Here you will find work in progress on a new Ansible role for managing
 snapshot sets using LVM. If you are interested in automating LVM
-snapshots as explained in the xref:2.2-snapshots/README.adoc#lvm[Let’s
+snapshots as explained in the xref:2.2-snapshots/README.adoc#lvm[Let's
 Talk About Snapshots] exercise, connect with the authors of this project
 to get in on the action.
 
@@ -123,6 +123,6 @@ to get in on the action.
 
 If you enjoyed this workshop, please take a moment to give it a 5-star
 rating or write a review. If you have any ideas for improvements or new
-features, don’t hesitate to raise an issue
+features, don't hesitate to raise an issue
 https://github.com/ansible/workshops/issues/new/choose[here] tagging
 @swapdisk and @heatmiser. All ideas and feedback are welcome!

@@ -26,29 +26,29 @@ In this step, we will be rolling back the RHEL in-place upgrade on one
 of our pet application servers.
 
 . Return to the AAP Web UI tab in your web browser. Navigate to
-Resources > Templates and then open the ``AUTO / 03 Rollback`` job
+Resources > Templates and then open the "AUTO / 03 Rollback" job
 template. Here is what it looks like:
 +
 image::rollback_template.svg[AAP Web UI showing the rollback job template details view]
-. Click the ``Launch`` button which will bring up the prompts for
+. Click the "Launch" button which will bring up the prompts for
 submitting the job starting with the limit and variables prompts. We
 only want to do a rollback of one server. To do this, enter the hostname
-of your chosen pet app server under the ``Limit`` prompt. For example:
+of your chosen pet app server under the "Limit" prompt. For example:
 +
 image::rollback_prompts.svg[AAP Web UI showing the rollback job limit and variables prompts]
 +
-Click the ``Next`` button to proceed.
+Click the "Next" button to proceed.
 +
 image::rollback_survey.svg[AAP Web UI showing the rollback job survey prompt]
 . Next we see the job template survey prompt asking us to select an
 inventory group. We already limited the job to one server, so just
-choose the ``ALL_rhel`` option and click the ``Next`` button. This will
+choose the "ALL_rhel" option and click the "Next" button. This will
 bring you to the preview of the selected job options and variable
 settings, for example:
 +
 image::rollback_preview.svg[AAP Web UI showing the rollback job preview prompt]
 +
-If everything looks good, use the ``Launch`` button to start the
+If everything looks good, use the "Launch" button to start the
 playbook job.
 
 [#step-2-observe-the-rollback-job-output]
@@ -60,14 +60,14 @@ automatically to the job output page.
 . The automated rollback takes only a few minutes to run. You can
 monitor the log output as the playbook run progresses.
 . When the job has finished running, scroll to the bottom of the job
-output. If it finished successfully, you should see ``failed=0`` status
+output. If it finished successfully, you should see "failed=0" status
 in the job summary like this example:
 +
-image::rollback_job_recap.svg[Rollback job ``PLAY RECAP`` as seen at the end of the job output]
+image::rollback_job_recap.svg[Rollback job "PLAY RECAP" as seen at the end of the job output]
 +
 Notice in the example above, we see the job completed in just under 3
-minutes. However, most of that time was spent in the final ``Wait for
-the snapshot to drain'' task which holds the job until the snapshot
+minutes. However, most of that time was spent in the final "Wait for
+the snapshot to drain" task which holds the job until the snapshot
 merges finish in the background. The instance was actually rolled back
 and service ready in just under a minute. Impressive, right?
 
@@ -89,5 +89,5 @@ image::commands_after_rollback.svg[command output showing the host is back to RH
 In this exercise, we used automation to quickly reverse the RHEL
 in-place upgrade and restore the app server back to its original state.
 
-In the next exercise, we’ll dig deeper to validate that all changes and
+In the next exercise, we'll dig deeper to validate that all changes and
 impacts caused by the upgrade are now undone.
