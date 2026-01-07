@@ -160,7 +160,7 @@ of ``failed=0`` indicates a successful playbook run. Scroll to the
 bottom of the job output and you should see that your job summary looks
 like this example:
 +
-image::analysis_job_recap.svg[Analysis job ``PLAY RECAP`` as seen at the end of the job output]
+image::analysis_job_recap.png[Analysis job ``PLAY RECAP`` as seen at the end of the job output]
 
 [#step-4-challenge-lab-analysis-playbook]
 === Step 4 - Challenge Lab: Analysis Playbook
