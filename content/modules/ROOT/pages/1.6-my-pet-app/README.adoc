@@ -66,7 +66,7 @@ for potential impacts. Feel free to skip the procedure below and make
 your own adventure. Just take care to test your app both before and
 after the upgrade.
 
-* Our example application will be the
+. Our example application will be the
 https://github.com/spring-projects/spring-petclinic[Spring Pet Clinic
 Sample Application] written in Java. It is a Spring Boot application
 that gets built using Maven. It will connect to a MySQL database which
@@ -86,7 +86,7 @@ If the app install job is successful, you can skip ahead to
 link:#step-3-test-the-pet-application[Step 3 - Test the Pet
 Application].
 ____
-* The first step in our app install procedure is to install a Java JDK.
+. The first step in our app install procedure is to install a Java JDK.
 We’ll use a 3rd-party one just for fun!
 +
 ____
@@ -107,7 +107,7 @@ sudo yum install mariadb mariadb-server temurin-17-jdk
 ----
 +
 Answer `y` to any prompts from the last command.
-* Verify that the temurin-17-jdk package was installed:
+. Verify that the temurin-17-jdk package was installed:
 +
 [source,bash]
 ----
@@ -115,7 +115,7 @@ rpm -q temurin-17-jdk
 ----
 +
 If not, go back and figure out what went wrong.
-* Next, we will install the Spring Pet Clinic Sample Application under
+. Next, we will install the Spring Pet Clinic Sample Application under
 the home directory of the ec2-user. Run these commands:
 +
 [source,bash]
@@ -127,7 +127,7 @@ git clone https://github.com/spring-projects/spring-petclinic.git
 You should now see that the application files are installed in the
 `spring-petclinic` directory.
 
-* We need to start the database server and create the database for our
+. We need to start the database server and create the database for our
 application. Use this command to enable and start the database:
 +
 [source,bash]
@@ -154,14 +154,14 @@ GRANT ALL PRIVILEGES ON petclinic.* TO 'petclinic'@'localhost' IDENTIFIED BY 'pe
 FLUSH PRIVILEGES;
 quit
 ----
-* Now we are ready to start the application web service. Use this
+. Now we are ready to start the application web service. Use this
 command to run it in the background:
 +
 [source,bash]
 ----
 echo 'cd $HOME/spring-petclinic && ./mvnw spring-boot:run -Dspring-boot.run.profiles=mysql >> $HOME/app.log 2>&1' | at now
 ----
-* The application will take a couple minute to come up the first time.
+. The application will take a couple minute to come up the first time.
 Check the `app.log` file to follow the progress and verify the web
 service has started successfully:
 +
@@ -189,19 +189,19 @@ Type Ctrl-C to quit the `tailf` command.
 Now that we have installed our application and verified it is running,
 it’s time to test how it works.
 
-* Use this command to determine the application’s external URL:
+. Use this command to determine the application’s external URL:
 +
 [source,bash]
 ----
 echo "http://$(curl -s ifconfig.me):8080"
 ----
-* Open a new web browser tab. Cut and paste the URL that was output by
+. Open a new web browser tab. Cut and paste the URL that was output by
 the command above. This should open the application web user interface.
 If the application is working correctly, you should see something like
 this:
 +
 image::petapp_home.svg[Pet Clinic application home page]
-* Try the different function tabs at the top of the web user interface.
+. Try the different function tabs at the top of the web user interface.
 For example, navigate to ``FIND OWNERS`` and search for Davis. Click on
 one of the owner records to see their details.
 +
@@ -212,7 +212,7 @@ The ``ERROR`` tab in the top-right corner is a error handling test
 function. If you click it, the expected result is a ``Something
 happened…'' message will be displayed and a runtime exception and stack
 trace will be logged in the `app.log` file.
-* Play with the application until you feel comfortable you understand
+. Play with the application until you feel comfortable you understand
 its expected behavior. After the upgrade, we will test it again to
 verify it has not been impacted.
 
@@ -222,7 +222,7 @@ verify it has not been impacted.
 Right now, our application was started manually. We need to configure
 the app so it will start up automatically when our server is rebooted.
 
-* Use this command to configure a reboot cron entry so the application
+. Use this command to configure a reboot cron entry so the application
 will be started automatically after every reboot:
 +
 [source,bash]
@@ -237,13 +237,13 @@ If you deployed the example app using the ``PETS / App Install``
 playbook job, you can skip the command above because the reboot cron
 entry was automatically created.
 ____
-* Now reboot the server to verify this works:
+. Now reboot the server to verify this works:
 +
 [source,bash]
 ----
 sudo reboot
 ----
-* Try refreshing the web browser tab where you have the Pet Clinic web
+. Try refreshing the web browser tab where you have the Pet Clinic web
 app open. While the server is rebooting, you may see a timeout or
 connection refused error. After the reboot is finished, the web app
 should be working again.
@@ -272,17 +272,17 @@ Whenever changes are made to a server, its a good idea to rerun the
 Leapp pre-upgrade report to make sure those changes have not introduced
 any new risk findings.
 
-* Launch the ``AUTO / 01 Analysis`` job template to generate a fresh
+. Launch the ``AUTO / 01 Analysis`` job template to generate a fresh
 pre-upgrade report. After the job finishes, review the report to see if
 there are any new findings. Refer to the steps in the previous exercises
 if you don’t have them memorized by heart already.
-* Did you notice that this high risk finding has popped up now?
+. Did you notice that this high risk finding has popped up now?
 +
 image::packages_not_signed_by_rh.svg[Packages not signed by Red Hat found on the system high risk finding]
-* If we open the finding, we are presented with the following details:
+. If we open the finding, we are presented with the following details:
 +
 image::packages_not_signed_details.svg[Packages not signed by Red Hat details view]
-* ``Packages not signed by Red Hat`` is just a fancy way of referring to
+. ``Packages not signed by Red Hat`` is just a fancy way of referring to
 3rd-party packages and/or package that are built in-house by your app
 teams. In the case of this finding, the package that has been identified
 is `temurin-17-jdk`, the 3rd-party JDK runtime package we installed. The

@@ -71,7 +71,7 @@ Dev/Test/Prod), location, app ID, owning team, etc.
 For this workshop, we will be using the RHEL Web Console to access the
 Leapp pre-upgrade reports we generated.
 
-* Return to the RHEL Web Console browser tab you opened from
+. Return to the RHEL Web Console browser tab you opened from
 xref:1.1-setup/README.adoc#step-4-access-the-rhel-web-console[Exercise
 1.1, Step 4]. This is the RHEL Web Console of the AAP controller host,
 but we need to access our pet app server hosts to see their pre-upgrade
@@ -80,7 +80,7 @@ in the top left corner of the RHEL Web Console to reveal the remote host
 menu. For example:
 +
 image::remote_host_menu_with_pets.svg[Remote host menu listing all pet app servers]
-* You can use the remote host menu to navigate to the web consoles of
+. You can use the remote host menu to navigate to the web consoles of
 each of your pet app servers. Try selecting one of your pet servers now.
 The RHEL Web Console system overview page will show the operating system
 version installed. For example, this pet app server is running RHEL8:
@@ -90,7 +90,7 @@ image::rhel8_os.svg[upward-moray running Red Hat Enterprise Linux 8.7 (Ootpa)]
 Here is an example of one running RHEL7:
 +
 image::rhel7_os.svg[Operating System Red Hat Enterprise Linux Server 7.9 (Maipo)]
-* When you navigate to different hosts in the RHEL Web Console, look out
+. When you navigate to different hosts in the RHEL Web Console, look out
 for the ``limited access mode`` warning:
 +
 image::limited_access.svg[Web console is running in limited access mode]
@@ -99,7 +99,7 @@ If you see this, use the button to switch to administrative access mode
 before proceeding. A confirmation will appear like this:
 +
 image::administrative_access.svg[You now have administrative access]
-* Take some time to explore the navigation menus available with the RHEL
+. Take some time to explore the navigation menus available with the RHEL
 Web Console of your different pet app servers. Once you feel comfortable
 navigating around the console and switching between hosts, move on to
 the next step where we will look at our first pre-upgrade report.
@@ -120,12 +120,12 @@ We are now here in the automation approach workflow:
 
 image::ripu-workflow-hl-review.svg[Automation approach workflow diagram with review report step highlighted]
 
-* Navigate to the RHEL Web Console remote host menu and click on the
+. Navigate to the RHEL Web Console remote host menu and click on the
 hostname of one of your RHEL8 pet app servers. Remember as we learned in
 the previous step, you can confirm the RHEL version on the system
 overview page. Also make sure you enabled administrative access as
 explained in the previous step.
-* Having verified you are looking at one of the RHEL8 pet app servers,
+. Having verified you are looking at one of the RHEL8 pet app servers,
 use the main menu to navigate to Tools > Upgrade Report. This will
 display the Leapp pre-upgrade report that was generated for the selected
 host. For example, the report might look like this:
@@ -142,13 +142,13 @@ differences that materially break the flow of the exercises in the
 workshop, kindly let us know by raising an issue
 https://github.com/ansible/workshops/issues/new[here].
 ____
-* When the pre-upgrade report is generated, the Leapp framework collects
+. When the pre-upgrade report is generated, the Leapp framework collects
 system data and assesses upgradeability based on a large collection of
 checks. When any of these checks uncovers a potential risk, it is
 recorded as a finding in the report. These findings are listed in order
 from highest risk to lowest. In the report above, we see there are three
 high risk findings. Let’s review each of these.
-* The first finding we see listed has the title ``GRUB2 core will be automatically updated during the upgrade``
+. The first finding we see listed has the title ``GRUB2 core will be automatically updated during the upgrade``
 You can see additional details for any finding by clicking on it in the list. For example, click on the first finding and you will see the details
 
 +
@@ -164,13 +164,13 @@ image:old_os.png[Details view of an outdated OS issue]
 +
 This finding is also marked as an inhibitor, so our upgrade will not proceed unless we take action to correct the cause of this inhibitor. Fortunately, this one is pretty straightforward to resolve, by simply running a yum update command to bring the system up to date.  We will explore how to automate this in a later exercise.
 
-* As we saw here, there's a lot of information in the report, and it can be overwhelming.  The good news is that we can filter the findings to make it easier to focus on the most important ones.
-* There are a number of filtering options you can use to limit the
+. As we saw here, there's a lot of information in the report, and it can be overwhelming.  The good news is that we can filter the findings to make it easier to focus on the most important ones.
+. There are a number of filtering options you can use to limit the
 findings that are displayed according to risk level, audience, etc.
 Click on the ``Filters`` button to experiment with this feature. For
 example, if you click the ``Is inhibitor?`` filter checkbox, you will
 see just the blocking inhibitor findings listed
-* Let’s now move on to the pre-upgrade report for one of our RHEL7
+. Let’s now move on to the pre-upgrade report for one of our RHEL7
 hosts.
 
 [#step-4-review-leapp-pre-upgrade-report-of-rhel7-host]
@@ -180,7 +180,7 @@ In the previous step, we reviewed the pre-upgrade report for one of our
 RHEL8 hosts. Now let’s take a look at the report from one of our RHEL7
 hosts.
 
-* Navigate to the RHEL Web Console remote host menu and click on the
+. Navigate to the RHEL Web Console remote host menu and click on the
 hostname of one of your RHEL7 pet app servers. Verify the host you have
 chosen is RHEL7. Then use the main menu to navigate to Tools > Upgrade
 Report. This will bring up the Leapp pre-upgrade report for the selected
@@ -198,15 +198,15 @@ differences that materially break the flow of the exercises in this
 workshop, kindly let us know by raising an issue
 https://github.com/ansible/workshops/issues/new[here].
 ____
-* In the report for our RHEL7 pet app server above, we see there are four
+. In the report for our RHEL7 pet app server above, we see there are four
 high risk findings and two of those are inhibitor findings. Let’s start
 by reviewing the high risk findings that are not inhibitors.
-* The ``GRUB core will be updated during upgrade`` finding is no
+. The ``GRUB core will be updated during upgrade`` finding is no
 different than the finding with the same title we learned about in the
 RHEL8 pre-upgrade report, so we’ll ignore this for now.
-* The RHSM Package Repositories finding is also the same as the one we saw in the
+. The RHSM Package Repositories finding is also the same as the one we saw in the
 RHEL8 pre-upgrade report, so we’ll ignore this for now.
-* Now let’s look at the new findings we are seeing only on our RHEL7
+. Now let’s look at the new findings we are seeing only on our RHEL7
 pre-upgrade report. The first entry on the list is the ``Difference in Python
 versions and support in RHEL8'' finding:
 +
@@ -216,7 +216,7 @@ This finding could be a concern if we have any apps on our pet server
 that are using the system-provided Python interpreter. Let’s assume we
 don’t have any of those in which case we can blissfully ignore this
 finding.  But be aware, when working with servers in the wild, it's important to understand the applications running on the server, as this could be a significant issue if you have any Python-based apps.
-* The other new high risk finding, and an inhibitor is the ``Missing required answers in the answer
+. The other new high risk finding, and an inhibitor is the ``Missing required answers in the answer
 file'' finding. Here are the details for this one:
 +
 image::missing_answers_inhibitor.svg[Details view of missing required answers in the answer file]
@@ -234,9 +234,9 @@ Following the same steps as in the previous two exercises, let’s now take a lo
 
 image::rhel9_report.png[Example pre-upgrade report of RHEL9 host]
 
-* In the report for our RHEL9 pet app server above, we see there are only two high risk findings and one of them is an inhibitor. Additionally, both of these findings are related to the GRUB2 core update and the RHSM repositories. These are the same findings we saw in the RHEL8 and RHEL7 pre-upgrade reports, and there's not much new here.
-* However, there's a new finding that is marked as a low risk, ``SElinux will be set to permissive mode``
 
+. In the report for our RHEL9 pet app server above, we see there are only two high risk findings and one of them is an inhibitor. Additionally, both of these findings are related to the GRUB2 core update and the RHSM repositories. These are the same findings we saw in the RHEL8 and RHEL7 pre-upgrade reports, and there's not much new here.
+. However, there's a new finding that is marked as a low risk, ``SElinux will be set to permissive mode``
 +
 image::rhel9_selinux.png[Details view of SELinux permissive]
 +
@@ -269,13 +269,13 @@ ____
 
 Of course, the answer is our automated snapshot/rollback capability.
 
-* If any of the high risk findings listed in the pre-upgrade report
+. If any of the high risk findings listed in the pre-upgrade report
 ultimately leads to the upgrade failing or results in application
 compatibility impact, we can quickly get back to where we started by
 rolling back the snapshot. Before rolling back, we can debug the root
 cause and use the experience to understand the best way to eliminate the
 risk of that failure or impact happening in the future.
-* There is a concept explained quite well in the famous article
+. There is a concept explained quite well in the famous article
 http://www.martinfowler.com/ieeeSoftware/failFast.pdf[Fail Fast]
 published in _IEEE Software_. The article dates back to 2004, so this is
 hardly a new concept. Unfortunately, there is a stigma associated with
@@ -283,11 +283,11 @@ failure that can lead to excessively risk-averse behavior. The most
 important benefit of having automated snapshots is being able to quickly
 revert failures. That allows us to safely adopt a fail fast and fail
 smart mantra.
-* Of course, there are many best practices we can follow to reduce risk.
+. Of course, there are many best practices we can follow to reduce risk.
 Obviously, test for application impacts by trying upgrades in your lower
 environments first. Any issues that can be worked out with Dev and Test
 servers will help you be prepared to avoid those issues in production.
-* The high risk findings reported by the Leapp pre-upgrade report are
+. The high risk findings reported by the Leapp pre-upgrade report are
 there to make us aware of potential failure modes, but experience has
 shown that they are not a problem in many cases. Don’t become petrified
 when you see those red findings on the report. Upgrade early and often!

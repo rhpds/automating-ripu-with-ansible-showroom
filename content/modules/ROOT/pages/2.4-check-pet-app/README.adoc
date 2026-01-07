@@ -20,7 +20,7 @@ It’s time to repeat the testing you did for
 xref:1.6-my-pet-app/README.adoc#step-3-test-the-pet-application[Step
 3] in the previous exercise.
 
-* You should usually be able to access the application web user
+. You should usually be able to access the application web user
 interface at the same address you used before. If you still have the app
 open in one of you browser tabs, try refreshing the page.
 +
@@ -38,10 +38,10 @@ determine the new URL for the application web user interface:
 echo "http://$(curl -s ifconfig.me):8080"
 ----
 ____
-* Did you previously use the ``Edit Owner`` or ``Add New Pet`` buttons
+. Did you previously use the ``Edit Owner`` or ``Add New Pet`` buttons
 to change any data or add new records? If so, check to see if that data
 is still there and displayed correctly.
-* If you observe any changes in your application behavior or the
+. If you observe any changes in your application behavior or the
 application isn’t working at all, troubleshoot the issue to try to
 narrow down the root cause. Make note of any issues so you can retest
 after rolling back the upgrade.
@@ -55,11 +55,11 @@ Imagine what would happen if your app at first appeared fine after the
 upgrade, but an issue was later discovered after the app had been
 returned to production use.
 
-* Add a new record to the database. For example, add a new pet record
+. Add a new record to the database. For example, add a new pet record
 with the name ``Post Upgrade`` to make it easy to distinguish. Remember
 this record to see what happens after we revert the OS upgrade in the
 next section of the workshop.
-* What will be the business impact if data updates are rolled back with
+. What will be the business impact if data updates are rolled back with
 the upgrade? That is exactly the problem we will demonstrate next
 because the pet app servers deployed in this workshop do not have
 separate volumes to isolate the OS from the app data.

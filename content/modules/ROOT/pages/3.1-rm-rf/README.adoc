@@ -31,13 +31,13 @@ Let’s get started!
 In the next exercise, we will be rolling back the RHEL upgrade on one of
 our servers.
 
-* Choose an app server. It can be one of the RHEL7 instances that is now
+. Choose an app server. It can be one of the RHEL7 instances that is now
 on RHEL8, or one of the RHEL8 instances that was upgraded to RHEL9.
-* Follow the steps you used with
+. Follow the steps you used with
 xref:1.1-setup/README.adoc#step-2-open-a-terminal-session[Exercise
 1.1: Step 2] to open a terminal session on the app server you have
 chosen to roll back.
-* At the shell prompt, use the `sudo -i` command to switch to the root
+. At the shell prompt, use the `sudo -i` command to switch to the root
 user. For example:
 +
 [source,plaintext]
@@ -51,7 +51,7 @@ Verify you see a root prompt like the example above.
 [#step-2-break-your-application]
 === Step 2 - Break your application
 
-* In
+. In
 xref:1.6-my-pet-app/README.adoc#step-5-run-another-pre-upgrade-report[Exercise
 1.6: Step 5], we observed a pre-upgrade finding warning of a potential
 risk that our `temurin-17-jdk` 3rd-party JDK runtime package might be

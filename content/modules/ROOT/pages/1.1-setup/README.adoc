@@ -35,12 +35,12 @@ intuitive way to use a web browser to edit files and access terminal
 sessions. If you are a command line hero, direct SSH access is available
 if VS Code is not to your liking.
 
-* You can open VS Code in your web browser using the ``Console URL``
+. You can open VS Code in your web browser using the ``Console URL``
 link under ``Code-Server Console (Bastion)`` on the workshop launch page provided
 by your instructor. The password is given below the link. For example:
 +
 image::vscode_link.png[Example link to VS Code WebUI]
-* After opening the link, type in the provided password to access your
+. After opening the link, type in the provided password to access your
 instance of VS Code.
 
 ____
@@ -58,10 +58,10 @@ Terminal sessions provide access to the RHEL commands and utilities that
 will help us understand what's going on ``behind the curtain`` when the
 RHEL in-place upgrade automation is doing its thing.
 
-* Use VS Code to open a terminal session. For example:
+. Use VS Code to open a terminal session. For example:
 +
 image::new_term.svg[Example of how to open a terminal session in VS Code]
-* This terminal session will be running on the AAP control host
+. This terminal session will be running on the AAP control host
 `ansible-1`. You can use the `ssh` command to login to one of your
 pet app hosts. Finally, use the highlighted commands confirm the RHEL OS
 version and kernel version installed.
@@ -78,16 +78,16 @@ The AAP Web UI is where we will go to submit and check the status of the
 Ansible playbook jobs we will use to automate the RHEL in-place upgrade
 workflow.
 
-* Let’s open the AAP Web UI in a new web browser tab using the
+. Let’s open the AAP Web UI in a new web browser tab using the
 ``Console`` link under ``Red Hat Ansible Automation Controller`` on the
 workshop launch page. For example:
 +
 image::aap_link.png[Example link to AAP Web UI]
-* Enter the username `admin` and the password provided. This will bring
+. Enter the username `admin` and the password provided. This will bring
 you to your AAP Web UI dashboard like the example below:
 +
 image::aap_console_example.png[Example AAP Web UI dashboard]
-* We will learn more about how to use the AAP Web UI in the next
+. We will learn more about how to use the AAP Web UI in the next
 exercise.
 
 [#step-4-access-the-rhel-web-console]
@@ -96,16 +96,16 @@ exercise.
 We will use the RHEL Web Console to review the results of the Leapp
 pre-upgrade reports we generate for our pet app servers.
 
-* Open a new web browser tab using the ``Console`` link under ``Cockpit``
+. Open a new web browser tab using the ``Console`` link under ``Cockpit``
 Interactive Linux Server Admin Interface'' on the workshop launch page.
 For example:
 +
 image::cockpit_link.png[Example link to RHEL Web Console]
-* Enter the username `student` and the password provided. This will
+. Enter the username `student` and the password provided. This will
 bring you to a RHEL Web Console Overview page like the example below:
 +
 image::cockpit_example.png[Example RHEL Web Console]
-* We will revisit the RHEL Web Console when we are ready to review our
+. We will revisit the RHEL Web Console when we are ready to review our
 pre-upgrade reports in an upcoming exercise.
 
 [#step-5-configure-AAP]
@@ -113,11 +113,11 @@ pre-upgrade reports in an upcoming exercise.
 
 The first thing we need to do is to configure AAP with our content.  A pre-defined configuration as code job template is available to do this.
 
-* Navigate to the AAP Web UI and go to the ``Templates`` tab inside Automation Execution (Automation Controller).  You should see a job template named ``Z / CaC / Controller``.  This is our pre-defined job template to configure AAP.  Click on the ``Launch`` button to run this job template.
+. Navigate to the AAP Web UI and go to the ``Templates`` tab inside Automation Execution (Automation Controller).  You should see a job template named ``Z / CaC / Controller``.  This is our pre-defined job template to configure AAP.  Click on the ``Launch`` button to run this job template.
 +
 image::initial_cac.png[Example of the initial CaC job template]
-* The job template will configure AAP with our content and create the necessary job templates for the workshop exercises.  This may take a few minutes to complete.
-* Once the job template has completed, navigate to the ``Templates`` tab again and you should see a list of job templates available for the workshop exercises.
+. The job template will configure AAP with our content and create the necessary job templates for the workshop exercises.  This may take a few minutes to complete.
+. Once the job template has completed, navigate to the ``Templates`` tab again and you should see a list of job templates available for the workshop exercises.
 + 
 image::completed_cac.png[AAP after running the CaC job template]
 

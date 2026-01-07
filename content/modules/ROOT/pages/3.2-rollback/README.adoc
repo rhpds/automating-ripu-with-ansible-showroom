@@ -25,12 +25,12 @@ just before entering the upgrade phase of the workflow.
 In this step, we will be rolling back the RHEL in-place upgrade on one
 of our pet application servers.
 
-* Return to the AAP Web UI tab in your web browser. Navigate to
+. Return to the AAP Web UI tab in your web browser. Navigate to
 Resources > Templates and then open the ``AUTO / 03 Rollback`` job
 template. Here is what it looks like:
 +
 image::rollback_template.svg[AAP Web UI showing the rollback job template details view]
-* Click the ``Launch`` button which will bring up the prompts for
+. Click the ``Launch`` button which will bring up the prompts for
 submitting the job starting with the limit and variables prompts. We
 only want to do a rollback of one server. To do this, enter the hostname
 of your chosen pet app server under the ``Limit`` prompt. For example:
@@ -40,7 +40,7 @@ image::rollback_prompts.svg[AAP Web UI showing the rollback job limit and variab
 Click the ``Next`` button to proceed.
 +
 image::rollback_survey.svg[AAP Web UI showing the rollback job survey prompt]
-* Next we see the job template survey prompt asking us to select an
+. Next we see the job template survey prompt asking us to select an
 inventory group. We already limited the job to one server, so just
 choose the ``ALL_rhel`` option and click the ``Next`` button. This will
 bring you to the preview of the selected job options and variable
@@ -57,9 +57,9 @@ playbook job.
 After launching the rollback playbook job, the AAP Web UI will navigate
 automatically to the job output page.
 
-* The automated rollback takes only a few minutes to run. You can
+. The automated rollback takes only a few minutes to run. You can
 monitor the log output as the playbook run progresses.
-* When the job has finished running, scroll to the bottom of the job
+. When the job has finished running, scroll to the bottom of the job
 output. If it finished successfully, you should see ``failed=0`` status
 in the job summary like this example:
 +
@@ -79,7 +79,7 @@ xref:2.3-check-upg/README.adoc#step-2-verify-the-hosts-are-upgraded-to-next-rhel
 2.3: Step 2], this time to verify that the RHEL version is reverted
 back.
 
-* For example, if the pet app host you rolled back had been upgraded
+. For example, if the pet app host you rolled back had been upgraded
 from RHEL7 to RHEL8, you should now see it is back to RHEL7:
 +
 image::commands_after_rollback.svg[command output showing the host is back to RHEL7 installed]

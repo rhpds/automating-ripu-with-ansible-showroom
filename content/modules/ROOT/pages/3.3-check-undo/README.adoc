@@ -20,12 +20,12 @@ In this step, we will repeat the observations we made on our host after
 the upgrade with the expectation that everything is back as it was
 before the upgrade.
 
-* In the previous exercise, we checked that the RHEL version is reverted
+. In the previous exercise, we checked that the RHEL version is reverted
 back. You can verify this at a shell prompt using commands like
 `cat /etc/redhat-release` and `uname -r` to output the OS release
 information and kernel version. You can also refresh the RHEL Web
 Console to confirm the RHEL version shown on the system overview page.
-* If you inflicted some damage to the pet app server with the optional
+. If you inflicted some damage to the pet app server with the optional
 xref:3.1-rm-rf/README.adoc[Trash the Instance] exercise, you will now
 find no evidence of that.
 +
@@ -39,7 +39,7 @@ the package is installed.
 +
 If you filled up your disk, check now with the `df -h /` command. You
 will see there is now plenty of free space reported.
-* If you installed the Spring Pet Clinic Sample Application from the
+. If you installed the Spring Pet Clinic Sample Application from the
 optional xref:1.6-my-pet-app/README.adoc[Deploy a Pet App] exercise,
 refresh the web user interface in your browser to verify it is running
 correctly after rolling back.
@@ -73,7 +73,7 @@ scope snapshots.
 No matter what the reason is for rolling back, the next step will be to
 decide what to do next.
 
-* Maybe you rolled back because there was a failure with the Leapp
+. Maybe you rolled back because there was a failure with the Leapp
 upgrade itself or some custom automation meant to deal with your
 standard tools and agents. If so, assess what happened and use the
 experience to improve your automation to prevent similar issues going
@@ -84,7 +84,7 @@ to fail fast! Failed upgrades early in the development of your
 automation should be expected and will inform you about what needs
 fixed. Having an automated rollback capability helps accelerate the
 development of robust playbooks.
-* What if you rolled back because application impact was discovered
+. What if you rolled back because application impact was discovered
 after the upgrade. In this case, it’s important for the app team to
 investigate the cause of the impact. Once the cause is understood, roll
 back so what was learned can be applied to avoid the issue next time.
@@ -94,7 +94,7 @@ process. App teams must take the time required to fully assess any
 application issues when upgrading their dev and test servers, rolling
 back as often as needed. Use the lower environments this way so everyone
 is fully prepared before moving to production.
-* After rolling back, the last pre-upgrade report generated before the
+. After rolling back, the last pre-upgrade report generated before the
 upgrade will still be available. If no significant changes are made
 after rolling back, it is not necessary to generate a fresh pre-upgrade
 report before trying another upgrade.
