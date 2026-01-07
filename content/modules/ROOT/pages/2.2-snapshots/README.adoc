@@ -73,82 +73,53 @@ There are a number of different types of snapshot solutions you may
 choose from. Each has their own benefits and drawbacks as summarized in
 the table below:
 
-Snapshot type
+[%header, cols=".^15%,.^20%a,.^25%a,.^40%a", frame=all, grid=all]
+|===
+^| Snapshot type
+^| Works with
+^| Benefits
+^| Drawbacks
 
-Works with
+| LVM
+| * Bare metal
+* On-prem VMs
+* Cloud*
+| * No external API access required
+* Scope can be just OS or everything
+| * Free space required in volume group
+* Snapshots can run out of space if not sized correctly
+* Automation must backup and restore /boot separately
 
-Benefits
+| VMware
+| * On-prem VMs (ESX)
+| * Simple and reliable
+* Scope includes everything
+| * Doesn’t support bare metal, etc.
+* Using VMware snapshot for over 3 days is discouraged
+* Getting API access can be difficult
+* No free space in datastores because of overcommitment
+* Everything scope might be too much
 
-Drawbacks
+| Amazon EBS
+| * Amazon EC2
+| * Simple and reliable
+* Unlimited storage capacity
+* Scope can be just OS or everything
+| * Only works on AWS
 
-LVM
-
-Bare metal
-
-On-prem VMs
-
-Cloud*
-
-No external API access required
-
-Scope can be just OS or everything
-
-Free space required in volume group
-
-Snapshots can run out of space if not sized correctly
-
-Automation must backup and restore /boot separately
-
-VMware
-
-On-prem VMs (ESX)
-
-Simple and reliable
-
-Scope includes everything
-
-Doesn’t support bare metal, etc.
-
-Using VMware snapshot for over 3 days is discouraged
-
-Getting API access can be difficult
-
-No free space in datastores because of overcommitment
-
-Everything scope might be too much
-
-Amazon EBS
-
-Amazon EC2
-
-Simple and reliable
-
-Unlimited storage capacity
-
-Scope can be just OS or everything
-
-Only works on AWS
-
-Break Mirror
-
-Bare metal
-
-Alternative to LVM for servers with hardware RAID
-
-Significant development and testing effort required
-
-RAID and Redfish API standards vary across different vendors and
+| Break Mirror
+| * Bare metal
+| * Alternative to LVM for servers with hardware RAID
+| * Significant development and testing effort required
+* RAID and Redfish API standards vary across different vendors and
 hardware models
 
-ReaR
-
-Bare metal
-
-On-prem VMs
-
-Method of last resort if no snapshot options will work
-
-Not really a snapshot, but does offer boot ISO full recovery capability
+| ReaR
+| * Bare metal
+* On-prem VMs
+| * Method of last resort if no snapshot options will work
+| * Not really a snapshot, but does offer boot ISO full recovery capability
+|===
 
 The following sections explain the pros and cons in detail.
 
