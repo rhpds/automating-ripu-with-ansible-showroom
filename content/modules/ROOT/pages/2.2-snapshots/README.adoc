@@ -73,82 +73,53 @@ There are a number of different types of snapshot solutions you may
 choose from. Each has their own benefits and drawbacks as summarized in
 the table below:
 
-Snapshot type
+[%header, cols=".^15%,.^20%a,.^25%a,.^40%a", frame=all, grid=all]
+|===
+^| Snapshot type
+^| Works with
+^| Benefits
+^| Drawbacks
 
-Works with
+| LVM
+| * Bare metal
+* On-prem VMs
+* Cloud*
+| * No external API access required
+* Scope can be just OS or everything
+| * Free space required in volume group
+* Snapshots can run out of space if not sized correctly
+* Automation must backup and restore /boot separately
 
-Benefits
+| VMware
+| * On-prem VMs (ESX)
+| * Simple and reliable
+* Scope includes everything
+| * Doesn’t support bare metal, etc.
+* Using VMware snapshot for over 3 days is discouraged
+* Getting API access can be difficult
+* No free space in datastores because of overcommitment
+* Everything scope might be too much
 
-Drawbacks
+| Amazon EBS
+| * Amazon EC2
+| * Simple and reliable
+* Unlimited storage capacity
+* Scope can be just OS or everything
+| * Only works on AWS
 
-LVM
-
-Bare metal
-
-On-prem VMs
-
-Cloud*
-
-No external API access required
-
-Scope can be just OS or everything
-
-Free space required in volume group
-
-Snapshots can run out of space if not sized correctly
-
-Automation must backup and restore /boot separately
-
-VMware
-
-On-prem VMs (ESX)
-
-Simple and reliable
-
-Scope includes everything
-
-Doesn’t support bare metal, etc.
-
-Using VMware snapshot for over 3 days is discouraged
-
-Getting API access can be difficult
-
-No free space in datastores because of overcommitment
-
-Everything scope might be too much
-
-Amazon EBS
-
-Amazon EC2
-
-Simple and reliable
-
-Unlimited storage capacity
-
-Scope can be just OS or everything
-
-Only works on AWS
-
-Break Mirror
-
-Bare metal
-
-Alternative to LVM for servers with hardware RAID
-
-Significant development and testing effort required
-
-RAID and Redfish API standards vary across different vendors and
+| Break Mirror
+| * Bare metal
+| * Alternative to LVM for servers with hardware RAID
+| * Significant development and testing effort required
+* RAID and Redfish API standards vary across different vendors and
 hardware models
 
-ReaR
-
-Bare metal
-
-On-prem VMs
-
-Method of last resort if no snapshot options will work
-
-Not really a snapshot, but does offer boot ISO full recovery capability
+| ReaR
+| * Bare metal
+* On-prem VMs
+| * Method of last resort if no snapshot options will work
+| * Not really a snapshot, but does offer boot ISO full recovery capability
+|===
 
 The following sections explain the pros and cons in detail.
 
@@ -364,34 +335,26 @@ With these concepts in mind, let’s consider if we want to include the
 apps and app data in what gets rolled back if we need to revert the RHEL
 upgrade:
 
-Snapshot scope
+[%header, cols=".^15%,.^40%a,.^45%a", frame=all, grid=all]
+|===
+^| Snapshot scope
+^| Benefits
+^| Drawbacks
 
-Benefits
-
-Drawbacks
-
-OS only
-
-Simplifies storage requirements
-
-Preserves isolation of OS changes from apps and app data
-
-Reduces risk of rolling back impacting external apps
-
-Probably not possible with VMware snapshots
-
-Discipline required to avoid temptation of trying quick app changes to
+| OS only
+| * Simplifies storage requirements
+* Preserves isolation of OS changes from apps and app data
+* Reduces risk of rolling back impacting external apps
+| * Probably not possible with VMware snapshots
+* Discipline required to avoid temptation of trying quick app changes to
 fix impacts
 
-OS and apps/data
-
-Reduces risk if trying to fix app impact during maintenance window
-
-Helpful if app impact could lead to app data corruption
-
-More storage space required
-
-Rolling back app data could impact external systems
+| OS and apps/data
+| * Reduces risk if trying to fix app impact during maintenance window
+* Helpful if app impact could lead to app data corruption
+| * More storage space required
+* Rolling back app data could impact external systems
+|===
 
 When snapshots only include the upgraded OS volumes, the best practice
 of isolating OS changes from app changes is followed. In this case, it
