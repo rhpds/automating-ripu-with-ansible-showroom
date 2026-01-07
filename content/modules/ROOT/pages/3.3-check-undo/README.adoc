@@ -26,7 +26,7 @@ back. You can verify this at a shell prompt using commands like
 information and kernel version. You can also refresh the RHEL Web
 Console to confirm the RHEL version shown on the system overview page.
 * If you inflicted some damage to the pet app server with the optional
-link:../3.1-rm-rf/README.md[Trash the Instance] exercise, you will now
+xref:3.1-rm-rf/README.adoc[Trash the Instance] exercise, you will now
 find no evidence of that.
 +
 For example, did you delete everything with the `rm -rf /*` command or
@@ -40,7 +40,7 @@ the package is installed.
 If you filled up your disk, check now with the `df -h /` command. You
 will see there is now plenty of free space reported.
 * If you installed the Spring Pet Clinic Sample Application from the
-optional link:../1.6-my-pet-app/README.md[Deploy a Pet App] exercise,
+optional xref:1.6-my-pet-app/README.adoc[Deploy a Pet App] exercise,
 refresh the web user interface in your browser to verify it is running
 correctly after rolling back.
 +

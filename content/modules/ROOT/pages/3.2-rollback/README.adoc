@@ -75,7 +75,7 @@ and service ready in just under a minute. Impressive, right?
 === Step 3 - Check the RHEL Version
 
 Repeat the steps you followed with
-link:../2.3-check-upg/README.md#step-2---verify-the-hosts-are-upgraded-to-next-rhel-version[Exercise
+xref:2.3-check-upg/README.adoc#step-2-verify-the-hosts-are-upgraded-to-next-rhel-version[Exercise
 2.3: Step 2], this time to verify that the RHEL version is reverted
 back.
 

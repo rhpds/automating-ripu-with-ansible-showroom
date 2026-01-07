@@ -8,7 +8,7 @@ Review the objectives listed in the next section to decide if you want
 to do this exercise or if you would rather skip ahead to the next
 exercise:
 
-* link:../2.1-upgrade/README.md[Exercise 2.1 - Run OS Upgrade Jobs]
+* xref:2.1-upgrade/README.adoc[Exercise 2.1 - Run OS Upgrade Jobs]
 
 == Objectives
 
@@ -83,7 +83,7 @@ commands, you can launch the ``PETS / App Install`` job template to
 deploy the example app.
 
 If the app install job is successful, you can skip ahead to
-link:#step-3---test-the-pet-application[Step 3 - Test the Pet
+link:#step-3-test-the-pet-application[Step 3 - Test the Pet
 Application].
 ____
 * The first step in our app install procedure is to install a Java JDK.

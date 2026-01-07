@@ -64,12 +64,12 @@ compatibility is not guaranteed. Of course, the only way to know for
 sure is try it!
 * If you skipped over any of the optional exercises, it’s not too late
 to go back and try them now:
-** link:../1.5-custom-modules/README.md[Exercise 1.5 - Custom
+** xref:1.5-custom-modules/README.adoc[Exercise 1.5 - Custom
 Pre-upgrade Checks]
-** link:../1.6-my-pet-app/README.md[Exercise 1.6 - Deploy a Pet App]
-** link:../2.4-check-pet-app/README.md[Exercise 2.4 - How is the Pet App
+** xref:1.6-my-pet-app/README.adoc[Exercise 1.6 - Deploy a Pet App]
+** xref:2.4-check-pet-app/README.adoc[Exercise 2.4 - How is the Pet App
 Doing?]
-** link:../3.1-rm-rf/README.md[Exercise 3.1 - Trash the Instance]
+** xref:3.1-rm-rf/README.adoc[Exercise 3.1 - Trash the Instance]
 * The workshop lab environment is now yours to play with. Dream up your
 own ideas for additional learning and experimentation. Remember you can
 upgrade and roll back as often as you like. Rinse and repeat!
@@ -100,7 +100,7 @@ and start upgrading.
 
 * Leapp Supplements is a repository of example Leapp custom actors. The
 CheckRebootHygiene actor that was demonstrated in the optional
-link:../1.5-custom-modules/README.md[Custom Pre-upgrade Checks] exercise
+xref:1.5-custom-modules/README.adoc[Custom Pre-upgrade Checks] exercise
 is maintained here. There is also a Makefile and RPM spec file that can
 be used to build packages for installing your Leapp custom actors.
 
@@ -115,7 +115,7 @@ workshop lab environment.
 
 * Here you will find work in progress on a new Ansible role for managing
 snapshot sets using LVM. If you are interested in automating LVM
-snapshots as explained in the link:../2.2-snapshots/README.md#lvm[Let’s
+snapshots as explained in the xref:2.2-snapshots/README.adoc#lvm[Let’s
 Talk About Snapshots] exercise, connect with the authors of this project
 to get in on the action.
 
