@@ -65,26 +65,26 @@ https://github.com/oamg/leapp-supplements[oamg/leapp-supplements]. We
 will use one of these to demonstrate adding a custom check to our
 pre-upgrade reports.
 
-* The example custom actor we are going to install implements checks for
+. The example custom actor we are going to install implements checks for
 compliance with an imaginary organization's ``reboot hygiene`` policy.
 The actor will block the upgrade by reporting inhibitor risk if any of
 the following conditions are detected:
-** The host uptime is greater than the maximum defined by the policy.
-** The running kernel version does not match the default kernel version
+.. The host uptime is greater than the maximum defined by the policy.
+.. The running kernel version does not match the default kernel version
 configured in the bootloader.
-** The /boot directory has any files that have been modified since the
+.. The /boot directory has any files that have been modified since the
 last reboot.
-* Go to your VS Code browser tab and open a terminal session. Refer back
+. Go to your VS Code browser tab and open a terminal session. Refer back
 to xref:1.1-setup/README.adoc#step-2-open-a-terminal-session[Exercise
 1.1, Step 2] if you need a reminder of how we did that.
-* Login to one of your pet app servers using the `ssh` command. For
+. Login to one of your pet app servers using the `ssh` command. For
 example:
 +
 [source,bash]
 ----
 ssh tidy-bengal
 ----
-* Now we will install the RPM package that provides our custom actor.
+. Now we will install the RPM package that provides our custom actor.
 Run the following command on your pet app server:
 +
 [source,bash]
@@ -100,7 +100,7 @@ demonstrating this custom actor. If we were ready to roll out custom
 actors at enterprise scale, we would include the package installation at
 the beginning of our analysis playbook.
 ____
-* This is an example of the output you should expect to see if the
+. This is an example of the output you should expect to see if the
 package is installed successfully:
 +
 [source,plaintext]
@@ -138,7 +138,7 @@ Installed:
 
 Complete!
 ----
-* To demonstrate the custom actor at work, let’s create a condition that
+. To demonstrate the custom actor at work, let’s create a condition that
 violates our policy so that an inhibitor finding will be reported. Use
 this command:
 +
@@ -157,28 +157,28 @@ reboot hygiene policy!
 We are now ready to try running a pre-upgrade report including the
 checks from our custom actor.
 
-* Return to your AAP Web UI browser tab. Navigate to Resources >
+. Return to your AAP Web UI browser tab. Navigate to Resources >
 Templates and open the ``AUTO / 01 Analysis`` job template. Launch the
 job choosing the ``ALL_rhel`` option at the ``Select inventory group``
 prompt.
-* When the job completes, go back to the RHEL Web Console and use the
+. When the job completes, go back to the RHEL Web Console and use the
 remote host menu to navigate to the pet app server where you installed
 the custom actor package. Refresh the pre-upgrade report. You should now
 see there is a new inhibitor finding. For example:
 +
 image::reboot_hygiene.svg[Pre-upgrade report showing inhibitor finding from custom actor]
-* Click on the finding to open the detail view. Here we see the summary
+. Click on the finding to open the detail view. Here we see the summary
 with an explanation of the finding and the remediation hint which
 politely says please reboot:
 +
 image::reboot_hygiene_finding.svg[Finding details reported by reboot hygiene custom actor]
-* Reboot the host to resolve the inhibitor finding. For example:
+. Reboot the host to resolve the inhibitor finding. For example:
 +
 [source,bash]
 ----
 sudo reboot
 ----
-* Now generate another pre-upgrade report after rebooting. Verify that
+. Now generate another pre-upgrade report after rebooting. Verify that
 this inhibitor finding has disappeared with the new report.
 
 [#step-4-learn-more-about-customizing-the-in-place-upgrade]
