@@ -74,70 +74,13 @@ the following conditions are detected:
 configured in the bootloader.
 .. The /boot directory has any files that have been modified since the
 last reboot.
-. Go to your VS Code browser tab and open a terminal session. Refer back
-to xref:1.1-setup/README.adoc#step-2-open-a-terminal-session[Exercise
-1.1, Step 2] if you need a reminder of how we did that.
-. Login to one of your pet app servers using the `ssh` command. For
-example:
+
+For this exercise, we will leverage an already created Ansible playbook in our AAP installation.
+. Return to your AAP Web UI browser tab and launch the playbook ``EXTRA / LEAPP Custom Actors``. This will install the actor on our RHEL 7 and 8 servers.
 +
-[source,bash]
-----
-ssh tidy-bengal
-----
-. Now we will install the RPM package that provides our custom actor.
-Run the following command on your pet app server:
-+
-[source,bash]
-----
-sudo yum -y --enablerepo=leapp-supplements install leapp-upgrade-\*-supplements
-----
-+
-____
-*Note*
+image::leapp_custom_actor.png[Launching the LEAPP Custom Actors playbook in AAP]
 
-We are installing the package manually just for the purpose of
-demonstrating this custom actor. If we were ready to roll out custom
-actors at enterprise scale, we would include the package installation at
-the beginning of our analysis playbook.
-____
-. This is an example of the output you should expect to see if the
-package is installed successfully:
-+
-[source,plaintext]
-----
-Resolving Dependencies
---> Running transaction check
----> Package leapp-upgrade-el7toel8-supplements.noarch 0:1.0.0-47.demo.el7 will be installed
---> Finished Dependency Resolution
 
-Dependencies Resolved
-
-==========================================================================================
- Package                             Arch    Version             Repository          Size
-==========================================================================================
-Installing:
- leapp-upgrade-el7toel8-supplements  noarch  1.0.0-47.demo.el7   leapp-supplements   12 k
-
-Transaction Summary
-==========================================================================================
-Install  1 Package
-
-Total download size: 12 k
-Installed size: 18 k
-Downloading packages:
-leapp-upgrade-el7toel8-supplements-1.0.0-47.demo.el7.noarch.rpm    |  12 kB  00:00:00
-Running transaction check
-Running transaction test
-Transaction test succeeded
-Running transaction
-  Installing : leapp-upgrade-el7toel8-supplements-1.0.0-47.demo.el7.noarch            1/1
-  Verifying  : leapp-upgrade-el7toel8-supplements-1.0.0-47.demo.el7.noarch            1/1
-
-Installed:
-  leapp-upgrade-el7toel8-supplements.noarch 0:1.0.0-47.demo.el7
-
-Complete!
-----
 . To demonstrate the custom actor at work, let’s create a condition that
 violates our policy so that an inhibitor finding will be reported. Use
 this command:
