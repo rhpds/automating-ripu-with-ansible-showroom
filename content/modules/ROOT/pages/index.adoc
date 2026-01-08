@@ -5,7 +5,7 @@ in-place upgrades for Red Hat Enterprise Linux (RHEL). The solution uses
 Ansible Automation Platform (AAP) to execute upgrades at enterprise
 scale across a large estate of RHEL hosts. The workshop demonstrates how
 to use an example of this approach to perform upgrades from RHEL7 to
-RHEL8 and from RHEL8 to RHEL9. You will also learn about how this
+RHEL8, RHEL8 to RHEL9, and from RHEL9 to RHEL10. You will also learn about how this
 solution can be customized to meet the special requirements of your
 enterprise environment.
 
@@ -72,14 +72,12 @@ them in the prescribed order.
 * xref:1.3-report/README.adoc[Exercise 1.3 - Review Pre-upgrade Reports]
 * xref:1.4-remediate/README.adoc[Exercise 1.4 - Perform Recommended Remediation]
 * xref:1.5-custom-modules/README.adoc[Exercise 1.5 - Custom Pre-upgrade Checks]
-* xref:1.6-my-pet-app/README.adoc[Exercise 1.6 - Deploy a Pet App]
 
 === Section 2 - RHEL OS Upgrade
 
 * xref:2.1-upgrade/README.adoc[Exercise 2.1 - Run OS Upgrade Jobs]
 * xref:2.2-snapshots/README.adoc[Exercise 2.2 - Let’s Talk About Snapshots]
 * xref:2.3-check-upg/README.adoc[Exercise 2.3 - Check if the Upgrade Worked]
-* xref:2.4-check-pet-app/README.adoc[Exercise 2.4 - (Optional) How is the Pet App Doing?]
 
 === Section 3 - Rolling Back
 

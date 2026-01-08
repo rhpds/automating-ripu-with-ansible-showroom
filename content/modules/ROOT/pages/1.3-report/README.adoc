@@ -29,7 +29,7 @@ to review the local Leapp pre-upgrade report file:
 +
 [source,bash]
 ----
-less /var/log/leapp/leapp-report.txt
+sudo less /var/log/leapp/leapp-report.txt
 ----
 +
 This is a ``quick and dirty`` way to review the report, but doesn’t
@@ -79,22 +79,18 @@ reports. Do this by clicking the ``lab-user​@​ansible-1.example.com`` box
 in the top left corner of the RHEL Web Console to reveal the remote host
 menu. For example:
 +
-<<<<<<< HEAD
-image::remote_host_menu_with_pets.svg[Remote host menu listing all pet app servers]
-. You can use the remote host menu to navigate to the web consoles of
-=======
+
 image::remote_host_menu_with_pets.png[Remote host menu listing all pet app servers]
 * You can use the remote host menu to navigate to the web consoles of
->>>>>>> ed7d0fd (Updates through 1.3)
 each of your pet app servers. Try selecting one of your pet servers now.
 The RHEL Web Console system overview page will show the operating system
 version installed. For example, this pet app server is running RHEL8:
 +
-image::rhel8_os.svg[upward-moray running Red Hat Enterprise Linux 8.7 (Ootpa)]
+image::rhel8_os.png[upward-moray running Red Hat Enterprise Linux 8.10 (Ootpa)]
 +
 Here is an example of one running RHEL7:
 +
-image::rhel7_os.svg[Operating System Red Hat Enterprise Linux Server 7.9 (Maipo)]
+image::rhel7_os.png[Operating System Red Hat Enterprise Linux Server 7.9 (Maipo)]
 . When you navigate to different hosts in the RHEL Web Console, look out
 for the ``limited access mode`` warning:
 +
@@ -166,13 +162,13 @@ image::rhsm_repos.png[Details view of RHSM repositories]
 This finding is a bit more serious.  It's marked as an inhibitor, so our upgrade will not proceed unless we take action to correct the cause of this inhibitor risk finding.  This one is an artifact of our lab environment, as we don't have access to the Red Hat Subscription Manager (RHSM) repositories in this environment. We'll create some automation to provide these repos for us in a later exercise.
 +
 
-. As we saw here, there's a lot of information in the report, and it can be overwhelming.  The good news is that we can filter the findings to make it easier to focus on the most important ones.
-. There are a number of filtering options you can use to limit the
+* As we saw here, there's a lot of information in the report, and it can be overwhelming.  The good news is that we can filter the findings to make it easier to focus on the most important ones.
+* There are a number of filtering options you can use to limit the
 findings that are displayed according to risk level, audience, etc.
 Click on the ``Filters`` button to experiment with this feature. For
 example, if you click the ``Is inhibitor?`` filter checkbox, you will
 see just the blocking inhibitor findings listed
-. Let’s now move on to the pre-upgrade report for one of our RHEL7
+* Let’s now move on to the pre-upgrade report for one of our RHEL7
 hosts.
 
 [#step-4-review-leapp-pre-upgrade-report-of-rhel7-host]
@@ -183,7 +179,7 @@ RHEL8 hosts. Now let’s take a look at the report from one of our RHEL7
 hosts.
 
 . Navigate to the RHEL Web Console remote host menu and click on the
-hostname of one of your RHEL7 pet app servers. Verify the host you have
+hostname of your RHEL7 pet app server. Verify the host you have
 chosen is RHEL7. Then use the main menu to navigate to Tools > Upgrade
 Report. This will bring up the Leapp pre-upgrade report for the selected
 host. For example, the report might look like this:

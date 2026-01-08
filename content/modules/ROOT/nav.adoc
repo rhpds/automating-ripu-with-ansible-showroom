@@ -27,12 +27,6 @@
 *** xref:1.5-custom-modules/README.adoc#step-2-install-a-leapp-custom-actor[Step 2 - Install a Leapp Custom Actor]
 *** xref:1.5-custom-modules/README.adoc#step-3-generate-a-new-pre-upgrade-report[Step 3 - Generate a New Pre-upgrade Report]
 *** xref:1.5-custom-modules/README.adoc#step-4-learn-more-about-customizing-the-in-place-upgrade[Step 4 - Learn More About Customizing the In-place Upgrade]
-** xref:1.6-my-pet-app/README.adoc[Exercise 1.6 - Deploy a Pet App]
-*** xref:1.6-my-pet-app/README.adoc#step-1-the-traditional-application-lifecycle[Step 1 - The Traditional Application Lifecycle]
-*** xref:1.6-my-pet-app/README.adoc#step-2-installing-our-beloved-pet-application[Step 2 - Installing Our Beloved Pet Application]
-*** xref:1.6-my-pet-app/README.adoc#step-3-test-the-pet-application[Step 3 - Test the Pet Application]
-*** xref:1.6-my-pet-app/README.adoc#step-4-configure-the-application-to-start-on-reboot[Step 4 - Configure the Application to Start on Reboot]
-*** xref:1.6-my-pet-app/README.adoc#step-5-run-another-pre-upgrade-report[Step 5 - Run Another Pre-upgrade Report]
 
 * Section 2 - RHEL OS Upgrade
 ** xref:2.1-upgrade/README.adoc[Exercise 2.1 - Run OS Upgrade Jobs]
@@ -46,9 +40,6 @@
 ** xref:2.3-check-upg/README.adoc[Exercise 2.3 - Check if the Upgrade Worked]
 *** xref:2.3-check-upg/README.adoc#step-1-review-the-upgrade-playbook-job-log[Step 1 - Review the Upgrade Playbook Job Log]
 *** xref:2.3-check-upg/README.adoc#step-2-verify-the-hosts-are-upgraded-to-next-rhel-version[Step 2 - Verify the Hosts are Upgraded to Next RHEL Version]
-** xref:2.4-check-pet-app/README.adoc[Exercise 2.4 - (Optional) How is the Pet App Doing?]
-*** xref:2.4-check-pet-app/README.adoc#step-1-retest-our-pet-application[Step 1 - Retest our Pet Application]
-*** xref:2.4-check-pet-app/README.adoc#step-2-add-more-records-to-the-database[Step 2 - Add More Records to the Database]
 
 * Section 3 - Rolling Back
 ** xref:3.1-rm-rf/README.adoc[Exercise 3.1 - (Optional) Trash the Instance]

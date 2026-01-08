@@ -22,9 +22,9 @@ operating system (OS) to the next major version.
 |===
 |Role |Inventory name
 |AAP Control Host |ansible-1
-|RHEL7 pet app host 1 |rhel7
-|RHEL8 pet app host 1 |rhel8
-|RHEL9 pet app host 1 |rhel9
+|RHEL7 pet app host 1 |node1
+|RHEL8 pet app host 1 |node2
+|RHEL9 pet app host 1 |node3
 |===
 
 [#step-1-access-the-environment]
@@ -119,11 +119,9 @@ image::initial_cac.png[Example of the initial CaC job template]
 . The job template will configure AAP with our content and create the necessary job templates for the workshop exercises.  This may take a few minutes to complete.
 . Once the job template has completed, navigate to the ``Templates`` tab again and you should see a list of job templates available for the workshop exercises.
 + 
-image::completed_cac.png[AAP after running the CaC job template]
+image::leapp_custom_actor.png[AAP after running the CaC job template]
 
 . After this, we now have AAP configured and ready to go for the workshop. To prepare our pet app servers for the lab exercise, we have a pre-defined playbook job template to run.
-+
-image::leapp_lab_init.png[Example of the Leapp lab init job template]
 . Click on the ``Launch`` button to run the ``Ansible Leapp Lab Initialization`` job template. This job will prepare the servers with interesting challenges to address in the next steps of the workshop.
 
 [#step-6-challenge-labs]
@@ -140,8 +138,8 @@ In this exercise, we learned about the lab environment we will be using
 to continue through the workshop exercises. We verified that we are able
 to use VS Code in our web browser and from there we can open terminal
 sessions. We also made sure we are able to access the AAP Web UI which
-will be the ``self-service portal`` we use to perform the next steps of
-the RHEL in-place upgrade automation workflow. Finally, we connected to
+will be the self-service portal we use to perform the next steps of
+the RHEL in-place upgrade automation workflow.  Finally, we connected to
 the RHEL Web Console where we will soon be reviewing pre-upgrade
 reports.
 

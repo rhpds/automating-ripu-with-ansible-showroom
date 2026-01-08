@@ -119,7 +119,7 @@ For example:
 image::rhel7_answer_fixed.svg[Pre-upgrade report of RHEL7 host without answer file inhibitor]
 +
 But we still have the ``Possible problems with remote login using root
-account'' inhibitor which we need to fix. Let’s look at that next.
+account`` inhibitor which we need to fix. Let’s look at that next.
 
 [#step-3-resolving-inhibitors-using-a-remediation-playbook]
 === Step 3 - Resolving Inhibitors Using a Remediation Playbook
@@ -170,7 +170,7 @@ inhibitor using the `leapp answer` command. For example:
     executable: /bin/bash
 ----
 . You will find the tasks above in the playbook
-https://github.com/redhat-partner-tech/leapp-project/blob/main/remediate_rhel7.yml#L21-L38[`remediate_rhel7.yml`].
+https://github.com/rhpds/leapp-project/blob/prod/remediate_rhel7.yml[`remediate_rhel7.yml`].
 There are a few more remediation task examples in this playbook as well.
 The ``OS / Remediate`` job template is already set up to execute this
 playbook, so let’s use it to remediate our RHEL7 hosts.
