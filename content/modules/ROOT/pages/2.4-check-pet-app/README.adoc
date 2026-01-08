@@ -22,7 +22,7 @@ xref:1.6-my-pet-app/README.adoc#step-3-test-the-pet-application[Step
 
 . You should usually be able to access the application web user
 interface at the same address you used before. If you still have the app
-open in one of you browser tabs, try refreshing the page.
+open in one of your browser tabs, try refreshing the page.
 +
 ____
 *Note*

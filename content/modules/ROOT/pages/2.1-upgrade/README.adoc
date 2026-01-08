@@ -38,8 +38,8 @@ Resources > Templates and then open the "AUTO / 02 Upgrade" job
 template. Here is what it looks like:
 +
 image::upgrade_template.svg[AAP Web UI showing the upgrade job template details view]
-. Click the "Launch" button which will bring up a the prompts for
-submitting the job starting with the variables prompt:
+. Click the "Launch" button which will bring up the prompts for
+submitting the job, starting with the variables prompt:
 +
 image::upgrade_vars_prompt.svg[Upgrade job variables prompt on AAP Web UI]
 . We don't need to change the variables settings, so just click the
@@ -63,7 +63,7 @@ After launching the upgrade job, the AAP Web UI will navigate
 automatically to the workflow job output page of the job we just
 started. This job will take up to 20 minutes to finish, so let's take
 this time to learn a little more about how the Leapp framework upgrades
-your OS to next RHEL major version.
+your OS to the next RHEL major version.
 
 * Keep in mind that the Leapp framework is responsible only for
 upgrading the RHEL OS packages. Additional tasks required for upgrading
