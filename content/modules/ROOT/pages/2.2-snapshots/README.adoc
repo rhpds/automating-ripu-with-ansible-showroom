@@ -1,4 +1,4 @@
-= Workshop Exercise - Let’s Talk About Snapshots
+= Workshop Exercise - Let's Talk About Snapshots
 
 == Objectives
 
@@ -21,7 +21,7 @@ RHEL in-place upgrade solution approach. In this exercise, we will
 explore some of the challenges that enterprises face and look at
 strategies for overcoming them.
 
-Let’s start by defining exactly what we mean when we talk about
+Let's start by defining exactly what we mean when we talk about
 snapshots.
 
 [#step-1-what-are-snapshots-and-what-are-they-not]
@@ -55,7 +55,7 @@ instantly saving the contents of an entire logical volume or virtual
 disk. Unlike backups, snapshots do not make a copy of the data being
 backed up, but rather mark a point in time after which a copy of all
 modified data is copied going forward. For this reason, the underlying
-technique used for snapshots is often referred to as ``copy-on-write``
+technique used for snapshots is often referred to as "copy-on-write"
 or COW.
 
 While COW snapshots are not a substitute for traditional full and
@@ -94,7 +94,7 @@ the table below:
 | * On-prem VMs (ESX)
 | * Simple and reliable
 * Scope includes everything
-| * Doesn’t support bare metal, etc.
+| * Doesn't support bare metal, etc.
 * Using VMware snapshot for over 3 days is discouraged
 * Getting API access can be difficult
 * No free space in datastores because of overcommitment
@@ -146,10 +146,10 @@ Logical volumes are contained in a storage pool known as a volume group.
 The storage available in a volume group comes from one or more physical
 volumes, that is, block devices underlying actual disks or disk
 partitions. Typically, the logical volumes where the RHEL OS is
-installed will be in a ``rootvg`` volume group. If best practices are
+installed will be in a "rootvg" volume group. If best practices are
 followed, applications and app data will be isolated in their own
 logicial volumes either in the same volume group or a separate volume
-group, ``appvg`` for example.
+group, "appvg" for example.
 
 To create logical volume snapshots, there must be free space in the
 volume group. That is, the total size of the logical volumes in the
@@ -173,7 +173,7 @@ ways we can make space available:
 * Adding another physical volume to the volume group (i.e., `pvcreate`
 and `vgextend`). For a VM, you would first configure an additional
 virtual disk.
-* Temporarily remove a logical volume you don’t need. For example, on
+* Temporarily remove a logical volume you don't need. For example, on
 bare metal servers, there is often a large /var/crash empty filesystem.
 Removing this filesystem from `/etc/fstab` and then using `lvremove` to
 remove the logical volume from which it was mounted will free up space
@@ -213,7 +213,7 @@ A VMware snapshot preserves the state and data of a VM at a specific
 point in time. Because VMware snapshots operate at the hypervisor level,
 they are completely independent of the guest OS. This makes them
 foolproof to anything that can go wrong during a RHEL upgrade. Even if
-an upgrade fails so badly that the OS can’t even be booted up again,
+an upgrade fails so badly that the OS can't even be booted up again,
 reverting the VMware snapshot will still save the day. For these
 reasons, VMware snapshots appear to be a very compelling snapshot
 option.
@@ -225,7 +225,7 @@ calls must be authorized for the AAP control node.
 
 In our experience, having this access granted can be extremely
 challenging. The team that controls the VMware environment in most
-organizations is deeply invested in the ``ClickOps`` model of doing
+organizations is deeply invested in the "ClickOps" model of doing
 everything manually using the vSphere management UI. They may also be
 hesitant to trust that automation developed outside of their team can be
 trusted to perform the operations they would do manually to create a
@@ -280,7 +280,7 @@ instantaneous rollback capability.
 
 Instead of creating a snapshot just before starting the upgrade, the
 automation reconfigures the RAID controller to break the mirror set of
-the root disk so then it’s just two JBOD disks. One of the JBOD disks is
+the root disk so then it's just two JBOD disks. One of the JBOD disks is
 used going forward with the upgrade while the other is left untouched.
 To perform a rollback, the mirror set is reconstructed from the
 untouched JBOD.
@@ -296,12 +296,12 @@ server models.
 ==== ReaR
 
 ReaR (Relax and Recover) is a backup and recovery tool that is included
-with RHEL. ReaR doesn’t use snapshots, but it does make it very easy to
+with RHEL. ReaR doesn't use snapshots, but it does make it very easy to
 perform a full backup and restore of your RHEL server. When taking a
 full backup, ReaR creates a bootable ISO image with the current state of
 the server. To use a ReaR backup to revert an in-place upgrade, we
 simply boot the server from the ISO image and then choose the
-``Automatic Recover`` option from the menu.
+"Automatic Recover" option from the menu.
 
 While ReaR backup and recovery is not instantaneous like rolling back a
 snapshot, it is remarkably fast compared to recovery tools that require
@@ -317,8 +317,8 @@ recover your Linux server with confidence] to learn more.
 
 The best practice for allocating the local storage of a RHEL servers is
 to configure volumes that separate the OS from the apps and app data.
-For example, the OS filesystems would be under a ``rootvg`` volume group
-while the apps and app data would be in an ``appvg`` volume group or at
+For example, the OS filesystems would be under a "rootvg" volume group
+while the apps and app data would be in an "appvg" volume group or at
 least in their own dedicated logical volumes. This separation helps
 isolate the storage usage requirements of these two groups so they can
 be manged based on their individual requirements and are less likely to
@@ -331,7 +331,7 @@ untouched with the expectation that system library forward compatibility
 and middleware runtime abstraction reduces the risk of the RHEL upgrade
 impacting app functionality.
 
-With these concepts in mind, let’s consider if we want to include the
+With these concepts in mind, let's consider if we want to include the
 apps and app data in what gets rolled back if we need to revert the RHEL
 upgrade:
 
@@ -362,7 +362,7 @@ is important to resist the temptation to make some heroic app changes in
 an attempt to avoid rolling back in the face of application impact after
 a RHEL upgrade. For the sake of safety and soundness, gather the
 evidence required to help understand what caused any app impact, but
-then do a rollback. Don’t make any app changes that could be difficult
+then do a rollback. Don't make any app changes that could be difficult
 to untangle after rolling back the OS.
 
 Unfortunately, a VMware snapshot saves the full state of a VM instance
@@ -402,9 +402,9 @@ important feature of any RHEL in-place upgrade solution.
 In this exercise, we learned about the pros and cons of a number of
 different methods of achieving an automated snapshot/rollback
 capability. We also considered the risks that can happen because of
-rolling back app data that isn’t isolated from OS changes. With this
+rolling back app data that isn't isolated from OS changes. With this
 knowledge, you are ready to make more informed decisions when designing
 your snapshot/rollback automation approach.
 
-In the next exercise, we’ll go back to look at how the RHEL in-place
+In the next exercise, we'll go back to look at how the RHEL in-place
 upgrades are progressing on our pet application servers.
