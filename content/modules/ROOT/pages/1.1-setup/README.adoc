@@ -83,7 +83,7 @@ workflow.
 workshop launch page. For example:
 +
 image::aap_link.png[Example link to AAP Web UI]
-. Enter the username `admin` and the password provided. This will bring
+. Enter the username `lab-user` and the password provided. This will bring
 you to your AAP Web UI dashboard like the example below:
 +
 image::aap_console_example.png[Example AAP Web UI dashboard]
@@ -120,6 +120,11 @@ image::initial_cac.png[Example of the initial CaC job template]
 . Once the job template has completed, navigate to the ``Templates`` tab again and you should see a list of job templates available for the workshop exercises.
 + 
 image::completed_cac.png[AAP after running the CaC job template]
+
+. After this, we now have AAP configured and ready to go for the workshop. To prepare our pet app servers for the lab exercise, we have a pre-defined playbook job template to run.
++
+image::leapp_lab_init.png[Example of the Leapp lab init job template]
+. Click on the ``Launch`` button to run the ``Ansible Leapp Lab Initialization`` job template. This job will prepare the servers with interesting challenges to address in the next steps of the workshop.
 
 [#step-6-challenge-labs]
 === Step 6 - Challenge Labs
