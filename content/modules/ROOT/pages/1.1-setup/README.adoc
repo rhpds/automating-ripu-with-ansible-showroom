@@ -48,7 +48,7 @@ ____
 
 A welcome wizard may appear to guide you through configuring your VS
 Code user experience. This is optional as the default settings will work
-fine for this workshop. Feel free to step though the wizard to explore
+fine for this workshop. Feel free to step through the wizard to explore
 the VS Code bells and whistles or you may just skip it.
 ____
 [#step-2-open-a-terminal-session]
@@ -62,8 +62,8 @@ RHEL in-place upgrade automation is doing its thing.
 +
 image::new_term.svg[Example of how to open a terminal session in VS Code]
 . This terminal session will be running on the AAP control host
-`ansible-1`. You can use the `ssh` command to login to one of your
-pet app hosts. Finally, use the highlighted commands confirm the RHEL OS
+`ansible-1`. You can use the `ssh` command to log in to one of your
+pet app hosts. Finally, use the highlighted commands to confirm the RHEL OS
 version and kernel version installed.
 +
 For example:
@@ -111,12 +111,12 @@ pre-upgrade reports in an upcoming exercise.
 [#step-5-configure-AAP]
 === Step 5 - Configure AAP
 
-The first thing we need to do is to configure AAP with our content.  A pre-defined configuration as code job template is available to do this.
+The first thing we need to do is to configure AAP with our content. A pre-defined configuration as code job template is available to do this.
 
-. Navigate to the AAP Web UI and go to the "Templates" tab inside Automation Execution (Automation Controller).  You should see a job template named "Z / CaC / Controller".  This is our pre-defined job template to configure AAP.  Click on the "Launch" button to run this job template.
+. Navigate to the AAP Web UI and go to the "Templates" tab inside Automation Execution (Automation Controller). You should see a job template named "Z / CaC / Controller". This is our pre-defined job template to configure AAP. Click on the "Launch" button to run this job template.
 +
 image::initial_cac.png[Example of the initial CaC job template]
-. The job template will configure AAP with our content and create the necessary job templates for the workshop exercises.  This may take a few minutes to complete.
+. The job template will configure AAP with our content and create the necessary job templates for the workshop exercises. This may take a few minutes to complete.
 . Once the job template has completed, navigate to the "Templates" tab again and you should see a list of job templates available for the workshop exercises.
 + 
 image::leapp_custom_actor.png[AAP after running the CaC job template]
@@ -139,8 +139,8 @@ to continue through the workshop exercises. We verified that we are able
 to use VS Code in our web browser and from there we can open terminal
 sessions. We also made sure we are able to access the AAP Web UI which
 will be the self-service portal we use to perform the next steps of
-the RHEL in-place upgrade automation workflow.  Finally, we connected to
+the RHEL in-place upgrade automation workflow. Finally, we connected to
 the RHEL Web Console where we will soon be reviewing pre-upgrade
 reports.
 
-Use the link below to move on the next exercise.
+Use the link below to move on to the next exercise.

@@ -19,7 +19,7 @@ review the findings listed in those reports. There are a number of
 different ways that we can access the reports. Let's review these and
 consider the pros and cons:
 
-* If we we're using the Leapp framework to manually upgrade just a
+* If we were using the Leapp framework to manually upgrade just a
 single RHEL host, we could simply get to a shell prompt on the host and
 look at the local report file output. In
 xref:1.1-setup/README.adoc#step-2-open-a-terminal-session[Exercise
@@ -155,14 +155,14 @@ You can see additional details for any finding by clicking on it in the list. Fo
 +
 image::grub_core_finding.png[Details view of grub core finding]
 +
-This finding is reported on every upgrade, as it is potentially impactful.  The summary provides the details of the issue and the recommended action to take.  We'll ignore this one for now, but make a note of it for later.
+This finding is reported on every upgrade, as it is potentially impactful. The summary provides the details of the issue and the recommended action to take. We'll ignore this one for now, but make a note of it for later.
 +
 image::rhsm_repos.png[Details view of RHSM repositories]
 +
-This finding is a bit more serious.  It's marked as an inhibitor, so our upgrade will not proceed unless we take action to correct the cause of this inhibitor risk finding.  This one is an artifact of our lab environment, as we don't have access to the Red Hat Subscription Manager (RHSM) repositories in this environment. We'll create some automation to provide these repos for us in a later exercise.
+This finding is a bit more serious. It's marked as an inhibitor, so our upgrade will not proceed unless we take action to correct the cause of this inhibitor risk finding. This one is an artifact of our lab environment, as we don't have access to the Red Hat Subscription Manager (RHSM) repositories in this environment. We'll create some automation to provide these repos for us in a later exercise.
 +
 
-* As we saw here, there's a lot of information in the report, and it can be overwhelming.  The good news is that we can filter the findings to make it easier to focus on the most important ones.
+* As we saw here, there's a lot of information in the report, and it can be overwhelming. The good news is that we can filter the findings to make it easier to focus on the most important ones.
 * There are a number of filtering options you can use to limit the
 findings that are displayed according to risk level, audience, etc.
 Click on the "Filters" button to experiment with this feature. For
@@ -213,8 +213,8 @@ image::rhel7_python.png[Details view of Difference in Python versions and suppor
 This finding could be a concern if we have any apps on our pet server
 that are using the system-provided Python interpreter. Let's assume we
 don't have any of those in which case we can blissfully ignore this
-finding.  But be aware, when working with servers in the wild, it's important to understand the applications running on the server, as this could be a significant issue if you have any Python-based apps.
-. The other new high risk finding, and an inhibitor is the "Missing required answers in the answer
+finding. But be aware, when working with servers in the wild, it's important to understand the applications running on the server, as this could be a significant issue if you have any Python-based apps.
+. The other new high risk finding, and also an inhibitor, is the "Missing required answers in the answer
 file" finding. Here are the details for this one:
 +
 image::missing_answers_inhibitor.svg[Details view of missing required answers in the answer file]
@@ -223,7 +223,7 @@ Here again, we will need to take action to remediate this finding. Don't
 panic! In the next exercise, we will explore different options for
 automating the required remediation actions and recommendations.
 
-Lets take a look at our last system, the RHEL 9 one.
+Let's take a look at our last system, the RHEL 9 one.
 
 [#step-5-review-leapp-pre-upgrade-report-of-rhel9-host]
 === Step 5 - Review Leapp Pre-upgrade Report of RHEL9 Host
@@ -237,7 +237,7 @@ image::rhel9_report.png[Example pre-upgrade report of RHEL9 host]
 +
 image::rhel9_selinux.png[Details view of SELinux permissive]
 +
-This finding is a low risk issue and it's not an inhibitor.  This finding is low, because the impact to the upgrade process is minimal. However, in many environments, this is a big deal, so we must take note of it as part of our post-upgrade checklist and re-enable SELinux after the upgrade!
+This finding is a low risk issue and it's not an inhibitor. This finding is low, because the impact to the upgrade process is minimal. However, in many environments, this is a big deal, so we must take note of it as part of our post-upgrade checklist and re-enable SELinux after the upgrade!
 
 [#challenge-lab-what-about-ignoring-so-many-high-findings?]
 === Challenge Lab: What About Ignoring So Many High Findings?

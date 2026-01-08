@@ -14,7 +14,7 @@ Jobs]
 
 == Objectives
 
-* Learn what are custom modules
+* Learn what custom modules are
 * Install a Leapp custom actor to implement additional pre-upgrade
 checks
 * See where to go to learn more about making your own custom actors
@@ -60,7 +60,7 @@ before and after the task that imports the `infra.leapp` collection
 [#step-2-install-a-leapp-custom-actor]
 === Step 2 - Install a Leapp Custom Actor
 
-There is a collection of example custom actor at the GitHub repo
+There is a collection of example custom actors at the GitHub repo
 https://github.com/oamg/leapp-supplements[oamg/leapp-supplements]. We
 will use one of these to demonstrate adding a custom check to our
 pre-upgrade reports.
@@ -81,7 +81,7 @@ For this exercise, we will leverage an already created Ansible playbook in our A
 image::leapp_custom_actor.png[Launching the LEAPP Custom Actors playbook in AAP]
 
 
-. To demonstrate the custom actor at work, let’s create a condition that
+. To demonstrate the custom actor at work, let's create a condition that
 violates our policy so that an inhibitor finding will be reported. Use
 this command:
 +
