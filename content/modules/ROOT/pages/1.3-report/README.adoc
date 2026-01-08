@@ -166,14 +166,8 @@ image::rhsm_repos.png[Details view of RHSM repositories]
 This finding is a bit more serious.  It's marked as an inhibitor, so our upgrade will not proceed unless we take action to correct the cause of this inhibitor risk finding.  This one is an artifact of our lab environment, as we don't have access to the Red Hat Subscription Manager (RHSM) repositories in this environment. We'll create some automation to provide these repos for us in a later exercise.
 +
 
-<<<<<<< HEAD
 . As we saw here, there's a lot of information in the report, and it can be overwhelming.  The good news is that we can filter the findings to make it easier to focus on the most important ones.
 . There are a number of filtering options you can use to limit the
-=======
-* As this is a lab system, and it is pretty standardized and uncustomized, there's not a lot of issues.
-* However, there can be a lot of information in the report, and it can be overwhelming.  The good news is that we can filter the findings to make it easier to focus on the most important ones.
-* There are a number of filtering options you can use to limit the
->>>>>>> ed7d0fd (Updates through 1.3)
 findings that are displayed according to risk level, audience, etc.
 Click on the ``Filters`` button to experiment with this feature. For
 example, if you click the ``Is inhibitor?`` filter checkbox, you will
@@ -243,7 +237,7 @@ Following the same steps as in the previous two exercises, let’s now take a lo
 image::rhel9_report.png[Example pre-upgrade report of RHEL9 host]
 
 
-. In the report for our RHEL9 pet app server above, we see there are only two high risk findings and one of them is an inhibitor. Additionally, both of these findings are related to the GRUB2 core update and the RHSM repositories. These are the same findings we saw in the RHEL8 and RHEL7 pre-upgrade reports, and there's not much new here.
+. In the report for our RHEL9 app server above, we see there are only two high risk findings and one of them is an inhibitor. Additionally, both of these findings are related to the GRUB2 core update and the RHSM repositories. These are the same findings we saw in the RHEL8 and RHEL7 pre-upgrade reports, and there's not much new here.
 . However, there's a new finding that is marked as a low risk, ``SElinux will be set to permissive mode``
 +
 image::rhel9_selinux.png[Details view of SELinux permissive]
