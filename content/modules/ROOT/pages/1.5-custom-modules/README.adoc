@@ -7,8 +7,6 @@ complete the workshop, but it's recommended if time allows. Review the
 objectives listed in the next section to decide if you want to do this
 exercise or if you would rather skip ahead to the next exercises:
 
-* xref:1.6-my-pet-app/README.adoc[Exercise 1.6 - (Optional) Deploy a
-Pet Application]
 * xref:2.1-upgrade/README.adoc[Exercise 2.1 - Run the RHEL Upgrade
 Jobs]
 

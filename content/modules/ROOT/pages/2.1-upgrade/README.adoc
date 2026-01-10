@@ -37,23 +37,23 @@ very lightweight compared to traditional enterprise app servers.
 Resources > Templates and then open the "AUTO / 02 Upgrade" job
 template. Here is what it looks like:
 +
-image::upgrade_template.svg[AAP Web UI showing the upgrade job template details view]
-. Click the "Launch" button which will bring up a the prompts for
+image::upgrade_template.png[AAP Web UI showing the upgrade job template details view]
+. Click the ``Launch`` button which will bring up a the prompts for
 submitting the job starting with the variables prompt:
 +
-image::upgrade_vars_prompt.svg[Upgrade job variables prompt on AAP Web UI]
-. We don't need to change the variables settings, so just click the
-"Next" button to move on.
+image::upgrade_vars_prompt.png[Upgrade job variables prompt on AAP Web UI]
+. We don’t need to change the variables settings, so just click the
+``Next`` button to move on.
 +
-image::upgrade_survey_prompt.svg[Upgrade job survey prompt on AAP Web UI]
+image::upgrade_survey_prompt.png[Upgrade job survey prompt on AAP Web UI]
 . Next we see the job template survey prompt asking us to select an
 inventory group. We are going to upgrade all our pet app hosts using a
 single job, so choose the "ALL_rhel" option and click the "Next"
 button. This will bring you to a preview of the selected job options and
 variable settings.
 +
-image::upgrade_preview.svg[Upgrade job preview on AAP Web UI]
-. If you are satisfied with the job preview, use the "Launch" button
+image::upgrade_preview.png[Upgrade job preview on AAP Web UI]
+. If you are satisfied with the job preview, use the ``Launch`` button
 to start the job.
 
 [#step-2-learn-more-about-leapp]
@@ -61,7 +61,7 @@ to start the job.
 
 After launching the upgrade job, the AAP Web UI will navigate
 automatically to the workflow job output page of the job we just
-started. This job will take up to 20 minutes to finish, so let's take
+started. This job will take up to 30 minutes to finish, so let’s take
 this time to learn a little more about how the Leapp framework upgrades
 your OS to next RHEL major version.
 
@@ -106,7 +106,7 @@ Documentation].
 == Conclusion
 
 In this exercise, we launched a workflow job template to create
-snapshots and start the upgrades of our pet app servers. We learned more
+snapshots and start the upgrades of our servers. We learned more
 about the Leapp framework to better understand what is happening as the
 RHEL OS is being upgraded.
 

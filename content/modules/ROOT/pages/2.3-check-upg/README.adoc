@@ -3,7 +3,7 @@
 == Objectives
 
 * Review the upgrade playbook job log
-* Verify our pet application servers are running the newer RHEL version
+* Verify our servers are running the newer RHEL version
 
 == Guide
 

@@ -31,32 +31,24 @@ explained as they are introduced.
 
 There is an optional presentation deck available with additional
 information on the benefits of the approach demonstrated in this
-workshop: link:../../decks/ansible_ripu.pdf[RHEL In-place Upgrade
-Automation]
+workshop: <WIP - Deck link to be added>.
 
 == Time Planning
 
 The time required to complete the workshop depends on the number of
-participants and how familiar they are with Linux and Ansible. The
-exercises themselves should take a minimum of 4 hours. The introduction
-in the optional presentation adds another hour. There are also some
-optional exercises which can be skipped, but are recommended if time
-allows. There are also supplemental exercises at the end of the workshop
-to allow for open-ended experimentation and exploring customizations
-that may apply to your specific environment and requirements. The lab
-environment provisioned could even be used for a multi-day deep dive
-workshop, but that is beyond the scope of this guide.
+participants and how familiar they are with Linux and Ansible. This abbreviated version of the workshop can be completed in under 2 hours.
+
+As this lab does have several long-running tasks, like the O/S upgrade, when working with a group of participants, it is recommended to keep the group together to have discussion time and presentations during those long-running tasks.  A recommended schedule is:
+
+<WIP - schedule to be added>
 
 == Lab Diagram
 
-The lab environment provisioned for the workshop includes a number of
-RHEL cloud instances. One instance is dedicated to hosting AAP and is
-used to run playbook and workflow jobs. The jobs are executed against
-the remaining hosts which will be upgraded in-place to the next RHEL
-major version. The automation uses LVM to manage the snapshot/rollback
-capability.
-
-image::ripu_lab_diagram.svg[RHEL In-place Upgrade Automation Workshop lab diagram]
+The lab consists of an Ansible Automation Platform (AAP) control host and
+three RHEL pet application hosts, one each for RHEL7, RHEL8, and RHEL9.
+These pet app hosts are where we will be performing the RHEL in-place
+upgrades. The AAP control host is used to run the Ansible playbook and
+workflow jobs that automate the RHEL in-place upgrade process.
 
 == Workshop Exercises
 

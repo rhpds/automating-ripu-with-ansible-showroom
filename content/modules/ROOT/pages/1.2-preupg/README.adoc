@@ -125,13 +125,8 @@ The prompts that each job template presents can be configured using the
 "Prompt on launch" checkboxes seen when editing a job template.
 ____
 +
-image::analysis_vars_prompt.png[Analysis job variables prompt on AAP Web UI]
-. The first prompt as seen above allows for changing the default
-playbook variables or adding more variables. We don't need to do this at
-this time, so just click the "Next" button to move on.
-+
 image::analysis_survey_prompt.png[Analysis job survey prompt on AAP Web UI]
-. Next we see the job template survey prompt. A survey is a customizable
+. First we see the job template survey prompt. A survey is a customizable
 set of prompts that can be configured from the Survey tab of the job
 template. For this job template, the survey allows for choosing a group
 of hosts on which the job will execute the playbook. Choose the

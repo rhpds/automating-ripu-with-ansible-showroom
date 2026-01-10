@@ -1,5 +1,15 @@
 = Workshop Exercise - Let's Talk About Snapshots
 
+* Warning:
++
+[source,asciidoc]
+----
+[WARNING]
+====
+**Warning:** This exercise is for discussion only. No steps are to be performed in the lab environment.
+====
+----
+
 == Objectives
 
 * Understand the difference between backups and snapshots
