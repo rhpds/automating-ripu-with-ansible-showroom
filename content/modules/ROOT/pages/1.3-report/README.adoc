@@ -162,12 +162,13 @@ image::remote_root_logins.png[Details view of remote root logins finding]
 The second finding is informing us that remote root logins are explicitly enabled on this host.  This is a potential security risk, but not an inhibitor to the upgrade.  The recommended action is to disable remote root logins before proceeding with the upgrade.  In the next exercise, we will explore how to automate this remediation action.
 +
 The other findings in here are not marked as high, but are still worth reviewing. We will go into some of these more later in this exercise.
+
 * As we saw here, there's a lot of information in the report, and it can be overwhelming.  The good news is that we can filter the findings to make it easier to focus on the most important ones.
 * There are a number of filtering options you can use to limit the
 findings that are displayed according to risk level, audience, etc.
 Click on the "Filters" button to experiment with this feature. For
 example, if you click the "Is inhibitor?" filter checkbox, you will
-see just the blocking inhibitor findings listed
+see just the blocking inhibitor findings listed.
 * Let's now move on to the pre-upgrade report for one of our RHEL7
 hosts.
 
@@ -202,8 +203,8 @@ by reviewing the high risk findings that are not inhibitors.
 different than the finding with the same title we learned about in the
 RHEL8 pre-upgrade report, so we’ll ignore this for now.
 . Now let’s look at the new findings we are seeing only on our RHEL7
-pre-upgrade report. The first entry on the list is the ``Difference in Python
-versions and support in RHEL8'' finding:
+pre-upgrade report. The first entry on the list is the "Difference in Python
+versions and support in RHEL8" finding:
 +
 image::rhel7_python.png[Details view of Difference in Python versions and support in RHEL8 finding]
 +
@@ -211,8 +212,8 @@ This finding could be a concern if we have any apps on our pet server
 that are using the system-provided Python interpreter. Let's assume we
 don't have any of those in which case we can blissfully ignore this
 finding.  But be aware, when working with servers in the wild, it's important to understand the applications running on the server, as this could be a significant issue if you have any Python-based apps.
-. Now, looking at the inhibitors, first is the ``Missing required answers in the answer
-file`` finding. Here are the details for this one:
+. Now, looking at the inhibitors, first is the "Missing required answers in the answer
+file" finding. Here are the details for this one:
 +
 image::missing_answers_inhibitor.svg[Details view of missing required answers in the answer file]
 +
@@ -223,6 +224,7 @@ automating the required remediation actions and recommendations.
 image::rhel7_cifs.png[Details view of cifs inhibitor]
 +
 The other inhibitor findings are related, as they are both unsupported network systems.  We will have to resolve these as well before we can upgrade.
+
 * This may be concerning to see so many high risk findings on the RHEL7
 pre-upgrade report.  However, as we look into remediating these findings in
 the next exercise, we will see how easy it is to address them with automation.
@@ -233,23 +235,36 @@ Lets take a look at our last system, the RHEL 9 one.
 [#step-5-review-leapp-pre-upgrade-report-of-rhel9-host]
 === Step 5 - Review Leapp Pre-upgrade Report of RHEL9 Host
 
-Following the same steps as in the previous two exercises, let's now take a look at the report from our RHEL9 host.
+Following the same steps as in the previous two exercises, let's now take a look 
+at the report from our RHEL9 host.
 
 image::rhel9_report.png[Example pre-upgrade report of RHEL9 host]
 
 
-. In the report for our RHEL9 app server above, we see there are only two high risk findings. One is the same GRUB2 core update findings we saw in the RHEL8 and RHEL7 pre-upgrade reports, and there's not much new here.
+. In the report for our RHEL9 app server above, we see there are only two high risk findings. 
+One is the same GRUB2 core update findings we saw in the RHEL8 and RHEL7 pre-upgrade reports, 
+and there's not much new here.
 . The other high risk finding is also not an inhibitor, but we'll take a look at it closely.
 +
+
 image::rhel9_unknown_repo.png[Details view of unknown repository finding]
+
 +
-This finding is indicating that there's a repository configured on the system that is not recognized as a standard Red Hat repository.  This could be a custom or third-party repository, or a renamed Red Hat repository.  In any case, this could lead to issues during the upgrade if packages are pulled from an unsupported source.  We should investigate this repository further to determine if it's safe to proceed with the upgrade or if we need to disable it first.  For the purposes of this lab, it's a Red Hat repository that has been renamed, so we can proceed.
+This finding is indicating that there's a repository configured on the system that is not 
+recognized as a standard Red Hat repository.  This could be a custom or third-party repository, 
+or a renamed Red Hat repository.  In any case, this could lead to issues during the upgrade if 
+packages are pulled from an unsupported source.  We should investigate this repository further 
+to determine if it's safe to proceed with the upgrade or if we need to disable it first.  
+For the purposes of this lab, it's a Red Hat repository that has been renamed, so we can proceed.
 . However, lets take a look at the rest of the findings we've been seeing throughout these exercises.
-. There's a finding that is marked as a low risk, ``SElinux will be set to permissive mode``
+. There's a finding that is marked as a low risk, "SElinux will be set to permissive mode"
 +
 image::rhel9_selinux.png[Details view of SELinux permissive]
 +
-This finding is a low risk issue and it's not an inhibitor.  This finding is low, because the impact to the upgrade process is minimal. However, in many environments, this is a big deal, so we must take note of it as part of our post-upgrade checklist and re-enable SELinux after the upgrade!
+This finding is a low risk issue and it's not an inhibitor.  This finding is low, because 
+the impact to the upgrade process is minimal. However, in many environments, this is a big deal, 
+so we must take note of it as part of our post-upgrade checklist and re-enable SELinux after 
+the upgrade!
 
 [#challenge-lab-what-about-ignoring-so-many-high-findings?]
 === Challenge Lab: What About Ignoring So Many High Findings?
