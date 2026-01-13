@@ -101,7 +101,7 @@ Interactive Linux Server Admin Interface'' on the workshop launch page.
 For example:
 +
 image::cockpit_link.png[Example link to RHEL Web Console]
-. Enter the username `student` and the password provided. This will
+. Enter the username `lab-user` and the password provided. This will
 bring you to a RHEL Web Console Overview page like the example below:
 +
 image::cockpit_example.png[Example RHEL Web Console]
