@@ -63,7 +63,7 @@ RHEL in-place upgrade automation is doing its thing.
 image::new_term.svg[Example of how to open a terminal session in VS Code]
 . This terminal session will be running on the AAP control host
 `ansible-1`. You can use the `ssh` command to login to one of your
-pet app hosts. Finally, use the highlighted commands confirm the RHEL OS
+pet app hosts. Finally, use the highlighted commands to confirm the RHEL OS
 version and kernel version installed.
 +
 For example:
