@@ -35,7 +35,7 @@ The image:playbook_icon.svg[arrow pointing down at server] icon
 indicates workflow steps that are automated by Ansible playbooks.
 ____
 
-==== Analysis
+==== *Analysis*
 
 During the analysis phase, no changes are made yet. When the analysis
 playbook is executed, it uses the Leapp utility to scan the host for
@@ -48,7 +48,7 @@ should be run again to verify the risks are resolved. This iteration
 continues until everyone reviewing the report is comfortable that any
 remaining findings are acceptable.
 
-==== Upgrade
+==== *Upgrade*
 
 After the analysis phase is done and the report indicates acceptable
 risk, a maintenance window can be scheduled and the upgrade phase can
@@ -63,7 +63,7 @@ host will reboot under the newly upgraded RHEL major version. Now the
 ops and app teams can assess if the upgrade was successful by verifying
 all application services are working as expected.
 
-==== Commit
+==== *Commit*
 
 If there are any application impacts discovered that can’t be easily
 corrected within the scheduled maintenance window, the decision can be
@@ -76,7 +76,7 @@ everyone is comfortable with the upgraded host, the commit playbook
 should be executed to delete the snapshot. The RHEL in-place upgrade is
 done.
 
-==== Let’s Get Started
+==== *Let’s Get Started*
 
 The RHEL in-place upgrade automation approach workflow is designed to
 reduce the risks inherent in doing an in-place upgrade versus deploying
@@ -103,8 +103,8 @@ automation controller host that has been pre-configured in your workshop
 lab environment.
 
 . Return to the AAP Web UI browser tab you opened in step 3 of the
-previous exercise. Navigate to Resources > Templates by clicking on
-``Templates`` under the ``Resources`` group in the navigation menu. This
+previous exercise. Navigate to the ``Automation Execution`` drop down on
+the lefthand side and select the ``Templates`` menu. This
 will bring up a list of job templates that can be used to run playbook
 jobs on target hosts:
 +
@@ -116,7 +116,7 @@ image::analysis_template.png[``AUTO / 01 Analysis`` job templates seen on AAP We
 . From here, we could use the ``Edit template`` button if we wanted to make any
 changes to the job template. This job template is already configured, so
 we are ready to use it to submit a playbook job. To do this, use the
-``Launch`` button which will bring up a series of prompts.
+``Launch template`` button which will bring up a series of prompts.
 +
 ____
 *Note*
