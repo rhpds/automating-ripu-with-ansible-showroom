@@ -77,14 +77,16 @@ xref:1.2-preupg/README.adoc#step-2-use-aap-to-launch-an-analysis-playbook-job[Ex
 1.2, Step 2], except this time, we will add this setting when we get to
 the Variables prompt:
 +
-[source,json]
+[source,yaml]
 ----
-  "leapp_answerfile": "[remove_pam_pkcs11_module_check]\nconfirm = True\n",
+leapp_answerfile: |
+  [remove_pam_pkcs11_module_check]
+  confirm: true
 ----
 +
 For example:
 +
-image::analysis_leapp_answerfile.svg[Setting the `leapp_answerfile` input variable]
+image::analysis_leapp_answerfile.png[Setting the `leapp_answerfile` input variable]
 +
 After making the variable setting as shown above, click the "Next"
 button. This will lead to the job template survey prompt. Previously, we
@@ -92,7 +94,7 @@ used the "ALL_rhel" option to run the pre-upgrade on all our pet
 servers. However, our `leapp_answerfile` setting is specific to our
 RHEL7 hosts, so choose the "rhel7" option this time:
 +
-image::analysis_survey_rhel7_only.svg[Choose "rhel7" at the survey prompt]
+image::analysis_survey_rhel7_only.png[Choose "rhel7" at the survey prompt]
 +
 Click the "Next" button to proceed to the preview prompt. If you are
 satisfied with the job preview, use the "Launch" button to start the
@@ -116,7 +118,7 @@ inhibitor finding is no longer being reported.
 +
 For example:
 +
-image::rhel7_answer_fixed.svg[Pre-upgrade report of RHEL7 host without answer file inhibitor]
+image::rhel7_answer_fixed.png[Pre-upgrade report of RHEL7 host without answer file inhibitor]
 +
 But we still have the "Possible problems with remote login using root
 account" inhibitor which we need to fix. Let's look at that next.
