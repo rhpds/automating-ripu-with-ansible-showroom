@@ -1,14 +1,9 @@
 = Workshop Exercise - Let's Talk About Snapshots
 
-* Warning:
-+
-[source,asciidoc]
-----
 [WARNING]
 ====
-**Warning:** This exercise is for discussion only. No steps are to be performed in the lab environment.
+**Warning:** This exercise is for discussion only in the current lab environment. No steps are to be performed.
 ====
-----
 
 == Objectives
 
