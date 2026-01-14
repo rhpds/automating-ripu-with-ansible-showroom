@@ -7,15 +7,15 @@
 
 == Guide
 
-In the previous exercises, we review pre-upgrade reports and performed
+In the previous exercises, we reviewed pre-upgrade reports and performed
 some recommended remediations. If you tried the optional exercises, you
 also learned about custom pre-upgrade checks and installed a sample pet
 application. After all of that, you finally launched the Ansible
 playbook jobs to run the RHEL in-place upgrades on your servers.
 
-It's time to see verify the result of the upgrades and let our
-application teams assess if their pet apps are still good. We are here
-in the our RHEL in-place upgrade automation workflow:
+It's time to verify the result of the upgrades and let our application
+teams assess if their pet apps are still good. We are here in our RHEL
+in-place upgrade automation workflow:
 
 image::ripu-workflow-hl-validate.svg[Automation approach workflow diagram with app validation steps highlighted]
 
@@ -102,7 +102,7 @@ reporting RHEL9:
 +
 image::rhel9_upgraded.png[node2 running Red Hat Enterprise Linux 9.2 (Plow)]
 +
-Here is an example one that was previously RHEL7 now running RHEL8:
+Here is an example of one that was previously RHEL7 now running RHEL8:
 +
 image::rhel8_upgraded.png[node1 running Red Hat Enterprise Linux Server 8.8 (Oopta)]
 +
