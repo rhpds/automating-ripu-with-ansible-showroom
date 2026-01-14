@@ -63,7 +63,7 @@ After launching the upgrade job, the AAP Web UI will navigate
 automatically to the workflow job output page of the job we just
 started. This job will take up to 30 minutes to finish, so let’s take
 this time to learn a little more about how the Leapp framework upgrades
-your OS to next RHEL major version.
+your OS to the next RHEL major version.
 
 * Keep in mind that the Leapp framework is responsible only for
 upgrading the RHEL OS packages. Additional tasks required for upgrading

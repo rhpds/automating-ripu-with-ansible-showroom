@@ -11,7 +11,7 @@ after rolling back
 
 In the previous exercise, we rolled back one of our pet app servers. Now
 we will take a closer look at where that has left us and consider where
-do we go from there.
+we go from there.
 
 [#step-1-our-state-after-rolling-back]
 === Step 1 - Our State After Rolling Back
@@ -65,7 +65,7 @@ the snapshot scope implemented by our rollback playbook?
 +
 The business will not be happy about losing their changes, so make sure
 they are aware of the risk to app data if you choose to do everything
-scope snapshots.
+snapshot scoped.
 
 [#step-2-what's-next?]
 === Step 2 - What's Next?
@@ -82,7 +82,7 @@ forward.
 Developing robust automation is an iterative process. Remember it's good
 to fail fast! Failed upgrades early in the development of your
 automation should be expected and will inform you about what needs
-fixed. Having an automated rollback capability helps accelerate the
+to be fixed. Having an automated rollback capability helps accelerate the
 development of robust playbooks.
 . What if you rolled back because application impact was discovered
 after the upgrade. In this case, it's important for the app team to
