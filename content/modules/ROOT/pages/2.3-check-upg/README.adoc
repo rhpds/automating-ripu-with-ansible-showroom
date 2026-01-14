@@ -3,7 +3,7 @@
 == Objectives
 
 * Review the upgrade playbook job log
-* Verify our pet application servers are running the newer RHEL version
+* Verify our servers are running the newer RHEL version
 
 == Guide
 
@@ -42,9 +42,10 @@ ____
 +
 For example:
 +
-image::upgrade_jobs.svg[AAP Web UI listing upgrade job entries]
+image::upgrade_jobs.png[AAP Web UI listing upgrade job entries]
 . If the playbook run finished without any failed tasks, you should see
 "Successful" displayed with a green checkmark.
+. Note that in our lab environment, there's a chance the upgrade playbook shows failed due to the infrastructure. We will review this in more detail shortly.
 +
 ____
 *Note*
@@ -58,10 +59,19 @@ Scroll down to the end of the log output to see the "PLAY RECAP"
 indicating the success or failure status for the playbook run executed
 on each host. Here is what you should expect to see:
 +
-image::upgrade_play_recap.svg[AAP Web UI showing successful upgrade playbook run play recap]
+image::upgrade_play_recap.png[AAP Web UI showing successful upgrade playbook run play recap]
 +
 If there are no failed runs, the RHEL in-place upgrade is done on all of
-our pet app servers.
+our pet app servers.  However, we do see this occasional failure in our
+lab environment due to the underlying cloud infrastructure. If you see
+any failed playbook runs, don't worry. Let's review how to handle that
+situation next.
+
+. To find the failure, especially in such a long playbook run, use the search field to find the word "failed". This will highlight any occurrences of the word in the log output.
++
+image::upgrade_failure.png[Searching for "failed" in the upgrade playbook log output]
++
+As we see, this is a satellite communication, the correct repos did not get enabled after the upgrade. This is a known issue in our lab environment. We will check if the server updated in the next step.
 
 [#step-2-verify-the-hosts-are-upgraded-to-next-rhel-version]
 === Step 2 - Verify the Hosts are Upgraded to Next RHEL Version
@@ -90,11 +100,16 @@ ____
 For example, this pet app server that previously had RHEL8 is now
 reporting RHEL9:
 +
-image::rhel9_upgraded.svg[fluent-bee running Red Hat Enterprise Linux 9.2 (Plow)]
+image::rhel9_upgraded.png[node2 running Red Hat Enterprise Linux 9.2 (Plow)]
 +
 Here is an example of one that was previously RHEL7 now running RHEL8:
 +
-image::rhel8_upgraded.svg[vocal-hyena running Red Hat Enterprise Linux Server 8.8 (Oopta)]
+image::rhel8_upgraded.png[node1 running Red Hat Enterprise Linux Server 8.8 (Oopta)]
++
+And even our RHEL 9 server, which did showed us an error in the upgrade playbook, is now running RHEL 10:
++
+image::rhel10_upgraded.png[node3 running Red Hat Enterprise Linux 10.0 (Plow)]
++
 . You can also check the RHEL and kernel versions from the command line
 following the steps you used with
 xref:1.1-setup/README.adoc#step-2-open-a-terminal-session[Exercise
@@ -102,9 +117,10 @@ xref:1.1-setup/README.adoc#step-2-open-a-terminal-session[Exercise
 +
 At the shell prompt of your pet app servers, use the
 `cat /etc/redhat-release` and `uname -r` commands. Here's an example
-showing a pet app server that was upgraded to RHEL9:
+showing a pet app server that was upgraded to RHEL10:
 +
-image::rhel9_commands.svg[command output showing RHEL9 is installed]
+image::rhel10_commands.png[Command line showing RHEL 10.0 and kernel version 6.12.0]
+
 
 == Conclusion
 

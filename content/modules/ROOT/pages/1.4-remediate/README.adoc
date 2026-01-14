@@ -77,14 +77,16 @@ xref:1.2-preupg/README.adoc#step-2-use-aap-to-launch-an-analysis-playbook-job[Ex
 1.2, Step 2], except this time, we will add this setting when we get to
 the Variables prompt:
 +
-[source,json]
+[source,yaml]
 ----
-  "leapp_answerfile": "[remove_pam_pkcs11_module_check]\nconfirm = True\n",
+leapp_answerfile: |
+  [remove_pam_pkcs11_module_check]
+  confirm: true
 ----
 +
 For example:
 +
-image::analysis_leapp_answerfile.svg[Setting the `leapp_answerfile` input variable]
+image::analysis_leapp_answerfile.png[Setting the `leapp_answerfile` input variable]
 +
 After making the variable setting as shown above, click the "Next"
 button. This will lead to the job template survey prompt. Previously, we
@@ -92,7 +94,7 @@ used the "ALL_rhel" option to run the pre-upgrade on all our pet
 servers. However, our `leapp_answerfile` setting is specific to our
 RHEL7 hosts, so choose the "rhel7" option this time:
 +
-image::analysis_survey_rhel7_only.svg[Choose "rhel7" at the survey prompt]
+image::analysis_survey_rhel7_only.png[Choose "rhel7" at the survey prompt]
 +
 Click the "Next" button to proceed to the preview prompt. If you are
 satisfied with the job preview, use the "Launch" button to start the
@@ -116,7 +118,7 @@ inhibitor finding is no longer being reported.
 +
 For example:
 +
-image::rhel7_answer_fixed.svg[Pre-upgrade report of RHEL7 host without answer file inhibitor]
+image::rhel7_answer_fixed.png[Pre-upgrade report of RHEL7 host without answer file inhibitor]
 +
 But we still have the "Possible problems with remote login using root
 account" inhibitor which we need to fix. Let's look at that next.
@@ -130,7 +132,7 @@ simply setting the `leapp_answerfile` input variable supported by the
 convenient way to resolve an answerfile inhibitor, our next inhibitor
 can't be resolved that way.
 
-. Here is our other inhibitor finding:
+. Here is our finding:
 +
 image::root_account_inhibitor.svg[Details view of missing required answers in the answer file]
 +
@@ -157,7 +159,8 @@ required remediations. Here's a task that should do the trick:
     - Restart sshd
 ----
 +
-While we're at it, let's also add a task to take care of the answer file
+
+While we’re at it, let’s also add a task to take care of the answer file
 inhibitor using the `leapp answer` command. For example:
 +
 [source,yaml]
@@ -171,9 +174,25 @@ inhibitor using the `leapp answer` command. For example:
 ----
 . You will find the tasks above in the playbook
 https://github.com/rhpds/leapp-project/blob/prod/remediate_rhel7.yml[`remediate_rhel7.yml`].
-There are a few more remediation task examples in this playbook as well.
-The "OS / Remediate" job template is already set up to execute this
-playbook, so let's use it to remediate our RHEL7 hosts.
+. However, there's a lot of other remediation tasks defined in this playbook as well.  Lets look at another way of resolving inhibitors using the infra.leapp collection.
++
+[source,yaml]
+----
+    - name: Include the leapp remediate role
+      ansible.builtin.import_role:
+        name: infra.leapp.remediate
+      vars:
+        remediation_todo:
+          - leapp_corrupted_grubenv_file
+          - leapp_missing_efi_bootmgr
+          - leapp_nfs_detected
+          - leapp_remote_using_root
+          - leapp_cifs_detected
+----
+This remediation approach uses the `remediate` role from the `infra.leapp`. Let's look at the documentation for this role at https://github.com/redhat-cop/infra.leapp/tree/main/roles/remediate. We can see that this role supports a `remediation_todo` variable that accepts a list of remediation tasks to perform.  Each of the items in the list corresponds to a specific remediation task defined by the role.  In our example above, we are including remediation tasks for all the inhibitors we have seen so far in our pre-upgrade reports.
+
+. For our purposes, the ``OS / Remediate`` job template is already set up to execute this
+playbook, so let’s use it to remediate our RHEL7 hosts.
 . Return to your AAP Web UI browser tab. Navigate to Resources >
 Templates on the AAP Web UI and open the "OS / Remediate" job
 template. Click the "Launch" button to get started.
@@ -192,7 +211,7 @@ refresh the report. You should now see there are no inhibitors:
 +
 image::rhel7_no_inhibitors.svg[Pre-upgrade report of RHEL7 host with no more inhibitors]
 +
-With no inhibitors indicated on our RHEL7 and RHEL8 pet servers, we are
+With no inhibitors indicated on our servers, we are
 ready to try the RHEL upgrade.
 
 == Conclusion
@@ -204,19 +223,5 @@ Finally, we used an example remediation playbook to demonstrate how we
 could address pre-upgrade inhibitor findings at scale across our RHEL
 estate.
 
-Now we are ready to try upgrading our RHEL pet app servers, but before
-we get to that, there are two more optional exercises in this section of
-the workshop:
-
-* xref:1.5-custom-modules/README.adoc[Exercise 1.5 - Custom Pre-upgrade
-Checks]
-* xref:1.6-my-pet-app/README.adoc[Exercise 1.6 - Deploy a Pet
-Application]
-
-These exercises are not required to successfully complete the workshop,
-but we recommend doing them if time allows. If you can't wait and want
-to skip ahead to upgrading your RHEL hosts, strap in for this exciting
-exercise:
-
-* xref:2.1-upgrade/README.adoc[Exercise 2.1 - Run the RHEL Upgrade
-Jobs]
+Now  while we could go ahead and upgrade our servers now (and if time is an issue, you could skip the next task),
+let's understand how the leapp process works by creating a custom actor to provide additional pre-upgrade checks and inhibitors.

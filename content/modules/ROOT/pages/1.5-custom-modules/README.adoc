@@ -7,8 +7,6 @@ complete the workshop, but it's recommended if time allows. Review the
 objectives listed in the next section to decide if you want to do this
 exercise or if you would rather skip ahead to the next exercises:
 
-* xref:1.6-my-pet-app/README.adoc[Exercise 1.6 - (Optional) Deploy a
-Pet Application]
 * xref:2.1-upgrade/README.adoc[Exercise 2.1 - Run the RHEL Upgrade
 Jobs]
 
@@ -79,11 +77,10 @@ For this exercise, we will leverage an already created Ansible playbook in our A
 . Return to your AAP Web UI browser tab and launch the playbook ``EXTRA / LEAPP Custom Actors``. This will install the actor on our RHEL 7 and 8 servers.
 +
 image::leapp_custom_actor.png[Launching the LEAPP Custom Actors playbook in AAP]
-
-
-. To demonstrate the custom actor at work, let's create a condition that
++
+. To demonstrate the custom actor at work, let’s create a condition that
 violates our policy so that an inhibitor finding will be reported. Use
-this command:
+this command on our RHEL 7 or RHEL 8 server.  You can do this however you choose, either SSH, through the VSCode terminal, or Cockpit terminal.
 +
 [source,bash]
 ----
@@ -109,7 +106,7 @@ remote host menu to navigate to the pet app server where you installed
 the custom actor package. Refresh the pre-upgrade report. You should now
 see there is a new inhibitor finding. For example:
 +
-image::reboot_hygiene.svg[Pre-upgrade report showing inhibitor finding from custom actor]
+image::reboot_hygiene.png[Pre-upgrade report showing inhibitor finding from custom actor]
 . Click on the finding to open the detail view. Here we see the summary
 with an explanation of the finding and the remediation hint which
 politely says please reboot:

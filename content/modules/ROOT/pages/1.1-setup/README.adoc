@@ -119,10 +119,12 @@ image::initial_cac.png[Example of the initial CaC job template]
 . The job template will configure AAP with our content and create the necessary job templates for the workshop exercises. This may take a few minutes to complete.
 . Once the job template has completed, navigate to the "Templates" tab again and you should see a list of job templates available for the workshop exercises.
 + 
-image::leapp_custom_actor.png[AAP after running the CaC job template]
+image::completed_cac.png[AAP after running the CaC job template]
 
 . After this, we now have AAP configured and ready to go for the workshop. To prepare our pet app servers for the lab exercise, we have a pre-defined playbook job template to run.
 . Click on the ``Launch`` button to run the ``Ansible Leapp Lab Initialization`` job template. This job will prepare the servers with interesting challenges to address in the next steps of the workshop.
++
+image::lab_config.png[Highlight of the lab initialization job template]
 
 [#step-6-challenge-labs]
 === Step 6 - Challenge Labs
