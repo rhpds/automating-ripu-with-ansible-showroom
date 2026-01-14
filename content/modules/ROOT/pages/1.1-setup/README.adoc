@@ -101,7 +101,7 @@ Interactive Linux Server Admin Interface" on the workshop launch page.
 For example:
 +
 image::cockpit_link.png[Example link to RHEL Web Console]
-. Enter the username `student` and the password provided. This will
+. Enter the username `lab-user` and the password provided. This will
 bring you to a RHEL Web Console Overview page like the example below:
 +
 image::cockpit_example.png[Example RHEL Web Console]
@@ -122,7 +122,7 @@ image::initial_cac.png[Example of the initial CaC job template]
 image::completed_cac.png[AAP after running the CaC job template]
 
 . After this, we now have AAP configured and ready to go for the workshop. To prepare our pet app servers for the lab exercise, we have a pre-defined playbook job template to run.
-. Click on the ``Launch`` button to run the ``Ansible Leapp Lab Initialization`` job template. This job will prepare the servers with interesting challenges to address in the next steps of the workshop.
+. Click on the "Launch" button to run the "Ansible Leapp Lab Initialization" job template. This job will prepare the servers with interesting challenges to address in the next steps of the workshop.
 +
 image::lab_config.png[Highlight of the lab initialization job template]
 
