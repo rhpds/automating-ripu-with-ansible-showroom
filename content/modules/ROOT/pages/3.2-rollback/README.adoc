@@ -69,7 +69,7 @@ Notice in the example above, we see the job completed in just under 3
 minutes. However, most of that time was spent in the final "Wait for
 the snapshot to drain" task which holds the job until the snapshot
 merges finish in the background. The instance was actually rolled back
-and service ready in just under a minute. Impressive, right?
+and service-ready in just under a minute. Impressive, right?
 
 [#step-3-check-the-rhel-version]
 === Step 3 - Check the RHEL Version

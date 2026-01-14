@@ -61,7 +61,7 @@ Another consideration with going from RHEL7 to RHEL9 is the increased
 risk of application impacts. While RHEL system library forward binary
 compatibility is really solid between each RHEL major version, "N+2"
 compatibility is not guaranteed. Of course, the only way to know for
-sure is try it!
+sure is to try it!
 * If you skipped over any of the optional exercises, it's not too late
 to go back and try them now:
 ** xref:1.5-custom-modules/README.adoc[Exercise 1.5 - Custom

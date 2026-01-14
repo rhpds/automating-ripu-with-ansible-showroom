@@ -19,7 +19,7 @@ review the findings listed in those reports. There are a number of
 different ways that we can access the reports. Let's review these and
 consider the pros and cons:
 
-* If we we're using the Leapp framework to manually upgrade just a
+* If we were using the Leapp framework to manually upgrade just a
 single RHEL host, we could simply get to a shell prompt on the host and
 look at the local report file output. In
 xref:1.1-setup/README.adoc#step-2-open-a-terminal-session[Exercise
@@ -155,7 +155,7 @@ You can see additional details for any finding by clicking on it in the list. Fo
 +
 image::grub_core_finding.png[Details view of grub core finding]
 +
-This finding is reported on every upgrade, as it is potentially impactful.  The summary provides the details of the issue and the recommended action to take.  As we see, there's no action required, so we can move on.
+This finding is reported on every upgrade, as it is potentially impactful. The summary provides the details of the issue and the recommended action to take. We'll ignore this one for now, but make a note of it for later.
 +
 image::remote_root_logins.png[Details view of remote root logins finding]
 +
@@ -211,8 +211,8 @@ image::rhel7_python.png[Details view of Difference in Python versions and suppor
 This finding could be a concern if we have any apps on our pet server
 that are using the system-provided Python interpreter. Let's assume we
 don't have any of those in which case we can blissfully ignore this
-finding.  But be aware, when working with servers in the wild, it's important to understand the applications running on the server, as this could be a significant issue if you have any Python-based apps.
-. Now, looking at the inhibitors, first is the "Missing required answers in the answer
+finding. But be aware, when working with servers in the wild, it's important to understand the applications running on the server, as this could be a significant issue if you have any Python-based apps.
+. The other new high risk finding, and also an inhibitor, is the "Missing required answers in the answer
 file" finding. Here are the details for this one:
 +
 image::missing_answers_inhibitor.svg[Details view of missing required answers in the answer file]
@@ -230,7 +230,7 @@ pre-upgrade report.  However, as we look into remediating these findings in
 the next exercise, we will see how easy it is to address them with automation.
 
 
-Lets take a look at our last system, the RHEL 9 one.
+Let's take a look at our last system, the RHEL 9 one.
 
 [#step-5-review-leapp-pre-upgrade-report-of-rhel9-host]
 === Step 5 - Review Leapp Pre-upgrade Report of RHEL9 Host

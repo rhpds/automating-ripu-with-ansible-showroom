@@ -197,7 +197,7 @@ role from the `infra.leapp` Ansible collection. By checking the
 that this role comes from another git repo at
 https://github.com/redhat-cop/infra.leapp. It is the `analysis` role
 under this second git repo that provides all the automation tasks that
-ultimately runs the Leapp pre-upgrade scan and generates the report.
+ultimately run the Leapp pre-upgrade scan and generate the report.
 . Drill down to the `roles/analysis` directory in this git repo to
 review the README and yaml source files.
 
