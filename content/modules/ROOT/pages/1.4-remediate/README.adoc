@@ -56,7 +56,7 @@ RHEL estate.
 
 The Leapp framework uses an answer file as a means of accepting user
 input choices. This is explained in greater detail in the
-https://leapp.readthedocs.io/en/latest/dialogs.html[Asking user
+https://leapp.readthedocs.io/en/stable/tutorials/dialogs.html#asking-user-questions[Asking user
 questions] section of the Leapp developer documentation. The inhibitor
 finding we dissected in the previous step is looking for us to make a
 decision or, more specifically, asking us to acknowledge we are aware
@@ -191,7 +191,7 @@ https://github.com/rhpds/leapp-project/blob/prod/remediate_rhel7.yml[`remediate_
 ----
 This remediation approach uses the `remediate` role from the `infra.leapp`. Let's look at the documentation for this role at https://github.com/redhat-cop/infra.leapp/tree/main/roles/remediate. We can see that this role supports a `remediation_todo` variable that accepts a list of remediation tasks to perform.  Each of the items in the list corresponds to a specific remediation task defined by the role.  In our example above, we are including remediation tasks for all the inhibitors we have seen so far in our pre-upgrade reports.
 
-. For our purposes, the ``OS / Remediate`` job template is already set up to execute this
+. For our purposes, the "OS / Remediate" job template is already set up to execute this
 playbook, so let’s use it to remediate our RHEL7 hosts.
 . Return to your AAP Web UI browser tab. Navigate to Resources >
 Templates on the AAP Web UI and open the "OS / Remediate" job
