@@ -1,5 +1,10 @@
 = Workshop Exercise - Trash the Instance
 
+[WARNING]
+====
+**Warning:** In the new lab environment we have moved to, snapshots are not currently deployed. Therefore, none of these exercises that involve rolling back using snapshots will work as intended. We are working to resolve this issue for future iterations of the workshop. The hands-on portion of this workshop is now completed.
+====
+
 == Optional Exercise
 
 This is an optional exercise. It is not required to successfully
