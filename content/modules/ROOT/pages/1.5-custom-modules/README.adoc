@@ -97,7 +97,7 @@ reboot hygiene policy!
 We are now ready to try running a pre-upgrade report including the
 checks from our custom actor.
 
-. Return to your AAP Web UI browser tab. Navigate to Resources >
+. Return to your AAP Web UI browser tab. Navigate to Automation Execution >
 Templates and open the "AUTO / 01 Analysis" job template. Launch the
 job choosing the "ALL_rhel" option at the "Select inventory group"
 prompt.
