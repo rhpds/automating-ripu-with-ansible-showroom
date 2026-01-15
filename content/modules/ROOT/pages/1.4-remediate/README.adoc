@@ -13,11 +13,13 @@ role
 === Step 1 - Explore Options for Resolving Inhibitors
 
 In the previous exercise, we reviewed the Leapp pre-upgrade reports that
-were generated for our RHEL pet application servers. Each server had a couple of inhibitors that will require attention before the RHEL upgrade can proceed.
+were generated for our RHEL pet application servers. Each server had a couple 
+of inhibitors that will require attention before the RHEL upgrade can proceed.
 
 We are now here in our automation approach workflow:
 
-image::ripu-workflow-hl-remediate.svg[Automation approach workflow diagram with apply recommended remediations step highlighted]
+image::ripu-workflow-hl-remediate.svg[Automation approach workflow diagram with 
+apply recommended remediations step highlighted]
 
 . Let's start by dissecting one of our inhibitor findings:
 +
