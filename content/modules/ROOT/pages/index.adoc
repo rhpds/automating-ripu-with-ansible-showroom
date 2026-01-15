@@ -72,7 +72,7 @@ them in the prescribed order.
 * xref:2.3-check-upg/README.adoc[Exercise 2.3 - Check if the Upgrade Worked]
 
 === Section 3 - Rolling Back
-
+NOTE: The hands-on portion of this section is currently disabled due to lab environment limitations.
 * xref:3.1-rm-rf/README.adoc[Exercise 3.1 - (Optional) Trash the Instance]
 * xref:3.2-rollback/README.adoc[Exercise 3.2 - Run Rollback Job]
 * xref:3.3-check-undo/README.adoc[Exercise 3.3 - Check if Upgrade Undone]
