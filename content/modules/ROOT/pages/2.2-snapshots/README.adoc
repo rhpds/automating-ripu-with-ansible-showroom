@@ -2,7 +2,7 @@
 
 [WARNING]
 ====
-**Warning:** This exercise is for discussion only in the current lab environment. No steps are to be performed.
+This exercise is for discussion only in the current lab environment. No steps are to be performed.
 ====
 
 == Objectives
