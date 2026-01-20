@@ -17,9 +17,8 @@ were generated for our RHEL pet application servers. Each server had a couple
 of inhibitors that will require attention before the RHEL upgrade can proceed.
 
 We are now here in our automation approach workflow:
-
-image::ripu-workflow-hl-remediate.svg[Automation approach workflow diagram with 
-apply recommended remediations step highlighted]
++
+image::ripu-workflow-hl-remediate.svg[Automation approach workflow diagram with apply recommended remediations step highlighted]
 
 . Let's start by dissecting one of our inhibitor findings:
 +
@@ -99,7 +98,7 @@ RHEL7 hosts, so choose the "rhel7" option this time:
 image::analysis_survey_rhel7_only.png[Choose "rhel7" at the survey prompt]
 +
 Click the "Next" button to proceed to the preview prompt. If you are
-satisfied with the job preview, use the "Launch" button to start the
+satisfied with the job preview, use the "Finish" button to start the
 job.
 . As before, the AAP Web UI will navigate automatically to the job
 output page after you start the job. The job will take a few minutes to
@@ -196,9 +195,18 @@ This remediation approach uses the `remediate` role from the `infra.leapp`. Let'
 . For our purposes, the "OS / Remediation" job template is already set up to execute this
 playbook, so let’s use it to remediate our RHEL7 hosts.
 . Return to your AAP Web UI browser tab. Navigate to Automation Execution >
+<<<<<<< HEAD
 Templates on the AAP Web UI and open the "OS / Remediation" job
 template. Click the "Launch" button to get started.
 . This will bring you to the job template survey prompt. Click "Next" at the variables survey question then choose the "rhel7" option at the "Select inventory group" prompt because our remediation playbook is specific to the pre-upgrade findings of our
+=======
+Templates on the AAP Web UI and open the "OS / Remediate" job
+template. Click the "Launch" button to get started.
+. Like before, we are not going to specify a limit, so just click the "Next"
+. This will bring you to the job template survey prompt. Again, choose
+the "rhel7" option at the "Select inventory group" prompt because
+our remediation playbook is specific to the pre-upgrade findings of our
+>>>>>>> f9fce50637c6376af39ccf05ccd23d5155de2489
 RHEL7 hosts. Then click the "Next" button. If you are satisfied with
 the job preview, use the "Launch" button to submit the job. This
 playbook includes only a small number of tasks and should run pretty
