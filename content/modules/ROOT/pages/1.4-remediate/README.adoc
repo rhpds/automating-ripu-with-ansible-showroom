@@ -192,20 +192,19 @@ https://github.com/rhpds/leapp-project/blob/prod/remediate_rhel7.yml[`remediate_
 ----
 This remediation approach uses the `remediate` role from the `infra.leapp`. Let's look at the documentation for this role at https://github.com/redhat-cop/infra.leapp/tree/main/roles/remediate. We can see that this role supports a `remediation_todo` variable that accepts a list of remediation tasks to perform.  Each of the items in the list corresponds to a specific remediation task defined by the role.  In our example above, we are including remediation tasks for all the inhibitors we have seen so far in our pre-upgrade reports.
 
-. For our purposes, the "OS / Remediate" job template is already set up to execute this
+. For our purposes, the "OS / Remediation" job template is already set up to execute this
 playbook, so let’s use it to remediate our RHEL7 hosts.
 . Return to your AAP Web UI browser tab. Navigate to Automation Execution >
-Templates on the AAP Web UI and open the "OS / Remediate" job
+Templates on the AAP Web UI and open the "OS / Remediation" job
 template. Click the "Launch" button to get started.
-. Like before, we are not going to specify a limit, so just click the "Next"
-. This will bring you to the job template survey prompt. Again, choose
-the "rhel7" option at the "Select inventory group" prompt because
-our remediation playbook is specific to the pre-upgrade findings of our
-RHEL7 hosts. Then click the "Next" button. If you are satisfied with
+. This will bring you to the job template survey prompt. Click "Next" at the variables 
+survey question then choose the "rhel7" option at the "Select inventory group" prompt 
+because our remediation playbook is specific to the pre-upgrade findings of our RHEL7 
+hosts. Then click the "Next" button. If you are satisfied with 
 the job preview, use the "Launch" button to submit the job. This
 playbook includes only a small number of tasks and should run pretty
 quickly.
-. When the "OS / Remediate" job is finished, launch the "AUTO / 01
+. When the "OS / Remediation" job is finished, launch the "AUTO / 01
 Analysis" job template one more time, again taking care to choose the
 "rhel7" option at the "Select inventory group" prompt. When the job
 completes, go back to the RHEL Web Console of your RHEL7 host and
