@@ -195,19 +195,12 @@ This remediation approach uses the `remediate` role from the `infra.leapp`. Let'
 . For our purposes, the "OS / Remediation" job template is already set up to execute this
 playbook, so let’s use it to remediate our RHEL7 hosts.
 . Return to your AAP Web UI browser tab. Navigate to Automation Execution >
-<<<<<<< HEAD
 Templates on the AAP Web UI and open the "OS / Remediation" job
 template. Click the "Launch" button to get started.
-. This will bring you to the job template survey prompt. Click "Next" at the variables survey question then choose the "rhel7" option at the "Select inventory group" prompt because our remediation playbook is specific to the pre-upgrade findings of our
-=======
-Templates on the AAP Web UI and open the "OS / Remediate" job
-template. Click the "Launch" button to get started.
-. Like before, we are not going to specify a limit, so just click the "Next"
-. This will bring you to the job template survey prompt. Again, choose
-the "rhel7" option at the "Select inventory group" prompt because
-our remediation playbook is specific to the pre-upgrade findings of our
->>>>>>> f9fce50637c6376af39ccf05ccd23d5155de2489
-RHEL7 hosts. Then click the "Next" button. If you are satisfied with
+. This will bring you to the job template survey prompt. Click "Next" at the variables 
+survey question then choose the "rhel7" option at the "Select inventory group" prompt 
+because our remediation playbook is specific to the pre-upgrade findings of our RHEL7 
+hosts. Then click the "Next" button. If you are satisfied with 
 the job preview, use the "Launch" button to submit the job. This
 playbook includes only a small number of tasks and should run pretty
 quickly.
