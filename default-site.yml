@@ -1,6 +1,6 @@
 ---
 site:
-  title: RHEL In-Place Upgrade Automation Showroom
+  title: "LB1542: Automating RHEL In Place Upgrades with Ansible"
   url: https://github.com/rhpds/showroom_template_nookbag
   start_page: modules::index.adoc
 
