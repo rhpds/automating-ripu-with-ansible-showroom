@@ -35,11 +35,14 @@ intuitive way to use a web browser to edit files and access terminal
 sessions. If you are a command line hero, direct SSH access is available
 if VS Code is not to your liking.
 
-. You can open VS Code in your web browser using the "Console URL"
-link under "Code-Server Console (Bastion)" on the workshop launch page provided
-by your instructor. The password is given below the link. For example:
+. Open VS Code in your web browser:
 +
-image::vscode_link.png[Example link to VS Code WebUI]
+*VS Code URL:* {code_server_url}
++
+*Password:* {code_server_password}
++
+image::vscode_link.png[Example link to VS Code WebUI,link=self,window=blank]
++
 . After opening the link, type in the provided password to access your
 instance of VS Code.
 
@@ -60,7 +63,8 @@ RHEL in-place upgrade automation is doing its thing.
 
 . Use VS Code to open a terminal session. For example:
 +
-image::new_term.svg[Example of how to open a terminal session in VS Code]
+image::new_term.svg[Example of how to open a terminal session in VS Code,link=self,window=blank]
++
 . This terminal session will be running on the AAP control host
 `ansible-1`. You can use the `ssh` command to log in to one of your
 pet app hosts. Finally, use the highlighted commands to confirm the RHEL OS
@@ -68,7 +72,16 @@ version and kernel version installed.
 +
 For example:
 +
-image::ssh_login.png[Example ssh login to pet app host]
+image::ssh_login.png[Example ssh login to pet app host,link=self,window=blank]
++
+*Alternative SSH access:* If you prefer direct SSH access instead of VS Code, you can connect using:
++
+[source,bash,role=execute]
+----
+{ssh_command}
+----
++
+Password: `{ssh_password}`
 
 
 [#step-3-access-the-aap-web-ui]
@@ -78,15 +91,20 @@ The AAP Web UI is where we will go to submit and check the status of the
 Ansible playbook jobs we will use to automate the RHEL in-place upgrade
 workflow.
 
-. Let's open the AAP Web UI in a new web browser tab using the
-"Console" link under "Red Hat Ansible Automation Controller" on the
-workshop launch page. For example:
+. Open the AAP Web UI in a new web browser tab:
 +
-image::aap_link.png[Example link to AAP Web UI]
-. Enter the username `lab-user` and the password provided. This will bring
+*AAP Controller URL:* {controller_url}
++
+*Username:* {controller_username}
++
+*Password:* {controller_password}
++
+image::aap_link.png[Example link to AAP Web UI,link=self,window=blank]
++
+. Enter the username and password above. This will bring
 you to your AAP Web UI dashboard like the example below:
 +
-image::aap_console_example.png[Example AAP Web UI dashboard]
+image::aap_console_example.png[Example AAP Web UI dashboard,link=self,window=blank]
 . We will learn more about how to use the AAP Web UI in the next
 exercise.
 
@@ -96,15 +114,20 @@ exercise.
 We will use the RHEL Web Console to review the results of the Leapp
 pre-upgrade reports we generate for our pet app servers.
 
-. Open a new web browser tab using the "Console" link under "Cockpit
-Interactive Linux Server Admin Interface" on the workshop launch page.
-For example:
+. Open a new web browser tab:
 +
-image::cockpit_link.png[Example link to RHEL Web Console]
-. Enter the username `lab-user` and the password provided. This will
+*Cockpit URL:* {cockpit_url}
++
+*Username:* {cockpit_username}
++
+*Password:* {cockpit_password}
++
+image::cockpit_link.png[Example link to RHEL Web Console,link=self,window=blank]
++
+. Enter the username and password above. This will
 bring you to a RHEL Web Console Overview page like the example below:
 +
-image::cockpit_example.png[Example RHEL Web Console]
+image::cockpit_example.png[Example RHEL Web Console,link=self,window=blank]
 . We will revisit the RHEL Web Console when we are ready to review our
 pre-upgrade reports in an upcoming exercise.
 
@@ -115,16 +138,16 @@ The first thing we need to do is to configure AAP with our content. A pre-define
 
 . Navigate to the AAP Web UI and go to the "Templates" tab inside Automation Execution (Automation Controller). You should see a job template named "Z / CaC / Controller". This is our pre-defined job template to configure AAP. Click on the "Launch" button to run this job template.
 +
-image::initial_cac.png[Example of the initial CaC job template]
+image::initial_cac.png[Example of the initial CaC job template,link=self,window=blank]
 . The job template will configure AAP with our content and create the necessary job templates for the workshop exercises. This may take a few minutes to complete.
 . Once the job template has completed, navigate to the "Templates" tab again and you should see a list of job templates available for the workshop exercises.
-+ 
-image::completed_cac.png[AAP after running the CaC job template]
++
+image::completed_cac.png[AAP after running the CaC job template,link=self,window=blank]
 
 . After this, we now have AAP configured and ready to go for the workshop. To prepare our pet app servers for the lab exercise, we have a pre-defined playbook job template to run.
 . Click on the "Launch" button to run the "Ansible Leapp Lab Initialization" job template. This job will prepare the servers with interesting challenges to address in the next steps of the workshop.
 +
-image::lab_config.png[Highlight of the lab initialization job template]
+image::lab_config.png[Highlight of the lab initialization job template,link=self,window=blank]
 
 [#step-6-challenge-labs]
 === Step 6 - Challenge Labs

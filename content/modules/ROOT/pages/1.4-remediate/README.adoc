@@ -18,25 +18,25 @@ of inhibitors that will require attention before the RHEL upgrade can proceed.
 
 We are now here in our automation approach workflow:
 +
-image::ripu-workflow-hl-remediate.svg[Automation approach workflow diagram with apply recommended remediations step highlighted]
+image::ripu-workflow-hl-remediate.svg[Automation approach workflow diagram with apply recommended remediations step highlighted,link=self,window=blank]
 
 . Let's start by dissecting one of our inhibitor findings:
 +
-image::missing_answers_dissected.svg[Details view of missing required answers in the answer file]
+image::missing_answers_dissected.svg[Details view of missing required answers in the answer file,link=self,window=blank]
 +
-image:circle_1.svg[1.] Each finding has a unique title.
+image:circle_1.svg[1.,link=self,window=blank] Each finding has a unique title.
 +
-image:circle_2.svg[2.] A risk factor is assigned to each finding,
+image:circle_2.svg[2.,link=self,window=blank] A risk factor is assigned to each finding,
 but as we discussed in the previous exercise, this may be more nuanced
 than can be indicated by a simple High, Medium, Low or Info rating.
 +
-image:circle_3.svg[3.] The summary provides a detailed
+image:circle_3.svg[3.,link=self,window=blank] The summary provides a detailed
 explanation of the risk and solution recommendation.
 +
-image:circle_4.svg[4.] Under remediation, we are given a fairly
+image:circle_4.svg[4.,link=self,window=blank] Under remediation, we are given a fairly
 prescriptive recommendation.
 +
-image:circle_5.svg[5.] Sometimes, the remediation also includes
+image:circle_5.svg[5.,link=self,window=blank] Sometimes, the remediation also includes
 an exact command like this one.
 . When a remediation command is given such as with the example above,
 there are a number of options we can choose from for how to execute the
@@ -87,7 +87,7 @@ leapp_answerfile: |
 +
 For example:
 +
-image::analysis_leapp_answerfile.png[Setting the `leapp_answerfile` input variable]
+image::analysis_leapp_answerfile.png[Setting the `leapp_answerfile` input variable,link=self,window=blank]
 +
 After making the variable setting as shown above, click the "Next"
 button. This will lead to the job template survey prompt. Previously, we
@@ -95,7 +95,7 @@ used the "ALL_rhel" option to run the pre-upgrade on all our pet
 servers. However, our `leapp_answerfile` setting is specific to our
 RHEL7 hosts, so choose the "rhel7" option this time:
 +
-image::analysis_survey_rhel7_only.png[Choose "rhel7" at the survey prompt]
+image::analysis_survey_rhel7_only.png[Choose "rhel7" at the survey prompt,link=self,window=blank]
 +
 Click the "Next" button to proceed to the preview prompt. If you are
 satisfied with the job preview, use the "Finish" button to start the
@@ -119,7 +119,7 @@ inhibitor finding is no longer being reported.
 +
 For example:
 +
-image::rhel7_answer_fixed.png[Pre-upgrade report of RHEL7 host without answer file inhibitor]
+image::rhel7_answer_fixed.png[Pre-upgrade report of RHEL7 host without answer file inhibitor,link=self,window=blank]
 +
 But we still have the "Possible problems with remote login using root
 account" inhibitor which we need to fix. Let's look at that next.
@@ -135,7 +135,7 @@ can't be resolved that way.
 
 . Here is our finding:
 +
-image::root_account_inhibitor.svg[Details view of missing required answers in the answer file]
+image::root_account_inhibitor.svg[Details view of missing required answers in the answer file,link=self,window=blank]
 +
 Like the previous inhibitor finding, this one also provides a detailed
 summary and a fairly prescriptive recommended remediation. However, it
@@ -210,7 +210,7 @@ Analysis" job template one more time, again taking care to choose the
 completes, go back to the RHEL Web Console of your RHEL7 host and
 refresh the report. You should now see there are no inhibitors:
 +
-image::rhel7_no_inhibitors.svg[Pre-upgrade report of RHEL7 host with no more inhibitors]
+image::rhel7_no_inhibitors.svg[Pre-upgrade report of RHEL7 host with no more inhibitors,link=self,window=blank]
 +
 With no inhibitors indicated on our servers, we are
 ready to try the RHEL upgrade.

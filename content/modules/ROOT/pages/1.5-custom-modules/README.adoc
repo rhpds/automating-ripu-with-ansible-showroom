@@ -76,7 +76,7 @@ last reboot.
 For this exercise, we will leverage an already created Ansible playbook in our AAP installation.
 . Return to your AAP Web UI browser tab and launch the playbook ``EXTRA / LEAPP Custom Actors``. This will install the actor on our RHEL 8 server.
 +
-image::leapp_custom_actor.png[Launching the LEAPP Custom Actors playbook in AAP]
+image::leapp_custom_actor.png[Launching the LEAPP Custom Actors playbook in AAP,link=self,window=blank]
 . To demonstrate the custom actor at work, let’s create a condition that
 violates our policy so that an inhibitor finding will be reported. Use
 this command on our RHEL 8 server.  You can do this however you choose, either SSH, through the VSCode terminal, or Cockpit terminal.
@@ -105,12 +105,12 @@ remote host menu to navigate to the pet app server where you installed
 the custom actor package. Refresh the pre-upgrade report. You should now
 see there is a new inhibitor finding. For example:
 +
-image::reboot_hygine.png[Pre-upgrade report showing inhibitor finding from custom actor]
+image::reboot_hygine.png[Pre-upgrade report showing inhibitor finding from custom actor,link=self,window=blank]
 . Click on the finding to open the detail view. Here we see the summary
 with an explanation of the finding and the remediation hint which
 politely says please reboot:
 +
-image::reboot_hygiene_finding.svg[Finding details reported by reboot hygiene custom actor]
+image::reboot_hygiene_finding.svg[Finding details reported by reboot hygiene custom actor,link=self,window=blank]
 . Reboot the host to resolve the inhibitor finding. For example:
 +
 [source,bash]

@@ -80,26 +80,26 @@ in the top left corner of the RHEL Web Console to reveal the remote host
 menu. For example:
 +
 
-image::remote_host_menu_with_pets.png[Remote host menu listing all pet app servers]
+image::remote_host_menu_with_pets.png[Remote host menu listing all pet app servers,link=self,window=blank]
 * You can use the remote host menu to navigate to the web consoles of
 each of your pet app servers. Try selecting one of your pet servers now.
 The RHEL Web Console system overview page will show the operating system
 version installed. For example, this pet app server is running RHEL8:
 +
-image::rhel8_os.png[upward-moray running Red Hat Enterprise Linux 8.10 (Ootpa)]
+image::rhel8_os.png[upward-moray running Red Hat Enterprise Linux 8.10 (Ootpa),link=self,window=blank]
 +
 Here is an example of one running RHEL7:
 +
-image::rhel7_os.png[Operating System Red Hat Enterprise Linux Server 7.9 (Maipo)]
+image::rhel7_os.png[Operating System Red Hat Enterprise Linux Server 7.9 (Maipo),link=self,window=blank]
 . When you navigate to different hosts in the RHEL Web Console, look out
 for the "limited access mode" warning:
 +
-image::limited_access.svg[Web console is running in limited access mode]
+image::limited_access.svg[Web console is running in limited access mode,link=self,window=blank]
 +
 If you see this, use the button to switch to administrative access mode
 before proceeding. A confirmation will appear like this:
 +
-image::administrative_access.svg[You now have administrative access]
+image::administrative_access.svg[You now have administrative access,link=self,window=blank]
 . Take some time to explore the navigation menus available with the RHEL
 Web Console of your different pet app servers. Once you feel comfortable
 navigating around the console and switching between hosts, move on to
@@ -119,7 +119,7 @@ upgraded. Additionally, many times these upgrades will be chained together, for 
 
 We are now here in the automation approach workflow:
 
-image::ripu-workflow-hl-review.svg[Automation approach workflow diagram with review report step highlighted]
+image::ripu-workflow-hl-review.svg[Automation approach workflow diagram with review report step highlighted,link=self,window=blank]
 
 . Navigate to the RHEL Web Console remote host menu and click on the
 hostname of one of your RHEL8 pet app servers. Remember as we learned in
@@ -131,7 +131,7 @@ use the main menu to navigate to Tools > Upgrade Report. This will
 display the Leapp pre-upgrade report that was generated for the selected
 host. For example, the report might look like this:
 +
-image::rhel8_report.png[Example pre-upgrade report of RHEL8 host]
+image::rhel8_report.png[Example pre-upgrade report of RHEL8 host,link=self,window=blank]
 +
 ____
 *Note*
@@ -153,11 +153,11 @@ high risk findings. Let's review each of these.
 You can see additional details for any finding by clicking on it in the list. For example, click on the first finding and you will see the details
 
 +
-image::grub_core_finding.png[Details view of grub core finding]
+image::grub_core_finding.png[Details view of grub core finding,link=self,window=blank]
 +
 This finding is reported on every upgrade, as it is potentially impactful. The summary provides the details of the issue and the recommended action to take. We'll ignore this one for now, but make a note of it for later.
 +
-image::remote_root_logins.png[Details view of remote root logins finding]
+image::remote_root_logins.png[Details view of remote root logins finding,link=self,window=blank]
 +
 The second finding is informing us that remote root logins are explicitly enabled on this host.  This is a potential security risk, but not an inhibitor to the upgrade.  The recommended action is to disable remote root logins before proceeding with the upgrade.  In the next exercise, we will explore how to automate this remediation action.
 +
@@ -185,7 +185,7 @@ chosen is RHEL7. Then use the main menu to navigate to Tools > Upgrade
 Report. This will bring up the Leapp pre-upgrade report for the selected
 host. For example, the report might look like this:
 +
-image::rhel7_report.png[Example pre-upgrade report of RHEL7 host]
+image::rhel7_report.png[Example pre-upgrade report of RHEL7 host,link=self,window=blank]
 +
 ____
 *Note*
@@ -202,11 +202,11 @@ by reviewing the high risk findings that are not inhibitors.
 . The "GRUB core will be updated during upgrade" finding is no
 different than the finding with the same title we learned about in the
 RHEL8 pre-upgrade report, so we’ll ignore this for now.
-. Now let’s look at the new findings we are seeing only on our RHEL7
+. Now let's look at the new findings we are seeing only on our RHEL7
 pre-upgrade report. The first entry on the list is the "Difference in Python
 versions and support in RHEL8" finding:
 +
-image::rhel7_python.png[Details view of Difference in Python versions and support in RHEL8 finding]
+image::rhel7_python.png[Details view of Difference in Python versions and support in RHEL8 finding,link=self,window=blank]
 +
 This finding could be a concern if we have any apps on our pet server
 that are using the system-provided Python interpreter. Let's assume we
@@ -215,13 +215,13 @@ finding. But be aware, when working with servers in the wild, it's important to 
 . The other new high risk finding, and also an inhibitor, is the "Missing required answers in the answer
 file" finding. Here are the details for this one:
 +
-image::missing_answers_inhibitor.svg[Details view of missing required answers in the answer file]
+image::missing_answers_inhibitor.svg[Details view of missing required answers in the answer file,link=self,window=blank]
 +
 Here again, we will need to take action to remediate this finding. Don't
 panic! In the next exercise, we will explore different options for
 automating the required remediation actions and recommendations.
 +
-image::rhel7_cifs.png[Details view of cifs inhibitor]
+image::rhel7_cifs.png[Details view of cifs inhibitor,link=self,window=blank]
 +
 The other inhibitor findings are related, as they are both unsupported network systems.  We will have to resolve these as well before we can upgrade.
 
@@ -235,19 +235,19 @@ Let's take a look at our last system, the RHEL 9 one.
 [#step-5-review-leapp-pre-upgrade-report-of-rhel9-host]
 === Step 5 - Review Leapp Pre-upgrade Report of RHEL9 Host
 
-Following the same steps as in the previous two exercises, let's now take a look 
+Following the same steps as in the previous two exercises, let's now take a look
 at the report from our RHEL9 host.
 
-image::rhel9_report.png[Example pre-upgrade report of RHEL9 host]
+image::rhel9_report.png[Example pre-upgrade report of RHEL9 host,link=self,window=blank]
 
 
-. In the report for our RHEL9 app server above, we see there are only two high risk findings. 
-One is the same GRUB2 core update findings we saw in the RHEL8 and RHEL7 pre-upgrade reports, 
+. In the report for our RHEL9 app server above, we see there are only two high risk findings.
+One is the same GRUB2 core update findings we saw in the RHEL8 and RHEL7 pre-upgrade reports,
 and there's not much new here.
 . The other high risk finding is also not an inhibitor, but we'll take a look at it closely.
 +
 
-image::rhel9_unknown_repo.png[Details view of unknown repository finding]
+image::rhel9_unknown_repo.png[Details view of unknown repository finding,link=self,window=blank]
 
 +
 This finding is indicating that there's a repository configured on the system that is not 
@@ -259,7 +259,7 @@ For the purposes of this lab, it's a Red Hat repository that has been renamed, s
 . However, lets take a look at the rest of the findings we've been seeing throughout these exercises.
 . There's a finding that is marked as a low risk, "SElinux will be set to permissive mode"
 +
-image::rhel9_selinux.png[Details view of SELinux permissive]
+image::rhel9_selinux.png[Details view of SELinux permissive,link=self,window=blank]
 +
 This finding is a low risk issue and it's not an inhibitor.  This finding is low, because 
 the impact to the upgrade process is minimal. However, in many environments, this is a big deal, 

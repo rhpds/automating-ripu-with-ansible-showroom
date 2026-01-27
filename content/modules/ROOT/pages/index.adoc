@@ -12,7 +12,7 @@ enterprise environment.
 There are four key features that the solution approach recommends to
 deliver success at scale:
 
-image::ripu_key_features.svg[Automate Everything, Snapshot/rollback, Custom Modules, Reporting Dashboard]
+image::ripu_key_features.svg[Automate Everything, Snapshot/rollback, Custom Modules, Reporting Dashboard,link=self,window=blank]
 
 As you progress through this workshop, you will learn more about the
 importance of these features and the different options for how you might
