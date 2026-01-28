@@ -74,21 +74,21 @@ maintained in upstream repositories that can be found on GitHub. Take
 some time to review the code and get engaged with the communities
 supporting these resources.
 
-==== https://github.com/redhat-cop/infra.leapp[redhat-cop/infra.leapp]
+==== https://github.com/redhat-cop/infra.leapp[redhat-cop/infra.leapp^]
 
 * The `infra.leapp` collection provides the Ansible role that generates
 the pre-upgrade reports and another that is used to perform the RHEL
 upgrades. This collection uses the Leapp framework for upgrades from
 RHEL7 and later, but also supports upgrading from RHEL6 using the older
 Red Hat Upgrade Tool. The collection is published on Ansible Galaxy
-https://galaxy.ansible.com/infra/leapp[here] and also available from
+https://galaxy.ansible.com/infra/leapp[here^] and also available from
 Ansible Automation Hub validated content
-https://console.redhat.com/ansible/automation-hub/repo/validated/infra/leapp/[here].
+https://console.redhat.com/ansible/automation-hub/repo/validated/infra/leapp/[here^].
 If you are planning to do RHEL in-place upgrades for your organization,
 these roles will help you quickly roll out proof-of-concept automation
 and start upgrading.
 
-==== https://github.com/oamg/leapp-supplements[oamg/leapp-supplements]
+==== https://github.com/oamg/leapp-supplements[oamg/leapp-supplements^]
 
 * Leapp Supplements is a repository of example Leapp custom actors. The
 CheckRebootHygiene actor that was demonstrated in the optional
@@ -96,7 +96,7 @@ xref:1.5-custom-modules/README.adoc[Custom Pre-upgrade Checks] exercise
 is maintained here. There is also a Makefile and RPM spec file that can
 be used to build packages for installing your Leapp custom actors.
 
-==== https://github.com/rhpds/leapp-project[rhpds/leapp-project]
+==== https://github.com/rhpds/leapp-project[rhpds/leapp-project^]
 
 * This is where you will find all of the AAP job templates and Ansible
 playbooks included in the workshop. You can also explore the
