@@ -76,7 +76,7 @@ image::ssh_login.png[Example ssh login to pet app host,link=self,window=blank]
 +
 *Alternative SSH access:* If you prefer direct SSH access instead of VS Code, you can connect using:
 +
-[source,bash,role=execute]
+[source,bash,role=execute,subs="attributes+"]
 ----
 {ssh_command}
 ----
