@@ -21,7 +21,7 @@ at least some experience using Ansible Automation Platform and working
 with Ansible playbooks and roles. If you're new to Ansible, consider
 first completing the workshop
 https://labs.demoredhat.com/exercises/ansible_rhel[Ansible for Red Hat
-Enterprise Linux].
+Enterprise Linux^].
 
 == Presentations
 

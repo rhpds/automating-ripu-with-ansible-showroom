@@ -143,7 +143,7 @@ ____
 The snapshot and rollback automation capability implemented for our
 workshop lab environment creates LVM snapshots managed using Ansible
 roles from the
-https://github.com/swapdisk/infra.lvm_snapshots#readme[`infra.lvm_snapshots`]
+https://github.com/swapdisk/infra.lvm_snapshots#readme[`infra.lvm_snapshots`^]
 collection.
 ____
 
@@ -190,7 +190,7 @@ shrinking, but not while the filesystem is mounted. Until recently, this
 way of freeing up volume group space was considered a last resort to be
 attempted by only the most skilled Linux admin, but it is now possible to
 safely automate shrinking logical volumes using the
-https://github.com/swapdisk/infra.lvm_snapshots/tree/main/roles/shrink_lv#readme[`shrink_lv`]
+https://github.com/swapdisk/infra.lvm_snapshots/tree/main/roles/shrink_lv#readme[`shrink_lv`^]
 role of the aforementioned `infra.lvm_snapshots` collection.
 
 After a snapshot is created, COW data will start to utilize the free
@@ -202,7 +202,7 @@ snapshot automation to determine snapshot sizings with enough cushion to
 prevent this. The `snapshot_autoextend_percent` and
 `snapshot_autoextend_threshold` settings in lvm.conf can also be used to
 reduce the risk of snapshots running out of space. The
-https://github.com/swapdisk/infra.lvm_snapshots/tree/main/roles/lvm_snapshots#readme[`lvm_snapshots`]
+https://github.com/swapdisk/infra.lvm_snapshots/tree/main/roles/lvm_snapshots#readme[`lvm_snapshots`^]
 role of the `infra.lvm_snapshots` collection supports variables that may
 be used to automatically configure the autoextend settings.
 
@@ -246,7 +246,7 @@ Another justification for pushing back on supporting automated snapshots
 will be the VMware vendor recommendation that snapshots should never be
 used for more than 72 hours (see KB article
 https://kb.vmware.com/s/article/1025279[Best practices for using VMware
-snapshots in the vSphere environment]). Unfortunately, app teams usually
+snapshots in the vSphere environment^]). Unfortunately, app teams usually
 need more than 3 days of soak time before they are comfortable that no
 impact to their apps has resulted from a RHEL upgrade.
 
@@ -292,7 +292,7 @@ untouched JBOD.
 
 Most bare metal servers support out-of-band management and those
 manufactured in the last decade will support APIs based on the
-https://www.dmtf.org/standards/redfish[Redfish] standard. These APIs can
+https://www.dmtf.org/standards/redfish[Redfish^] standard. These APIs can
 be used by automation to break and reconstruct the mirror set, but be
 prepared for a significant development and testing effort because the
 API implementations are not always the same across different vendors and
@@ -315,7 +315,7 @@ level.
 
 Read the article
 https://www.redhat.com/sysadmin/rear-backup-and-recover[ReaR: Backup and
-recover your Linux server with confidence] to learn more.
+recover your Linux server with confidence^] to learn more.
 
 [#step-3-snapshot-scope]
 === Step 3 - Snapshot Scope

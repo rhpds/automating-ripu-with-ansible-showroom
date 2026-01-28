@@ -101,7 +101,7 @@ during the Leapp upgrade and is especially important if you are planning
 to develop any Leapp custom actors. You can learn more about the Leapp
 framework architecture and internal design by reading the upstream
 https://leapp.readthedocs.io/en/latest/index.html[Leapp Developer
-Documentation].
+Documentation^].
 
 == Conclusion
 

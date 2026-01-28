@@ -58,7 +58,7 @@ RHEL estate.
 The Leapp framework uses an answer file as a means of accepting user
 input choices. This is explained in greater detail in the
 https://leapp.readthedocs.io/en/stable/tutorials/dialogs.html#asking-user-questions[Asking user
-questions] section of the Leapp developer documentation. The inhibitor
+questions^] section of the Leapp developer documentation. The inhibitor
 finding we dissected in the previous step is looking for us to make a
 decision or, more specifically, asking us to acknowledge we are aware
 that Leapp will disable the pam_pkcs11 PAM module during the RHEL
@@ -68,7 +68,7 @@ upgrade.
 we launched a playbook that runs the pre-upgrade report using the
 `analysis` role from the `infra.leapp` Ansible collection. Look at the
 https://github.com/redhat-cop/infra.leapp/blob/main/roles/analysis/README.md[documentation
-for this role]. Do you see where it supports a `leapp_answerfile` input
+for this role^]. Do you see where it supports a `leapp_answerfile` input
 variable? We can set the variable to automatically populate the Leapp
 answer file.
 . Let's try running the pre-upgrade job again with this variable
@@ -174,7 +174,7 @@ inhibitor using the `leapp answer` command. For example:
     executable: /bin/bash
 ----
 . You will find the tasks above in the playbook
-https://github.com/rhpds/leapp-project/blob/prod/remediate_rhel7.yml[`remediate_rhel7.yml`].
+https://github.com/rhpds/leapp-project/blob/prod/remediate_rhel7.yml[`remediate_rhel7.yml`^].
 . However, there's a lot of other remediation tasks defined in this playbook as well.  Lets look at another way of resolving inhibitors using the infra.leapp collection.
 +
 [source,yaml]
@@ -190,7 +190,7 @@ https://github.com/rhpds/leapp-project/blob/prod/remediate_rhel7.yml[`remediate_
           - leapp_remote_using_root
           - leapp_cifs_detected
 ----
-This remediation approach uses the `remediate` role from the `infra.leapp`. Let's look at the documentation for this role at https://github.com/redhat-cop/infra.leapp/tree/main/roles/remediate. We can see that this role supports a `remediation_todo` variable that accepts a list of remediation tasks to perform.  Each of the items in the list corresponds to a specific remediation task defined by the role.  In our example above, we are including remediation tasks for all the inhibitors we have seen so far in our pre-upgrade reports.
+This remediation approach uses the `remediate` role from the `infra.leapp`. Let's look at the documentation for this role at https://github.com/redhat-cop/infra.leapp/tree/main/roles/remediate[infra.leapp remediate role^]. We can see that this role supports a `remediation_todo` variable that accepts a list of remediation tasks to perform.  Each of the items in the list corresponds to a specific remediation task defined by the role.  In our example above, we are including remediation tasks for all the inhibitors we have seen so far in our pre-upgrade reports.
 
 . For our purposes, the "OS / Remediation" job template is already set up to execute this
 playbook, so let’s use it to remediate our RHEL7 hosts.

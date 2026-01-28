@@ -59,7 +59,7 @@ before and after the task that imports the `infra.leapp` collection
 === Step 2 - Install a Leapp Custom Actor
 
 There is a collection of example custom actors at the GitHub repo
-https://github.com/oamg/leapp-supplements[oamg/leapp-supplements]. We
+https://github.com/oamg/leapp-supplements[oamg/leapp-supplements^]. We
 will use one of these to demonstrate adding a custom check to our
 pre-upgrade reports.
 
@@ -125,7 +125,7 @@ this inhibitor finding has disappeared with the new report.
 
 Read the knowledge article
 https://access.redhat.com/articles/4977891[Customizing your Red Hat
-Enterprise Linux in-place upgrade] to understand best practices for
+Enterprise Linux in-place upgrade^] to understand best practices for
 handling the upgrade of third-party packages using custom repositories
 for an in-place upgrade or custom actors.
 
@@ -134,12 +134,12 @@ scope of this workshop. Here are some resources you can check out to
 learn more on your own:
 
 * https://leapp.readthedocs.io/en/latest/[Developer Documentation for
-Leapp]: this documentation covers the internal workflow architecture of
+Leapp^]: this documentation covers the internal workflow architecture of
 the Leapp framework and how to develop and test your own custom actors.
-* https://oamg.github.io/leapp-dashboard/#/[Leapp Dashboard]: dig around
+* https://oamg.github.io/leapp-dashboard/#/[Leapp Dashboard^]: dig around
 here to make sure the custom actor functionality you are considering
 doesn't already exist in the mainstream Leapp framework.
-* https://github.com/oamg/leapp-supplements[oamg/leapp-supplements]:
+* https://github.com/oamg/leapp-supplements[oamg/leapp-supplements^]:
 GitHub repo where you can find example custom actors and contribute your
 own. It also has the `Makefile` for custom actor RPM packaging.
 

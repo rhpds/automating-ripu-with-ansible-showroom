@@ -37,9 +37,9 @@ if VS Code is not to your liking.
 
 . Open VS Code in your web browser:
 +
-*VS Code URL:* {code_server_url}
+*VS Code URL:* link:{code_server_url}[{code_server_url}^]
 +
-*Password:* {code_server_password}
+*Password:* `{code_server_password}`
 +
 image::vscode_link.png[Example link to VS Code WebUI,link=self,window=blank]
 +
@@ -93,11 +93,11 @@ workflow.
 
 . Open the AAP Web UI in a new web browser tab:
 +
-*AAP Controller URL:* {controller_url}
+*AAP Controller URL:* link:{controller_url}[{controller_url}^]
 +
-*Username:* {controller_username}
+*Username:* `{controller_username}`
 +
-*Password:* {controller_password}
+*Password:* `{controller_password}`
 +
 image::aap_link.png[Example link to AAP Web UI,link=self,window=blank]
 +
@@ -116,11 +116,11 @@ pre-upgrade reports we generate for our pet app servers.
 
 . Open a new web browser tab:
 +
-*Cockpit URL:* {cockpit_url}
+*Cockpit URL:* link:{cockpit_url}[{cockpit_url}^]
 +
-*Username:* {cockpit_username}
+*Username:* `{cockpit_username}`
 +
-*Password:* {cockpit_password}
+*Password:* `{cockpit_password}`
 +
 image::cockpit_link.png[Example link to RHEL Web Console,link=self,window=blank]
 +

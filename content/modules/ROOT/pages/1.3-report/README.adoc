@@ -43,16 +43,16 @@ when you are ready to quit the `less` command.
 ____
 * If your RHEL hosts are registered to
 https://www.redhat.com/en/technologies/management/insights[Red Hat
-Insights], you can see the Leapp pre-upgrade reports on your Insights
+Insights^], you can see the Leapp pre-upgrade reports on your Insights
 console. The pet app servers provisioned for this workshop are not
 registered to Insights, so we can't demonstrate this here. Read the blog
 article
 https://www.redhat.com/en/blog/take-unknowns-out-rhel-upgrades-red-hat-insights[Take
-the unknowns out of RHEL upgrades with Red Hat Insights] to see an
+the unknowns out of RHEL upgrades with Red Hat Insights^] to see an
 example of how Insights can be used to review and manage Leapp
 pre-upgrades.
 * RHEL includes an optional administration web console based on
-https://access.redhat.com/documentation/en-us/red_hat_enterprise_linux/8/html-single/managing_systems_using_the_rhel_8_web_console/index#what-is-the-RHEL-web-console_getting-started-with-the-rhel-8-web-console[Cockpit]
+https://access.redhat.com/documentation/en-us/red_hat_enterprise_linux/8/html-single/managing_systems_using_the_rhel_8_web_console/index#what-is-the-RHEL-web-console_getting-started-with-the-rhel-8-web-console[Cockpit^]
 that we call the RHEL Web Console. We will explore how to review the
 Leapp pre-upgrade reports using the RHEL Web Console in the next step of
 this exercise.
@@ -141,7 +141,7 @@ updates made to the Leapp framework and other RHEL packages released
 over time since this workshop was written. If you discover any
 differences that materially break the flow of the exercises in the
 workshop, kindly let us know by raising an issue
-https://github.com/ansible/workshops/issues/new[here].
+https://github.com/ansible/workshops/issues/new[here^].
 ____
 . When the pre-upgrade report is generated, the Leapp framework collects
 system data and assesses upgradeability based on a large collection of
@@ -195,7 +195,7 @@ updates made to the Leapp framework and other RHEL packages released
 over time since this workshop was written. If you discover any
 differences that materially break the flow of the exercises in this
 workshop, kindly let us know by raising an issue
-https://github.com/ansible/workshops/issues/new[here].
+https://github.com/ansible/workshops/issues/new[here^].
 ____
 . In the report for our RHEL7 pet app server above, we see there are many more findings we need to address. Let’s start
 by reviewing the high risk findings that are not inhibitors.
@@ -299,7 +299,7 @@ rolling back the snapshot. Before rolling back, we can debug the root
 cause and use the experience to understand the best way to eliminate the
 risk of that failure or impact happening in the future.
 . There is a concept explained quite well in the famous article
-http://www.martinfowler.com/ieeeSoftware/failFast.pdf[Fail Fast]
+http://www.martinfowler.com/ieeeSoftware/failFast.pdf[Fail Fast^]
 published in _IEEE Software_. The article dates back to 2004, so this is
 hardly a new concept. Unfortunately, there is a stigma associated with
 failure that can lead to excessively risk-averse behavior. The most
