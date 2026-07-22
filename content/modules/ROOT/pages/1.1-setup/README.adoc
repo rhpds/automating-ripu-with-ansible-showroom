@@ -11,7 +11,7 @@
 === Your Lab Environment
 
 The workshop is provisioned with a pre-configured lab environment. Your
-access to the lab is made posible by a number of services running on the
+access to the lab is made possible by a number of services running on the
 bastion host. You have access to a host deployed with Ansible Automation
 Platform (AAP) which you will use to control the playbook and workflow
 jobs that automate the RHEL in-place upgrade workflow steps. You will
@@ -163,7 +163,7 @@ image::cockpit_example.svg[Example RHEL Web Console,link=self,window=blank]
 pre-upgrade reports in an upcoming exercise.
 
 ////
-Configure AAP steps now done automatically during workshop provisiong
+Configure AAP steps now done automatically during workshop provisioning
 
 [#step-5-configure-AAP]
 === Step 5 - Configure AAP
