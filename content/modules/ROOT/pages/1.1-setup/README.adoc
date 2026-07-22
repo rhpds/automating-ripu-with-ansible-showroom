@@ -10,42 +10,46 @@
 
 === Your Lab Environment
 
-The workshop is provisioned with a pre-configured lab environment. You
-will have access to a host deployed with Ansible Automation Platform
-(AAP) which you will use to control the playbook and workflow jobs that
-automate the RHEL in-place upgrade workflow steps. You will also have
-access to some "pet" application hosts, with RHEL 7, 8, and 9.
- These are the hosts where we will be upgrading the RHEL
-operating system (OS) to the next major version.
+The workshop is provisioned with a pre-configured lab environment. Your
+access to the lab is made posible by a number of services running on the
+bastion host. You have access to a host deployed with Ansible Automation
+Platform (AAP) which you will use to control the playbook and workflow
+jobs that automate the RHEL in-place upgrade workflow steps. You will
+also have access to three "pet" application servers, one each running
+RHEL7, RHEL8, and RHEL9 respectively. These are the hosts where we will
+be upgrading the RHEL operating system (OS) to the next major version.
 
 [cols=",",options="header",]
 |===
 |Role |Inventory name
-|AAP Control Host |ansible-1
-|RHEL7 pet app host 1 |node1
-|RHEL8 pet app host 1 |node2
-|RHEL9 pet app host 1 |node3
+|Workshop bastion host |`ansible-1`
+|AAP controller host |`controller`
+|RHEL7 pet app server |`{node1_instance_name}`
+|RHEL8 pet app server |`{node2_instance_name}`
+|RHEL9 pet app server |`{node3_instance_name}`
 |===
+
+We'll dive deeper into why we are using random pet names in a later
+exercise.
 
 [#step-1-access-the-environment]
 === Step 1 - Access the Environment
 
 We will use Visual Studio Code (VS Code) as it provides a convenient and
 intuitive way to use a web browser to edit files and access terminal
-sessions. If you are a command line hero, direct SSH access is available
-if VS Code is not to your liking.
+sessions. 
+
 
 . Open VS Code in your web browser:
 +
 *VS Code URL:* link:{code_server_url}[{code_server_url}^]
 +
 *Password:* `{code_server_password}`
-+
-image::vscode_link.png[Example link to VS Code WebUI,link=self,window=blank]
-+
+
 . After opening the link, type in the provided password to access your
 instance of VS Code.
 
++
 ____
 *Note*
 
@@ -54,6 +58,7 @@ Code user experience. This is optional as the default settings will work
 fine for this workshop. Feel free to step through the wizard to explore
 the VS Code bells and whistles or you may just skip it.
 ____
+
 [#step-2-open-a-terminal-session]
 === Step 2 - Open a Terminal Session
 
@@ -65,24 +70,54 @@ RHEL in-place upgrade automation is doing its thing.
 +
 image::new_term.svg[Example of how to open a terminal session in VS Code,link=self,window=blank]
 +
-. This terminal session will be running on the AAP control host
-`ansible-1`. You can use the `ssh` command to log in to one of your
-pet app hosts. Finally, use the highlighted commands to confirm the RHEL OS
-version and kernel version installed.
+. This terminal session will be running on the workshop bastion host
+`ansible-1`. From here, you can use `ssh` commands to log in to your
+pet app servers.
+
++
+For example, the command `ssh {node1_instance_name}` will log you into
+your RHEL7 server.
+
++
+After logging in, use the commands highlighted in the example below to
+confirm the RHEL OS version and kernel version installed.
+
 +
 For example:
 +
-image::ssh_login.png[Example ssh login to pet app host,link=self,window=blank]
+image::ssh_login.svg[Example ssh login to pet app host,link=self,window=blank]
 +
-*Alternative SSH access:* If you prefer direct SSH access instead of VS Code, you can connect using:
+In the example above, the `ssh` command connected us to a new session on
+our RHEL7 pet app server.
+
 +
+Then the commands `cat /etc/redhat-release` and `uname -r` were used to
+output the OS release information "Red Hat Enterprise Linux Server
+release 7.9 (Maipo)" and show that kernel version
+"3.10.0-1160.119.1.el7.x86_64" is running.
+
++
+Use the `exit` command to end the session on the RHEL7 pet app server.
+That will return you back to the command prompt on the workshop bastion
+host. Then you can try logging into your RHEL8 and RHEL9 pet app servers
+to check their OS versions as well.
+
++
+____
+*Note*
+
+If VS Code is not your cup of tea or you just prefer to work at the
+command line, you may connect directly from your own terminal session.
+Use the following `ssh` command and password to connect directly to the
+workshop bastion host:
+
 [source,bash,role=execute,subs="attributes+"]
 ----
 {ssh_command}
 ----
-+
-Password: `{ssh_password}`
 
+Password: `{ssh_password}`
+____
 
 [#step-3-access-the-aap-web-ui]
 === Step 3 - Access the AAP Web UI
@@ -99,12 +134,10 @@ workflow.
 +
 *Password:* `{controller_password}`
 +
-image::aap_link.png[Example link to AAP Web UI,link=self,window=blank]
-+
 . Enter the username and password above. This will bring
 you to your AAP Web UI dashboard like the example below:
 +
-image::aap_console_example.png[Example AAP Web UI dashboard,link=self,window=blank]
+image::aap_console_example.svg[Example AAP Web UI dashboard,link=self,window=blank]
 . We will learn more about how to use the AAP Web UI in the next
 exercise.
 
@@ -122,14 +155,15 @@ pre-upgrade reports we generate for our pet app servers.
 +
 *Password:* `{cockpit_password}`
 +
-image::cockpit_link.png[Example link to RHEL Web Console,link=self,window=blank]
-+
 . Enter the username and password above. This will
 bring you to a RHEL Web Console Overview page like the example below:
 +
-image::cockpit_example.png[Example RHEL Web Console,link=self,window=blank]
+image::cockpit_example.svg[Example RHEL Web Console,link=self,window=blank]
 . We will revisit the RHEL Web Console when we are ready to review our
 pre-upgrade reports in an upcoming exercise.
+
+////
+Configure AAP steps now done automatically during workshop provisiong
 
 [#step-5-configure-AAP]
 === Step 5 - Configure AAP
@@ -149,8 +183,10 @@ image::completed_cac.png[AAP after running the CaC job template,link=self,window
 +
 image::lab_config.png[Highlight of the lab initialization job template,link=self,window=blank]
 
-[#step-6-challenge-labs]
-=== Step 6 - Challenge Labs
+////
+
+[#step-5-challenge-labs]
+=== Step 5 - Challenge Labs
 
 You will soon discover that many exercises in the workshop come with a
 "Challenge Lab" step. These labs are meant to give you a small task to
