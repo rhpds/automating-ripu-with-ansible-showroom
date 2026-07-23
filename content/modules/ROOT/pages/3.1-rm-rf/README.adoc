@@ -1,10 +1,5 @@
 = Workshop Exercise - Trash the Instance
 
-[WARNING]
-====
-In the new lab environment we have moved to, snapshots are not currently deployed. Therefore, none of these exercises that involve rolling back using snapshots will work as intended. We are working to resolve this issue for future iterations of the workshop. The hands-on portion of this workshop is now completed.
-====
-
 == Optional Exercise
 
 This is an optional exercise. It is not required to successfully
@@ -28,6 +23,14 @@ recursive command and already know the consequences. In this exercise,
 we are going to intentionally mess up one of our pet app servers to
 demonstrate how rolling back can save the day.
 
+[WARNING]
+====
+Don't actually do `rm -rf /*` on your server! Make whatever changes you
+want to demonstrate that everything can be rolled back, but don't mess
+up your instances so severely that Ansible can no longer connect to run
+the rollback job.
+====
+
 Let's get started!
 
 [#step-1-select-a-pet-app-server]
@@ -36,8 +39,9 @@ Let's get started!
 In the next exercise, we will be rolling back the RHEL upgrade on one of
 our servers.
 
-. Choose an app server. It can be one of the RHEL7 instances that is now
-on RHEL8, or one of the RHEL8 instances that was upgraded to RHEL9.
+. Choose an app server. It can be any one of the RHEL instances that you
+upgraded.
+
 . Follow the steps you used with
 xref:1.1-setup/README.adoc#step-2-open-a-terminal-session[Exercise
 1.1: Step 2] to open a terminal session on the app server you have
@@ -47,8 +51,8 @@ user. For example:
 +
 [source,plaintext]
 ----
-[ec2-user@cute-bedbug ~]$ sudo -i
-[root@cute-bedbug ~]#
+[lab-user@moral9tiger ~]$ sudo -i
+[root@moral9tiger ~]# 
 ----
 +
 Verify you see a root prompt like the example above.
@@ -83,6 +87,7 @@ which: no javac in (/home/ec2-user/.local/bin:/home/ec2-user/bin:/usr/local/bin:
 Error: JAVA_HOME is not defined correctly.
 We cannot execute
 ----
+
 +
 This is a realistic example of application impact that can be reversed
 by rolling back the upgrade.

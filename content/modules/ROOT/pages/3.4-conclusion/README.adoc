@@ -47,21 +47,23 @@ we have just scratched the surface.
 * Is it possible to upgrade from RHEL7 to RHEL9? While the Leapp
 framework doesn't support a "double upgrade" directly, it is possible
 to take a host that was upgraded from RHEL7 to RHEL8 and then upgrade it
-from there to RHEL9. You can try this with one of the pet app instances
-in the workshop lab.
+from there to RHEL9. You can try this with the pet app instance that was
+originally running RHEL7. You will need to roll it back to RHEL7 first.
+Then take a look at the "OS / Upgrade 7-8-9" workflow job template.
+
 +
-There are a couple things to be aware of if you want to try it. You will
-first need to run the "AUTO / 04 Commit" playbook job template. This
-job will delete the snapshot created for your RHEL7 to RHEL8 upgrade, so
-be sure you are happy with everything before you do this. While rolling
-back to RHEL7 will then be impossible, you will be able to roll back to
-RHEL8 if needed after upgrading to RHEL9.
-+
-Another consideration with going from RHEL7 to RHEL9 is the increased
+One consideration with going from RHEL7 to RHEL9 is the increased
 risk of application impacts. While RHEL system library forward binary
 compatibility is really solid between each RHEL major version, "N+2"
 compatibility is not guaranteed. Of course, the only way to know for
-sure is to try it!
+sure is to try it! Remember, fail fast!
+
+* If you skipped over any of the optional exercises, it's not too late to go back and try them now:
+ ** xref:../1.5-custom-modules/README.adoc[Exercise 1.5 - Custom Pre-upgrade Checks]
+ ** xref:../1.6-my-pet-app/README.adoc[Exercise 1.6 - Deploy a Pet App]
+ ** xref:../2.4-check-pet-app/README.adoc[Exercise 2.4 - How is the Pet App Doing?]
+ ** xref:../3.1-rm-rf/README.adoc[Exercise 3.1 - Trash the Instance]
+
 * The workshop lab environment is now yours to play with. Dream up your
 own ideas for additional learning and experimentation. Remember you can
 upgrade and roll back as often as you like. Rinse and repeat!
@@ -102,3 +104,12 @@ be used to build packages for installing your Leapp custom actors.
 playbooks included in the workshop. You can also explore the
 infrastructure as code (IaC) magic that is used to provision the
 workshop lab environment.
+
+== Thank You!
+
+If you enjoyed this workshop, please take a moment to give it a 5-star
+rating or write a review. If you have any ideas for improvements or new
+features, don't hesitate to raise an issue
+https://github.com/rhpds/automating-ripu-with-ansible-showroom/issues/new[here] tagging
+@swapdisk and @heatmiser.
+

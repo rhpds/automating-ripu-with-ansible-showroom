@@ -1,10 +1,5 @@
 = Workshop Exercise - Let's Talk About Snapshots
 
-[WARNING]
-====
-This exercise is for discussion only in the current lab environment. No steps are to be performed.
-====
-
 == Objectives
 
 * Understand the difference between backups and snapshots
@@ -143,7 +138,7 @@ ____
 The snapshot and rollback automation capability implemented for our
 workshop lab environment creates LVM snapshots managed using Ansible
 roles from the
-https://github.com/swapdisk/infra.lvm_snapshots#readme[`infra.lvm_snapshots`^]
+https://github.com/redhat-cop/infra.lvm_snapshots#readme[`infra.lvm_snapshots`^]
 collection.
 ____
 
@@ -163,14 +158,14 @@ volume group must be less than the total size of the volume group. The
 
 [source,bash]
 ----
-# vgs
-  VG         #PV #LV #SN Attr   VSize  VFree
-  VolGroup00   1   7   0 wz--n- 29.53g 9.53g
+[root@super8aphid ~]# vgs
+  VG   #PV #LV #SN Attr   VSize   VFree 
+  vg00   1   9   0 wz--n- <63.00g 21.46g
 ----
 
-In the example above, the `VolGroup00` volume group total size is 29.53
-GiB and there is 9.53 GiB of free space in the volume group. This should
-be enough free space to support rolling back a RHEL upgrade.
+In the example above, the `vg00` volume group total size is 63 GiB and
+there is 21.46 GiB of free space in the volume group. This should be
+enough free space to support rolling back a RHEL upgrade.
 
 If there is not enough free space in the volume group, there are a few
 ways we can make space available:
@@ -190,7 +185,7 @@ shrinking, but not while the filesystem is mounted. Until recently, this
 way of freeing up volume group space was considered a last resort to be
 attempted by only the most skilled Linux admin, but it is now possible to
 safely automate shrinking logical volumes using the
-https://github.com/swapdisk/infra.lvm_snapshots/tree/main/roles/shrink_lv#readme[`shrink_lv`^]
+https://github.com/redhat-cop/infra.lvm_snapshots/tree/main/roles/shrink_lv#readme[`shrink_lv`^]
 role of the aforementioned `infra.lvm_snapshots` collection.
 
 After a snapshot is created, COW data will start to utilize the free
@@ -202,7 +197,7 @@ snapshot automation to determine snapshot sizings with enough cushion to
 prevent this. The `snapshot_autoextend_percent` and
 `snapshot_autoextend_threshold` settings in lvm.conf can also be used to
 reduce the risk of snapshots running out of space. The
-https://github.com/swapdisk/infra.lvm_snapshots/tree/main/roles/lvm_snapshots#readme[`lvm_snapshots`^]
+https://github.com/redhat-cop/infra.lvm_snapshots/tree/main/roles/lvm_snapshots#readme[`lvm_snapshots`^]
 role of the `infra.lvm_snapshots` collection supports variables that may
 be used to automatically configure the autoextend settings.
 
