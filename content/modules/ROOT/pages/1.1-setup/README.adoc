@@ -24,9 +24,9 @@ be upgrading the RHEL operating system (OS) to the next major version.
 |Role |Inventory name
 |Workshop bastion host |`ansible-1`
 |AAP controller host |`controller`
-|RHEL7 pet app server |`{node1_instance_name}`
-|RHEL8 pet app server |`{node2_instance_name}`
-|RHEL9 pet app server |`{node3_instance_name}`
+|RHEL7 pet app server |`{rhel7_pet_app_server}`
+|RHEL8 pet app server |`{rhel8_pet_app_server}`
+|RHEL9 pet app server |`{rhel9_pet_app_server}`
 |===
 
 We'll dive deeper into why we are using random pet names in a later
@@ -75,7 +75,7 @@ image::new_term.svg[Example of how to open a terminal session in VS Code,link=se
 pet app servers.
 
 +
-For example, the command `ssh {node1_instance_name}` will log you into
+For example, the command `ssh {rhel7_pet_app_server}` will log you into
 your RHEL7 server.
 
 +
