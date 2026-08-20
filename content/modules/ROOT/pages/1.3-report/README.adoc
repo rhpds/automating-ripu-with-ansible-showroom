@@ -175,7 +175,7 @@ which has been split to multiple rpms on RHEL 9
 (https://pes.osci.redhat.com/?fromRelease=all&toRelease=all&search=jitterentropy-devel&detail=8811)
 and one of them is in CRB repository. obviously, customer will most
 likely not be interested in the devel package, but if so, they know it's
-there and what to do in case it shoud be installed (and where it's
+there and what to do in case it should be installed (and where it's
 actually located)
 
 +
