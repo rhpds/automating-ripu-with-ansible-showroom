@@ -107,16 +107,23 @@ previous exercise. Navigate to the "Automation Execution" drop down on
 the lefthand side and select the "Templates" in the navigation menu. 
 This will bring up a list of job templates that can be used to run playbook
 jobs on target hosts:
+
 +
-image::aap_templates.png[Job templates listed on AAP Web UI,link=self,window=blank]
+image::aap_templates.svg[Job templates listed on AAP Web UI,link=self,window=blank]
+
++
 . Click on the "AUTO / 01 Analysis" job template. This will display
 the Details tab of the job template:
+
 +
-image::analysis_template.png["AUTO / 01 Analysis" job templates seen on AAP Web UI,link=self,window=blank]
+image::analysis_template.svg["AUTO / 01 Analysis" job templates seen on AAP Web UI,link=self,window=blank]
+
++
 . From here, we could use the "Edit template" button if we wanted to make any
 changes to the job template. This job template is already configured, so
 we are ready to use it to submit a playbook job. To do this, use the
 "Launch template" button which will bring up a series of prompts.
+
 +
 ____
 *Note*
@@ -124,17 +131,35 @@ ____
 The prompts that each job template presents can be configured using the
 "Prompt on launch" checkboxes seen when editing a job template.
 ____
-First, we see a prompt for providing extra variables for the playbook run. We will revisit this section later, but for this run, we have nothing to provide here, so just click the "Next" button to move onto the survey prompt.
+
 +
-image::analysis_survey_prompt.png[Analysis job survey prompt on AAP Web UI,link=self,window=blank]
+image::analysis_vars_prompt.svg[Analysis job variables prompt on AAP Web UI,link=self,window=blank]
+
++
+. The first prompt as seen above allows for changing the default playbook
+variables or adding more variables. We will take a look at using
+playbook variables in a later exercise. For this run, we have nothing to
+provide here, so just click the "Next" button to move onto the survey
+prompt.
+
++
+image::analysis_survey_prompt.svg[Analysis job survey prompt on AAP Web UI,link=self,window=blank]
+
++
 . Next, we see the job template survey prompt. A survey is a customizable
 set of prompts that can be configured from the Survey tab of the job
 template. For this job template, the survey allows for choosing a group
 of hosts on which the job will execute the playbook. Choose the
-"ALL_rhel" option and click the "Next" button. This will bring you
-to a preview of the selected job options and variable settings.
+"ALL_rhel" option and click the "Next" button.
+
 +
-image::analysis_preview.png[Analysis job preview on AAP Web UI,link=self,window=blank]
+This will bring you to a preview of the selected job options and
+variable settings.
+
++
+image::analysis_preview.svg[Analysis job preview on AAP Web UI,link=self,window=blank]
+
++
 . If you are satisfied with the job preview, use the "Finish" button
 to start the playbook job.
 
@@ -148,6 +173,7 @@ automatically to the job output page for the job you just started.
 clicking the "Follow" button. When you are in follow mode, the output
 will scroll automatically as task results are streamed to the bottom of
 the job output shown in the AAP Web UI.
+
 . The analysis playbook will run the Leapp pre-upgrade scan. This will
 take about two or three minutes to complete. When it is done, you can
 find a "PLAY RECAP" at the end of the job output, showing the success
@@ -155,8 +181,9 @@ or failure status for the playbook runs, executed on each host. A status
 of "failed=0" indicates a successful playbook run. Scroll to the
 bottom of the job output and you should see that your job summary looks
 like this example:
+
 +
-image::analysis_job_recap.png[Analysis job "PLAY RECAP" as seen at the end of the job output,link=self,window=blank]
+image::analysis_job_recap.svg[Analysis job "PLAY RECAP" as seen at the end of the job output,link=self,window=blank]
 
 [#step-4-challenge-lab-analysis-playbook]
 === Step 4 - Challenge Lab: Analysis Playbook

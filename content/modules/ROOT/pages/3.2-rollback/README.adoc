@@ -1,10 +1,5 @@
 = Workshop Exercise - Run Rollback Job
 
-[WARNING]
-====
-In the new lab environment we have moved to, snapshots are not currently deployed. Therefore, none of these exercises that involve rolling back using snapshots will work as intended. We are working to resolve this issue for future iterations of the workshop. The hands-on portion of this workshop is now completed.
-====
-
 == Objectives
 
 * Demonstrate using an Ansible playbook for rolling back a RHEL upgrade
@@ -53,7 +48,7 @@ settings, for example:
 +
 image::rollback_preview.svg[AAP Web UI showing the rollback job preview prompt,link=self,window=blank]
 +
-If everything looks good, use the "Launch" button to start the
+If everything looks good, use the "Finish" button to start the
 playbook job.
 
 [#step-2-observe-the-rollback-job-output]
@@ -70,11 +65,11 @@ in the job summary like this example:
 +
 image::rollback_job_recap.svg[Rollback job "PLAY RECAP" as seen at the end of the job output,link=self,window=blank]
 +
-Notice in the example above, we see the job completed in just under 3
+Notice in the example above, we see the job completed in just under 2
 minutes. However, most of that time was spent in the final "Wait for
 the snapshot to drain" task which holds the job until the snapshot
 merges finish in the background. The instance was actually rolled back
-and service-ready in just under a minute. Impressive, right?
+and service-ready in under a minute. Impressive, right?
 
 [#step-3-check-the-rhel-version]
 === Step 3 - Check the RHEL Version
@@ -85,7 +80,7 @@ xref:2.3-check-upg/README.adoc#step-2-verify-the-hosts-are-upgraded-to-next-rhel
 back.
 
 . For example, if the pet app host you rolled back had been upgraded
-from RHEL7 to RHEL8, you should now see it is back to RHEL7:
+from RHEL9 to RHEL10, you should now see it is back to RHEL9:
 +
 image::commands_after_rollback.svg[command output showing the host is back to RHEL7 installed,link=self,window=blank]
 

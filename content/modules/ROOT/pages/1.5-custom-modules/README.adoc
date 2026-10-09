@@ -73,13 +73,19 @@ configured in the bootloader.
 .. The /boot directory has any files that have been modified since the
 last reboot.
 
-For this exercise, we will leverage an already created Ansible playbook in our AAP installation.
-. Return to your AAP Web UI browser tab and launch the playbook ``EXTRA / LEAPP Custom Actors``. This will install the actor on our RHEL 8 server.
+. For this exercise, we will leverage an already created Ansible
+playbook in our AAP installation. Return to your AAP Web UI browser
+tab and launch the playbook ``EXTRA / LEAPP Custom Actors``. This will
+install the actor on our RHEL 8 server.
+
 +
 image::leapp_custom_actor.png[Launching the LEAPP Custom Actors playbook in AAP,link=self,window=blank]
+
 . To demonstrate the custom actor at work, let’s create a condition that
 violates our policy so that an inhibitor finding will be reported. Use
-this command on our RHEL 8 server.  You can do this however you choose, either SSH, through the VSCode terminal, or Cockpit terminal.
+this command on our RHEL 8 server. You can do this however you choose,
+either SSH, through the VSCode terminal, or Cockpit terminal.
+
 +
 [source,bash]
 ----
